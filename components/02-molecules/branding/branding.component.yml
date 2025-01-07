@@ -16,7 +16,7 @@ props:
       type: string
       format: iri-reference
       examples:
-        - "../src/images/colorwheel.svg"
+        - "../assets/images/colorwheel.svg"
     url:
       type: string
       title: Branding url

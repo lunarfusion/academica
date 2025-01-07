@@ -3,3 +3,5 @@ storybook-static/
 build-storybook.log
 .DS_Store
 .env
+
+*storybook.log

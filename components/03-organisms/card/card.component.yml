@@ -16,9 +16,9 @@ slots:
   #   examples:
   #     - Card content, placeholder for child components
 
-  content:    
+  content:
     # no block names here, just start with type: component
-    ### CHILD COMPONENT 
+    ### CHILD COMPONENT
     - type: component
       component: "storybook-university:title"
       props:
@@ -26,7 +26,7 @@ slots:
         extra_classes:
           - card__title
       slots:
-        text: sdcStorybook Title of the Card Component   
+        text: sdcStorybook Title of the Card Component
   ### CHILD COMPONENT - this won't render, screws up storybook
   # card_title:
   #   - type: component
@@ -45,20 +45,20 @@ slots:
     description: Image for the card
     type: string
     examples:
-      - "../src/images/placeholder-600-400.jpg"
-  
-               
+      - "../assets/images/placeholder-600-400.jpg"
+
+
 thirdPartySettings:
   sdcStorybook:
     stories:
-      
+
       ### VARIANT - default vertical card style
       default:
         props:
           label: Card default style
         slots:
-          
-          ### CHILD COMPONENT 
+
+          ### CHILD COMPONENT
           card_title:
             - type: component
               component: "storybook-university:title"

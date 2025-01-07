@@ -12,21 +12,38 @@
     "lint-fix": "eslint --fix \"**/*.js\""
   },
   "dependencies": {
+    "@apidevtools/json-schema-ref-parser": "^11.7.3",
+    "autoprefixer": "^10.4.20",
     "heroicons": "^2.2.0",
     "postcss-import": "^16.1.0",
+    "storybook-addon-sdc": "^0.5.1",
     "vite": "^5.4.10",
     "vite-plugin-live-reload": "^3.0.3"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.2",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-interactions": "^8.4.7",
+    "@storybook/addon-links": "^8.4.7",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/html": "^8.4.7",
+    "@storybook/html-vite": "^8.4.7",
+    "@storybook/test": "^8.4.7",
     "autoprefixer": "^10.4.19",
+    "eslint-plugin-storybook": "^0.11.2",
     "postcss": "^8.4.38",
     "postcss-custom-media": "^10.0.6",
+    "postcss-load-config": "^6.0.1",
+    "postcss-loader": "^8.1.1",
     "postcss-nested": "^6.0.1",
-    "postcss-nesting": "^12.1.5"
+    "postcss-nesting": "^12.1.5",
+    "storybook": "^8.4.7",
+    "vite-plugin-twig-drupal": "^1.4.2"
   },
   "eslintConfig": {
     "extends": [
-      "@almunnings/eslint-config/drupal"
+      "@almunnings/eslint-config/drupal",
+      "plugin:storybook/recommended"
     ],
     "rules": {
       "semi": "off",

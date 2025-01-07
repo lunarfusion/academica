@@ -9,5 +9,5 @@ props:
       type: object
       title: Image content
       examples:
-        - src:  "../src/images/placeholder-600-400.jpg"
+        - src:  "../assets/images/placeholder-600-400.jpg"
           alt: 'image example'

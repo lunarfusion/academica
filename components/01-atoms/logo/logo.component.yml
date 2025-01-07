@@ -9,7 +9,7 @@ props:
       type: object
       title: Logo image
       examples:
-        - src:  "../src/images/colorwheel.svg"
+        - src:  "../assets/images/logo.svg"
 
     url:
       type: string

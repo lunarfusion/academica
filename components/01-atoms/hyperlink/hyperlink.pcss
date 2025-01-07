@@ -18,57 +18,53 @@ a:not(.button) {
 
   /* focus indicator */
   border: var(--em-size-thickness-focus-indicator) solid transparent;
-}
 
-  a:not(.button):hover,
-  a:not(.button):visited:hover {
+  &:hover,
+  &:visited:hover {
     color: var(--em-color-link-hover);
     background-position: 2% 100%;
   }
 
-  a:not(.button):focus,
-  a:not(.button):focus-visible,
-  a:not(.button):visited:focus,
-  a:not(.button):visited:focus-visible {
+  &:focus,
+  &:focus-visible,
+  &:visited:focus,
+  &:visited:focus-visible {
     color: var(--em-color-link-focus);
     outline: 0;
     border-color: var(--em-color-focus-indicator);
   }
 
-  a:not(.button):active,
-  a:not(.button):visited:active {
+  &:active,
+  &:visited:active {
     color: var(--em-color-link-active);
     border-color: transparent;
     outline: none;
   }
 
-  a:not(.button):focus:active,
-  a:not(.button):focus-visible:active {
+  &:focus:active,
+  &:focus-visible:active {
     border-color: transparent;
     outline: none;
   }
 
   /*** prevent focus from firing on click ***/
-
-  a:not(.button):-webkit-focus-ring {
+  &:-webkit-focus-ring {
     border-color: transparent;
     outline: none;
     box-shadow: none;
   }
 
-  a:not(.button):visited {
+  &:visited {
     color: var(--em-color-link-visited);
   }
+}
 
 
 p:has(.cta-link) {
   display: flex;
 }
 
-
 /*** CTA links ***/
-
-
 .cta-link {
   --cta-icon-transform: 0.25rem;
 
@@ -94,23 +90,17 @@ p:has(.cta-link) {
 
   background-size: 300% 3px;
   background-position: 90% 100%;
-}
 
-
-/* visited stays bright */
-
-
-.cta-link:visited {
+  /* visited stays bright */
+  &:visited {
     color: var(--em-color-link-default);
   }
 
-
-.cta-link:hover {
+  &:hover {
     background-position: 10% 100%;
   }
 
-
-.cta-link::after {
+  &::after {
     content: "";
     width: 1.125rem;
     height: 1.125rem;
@@ -121,18 +111,15 @@ p:has(.cta-link) {
     margin-block: auto;
     margin-inline-start: auto;
     background-color: var(--em-color-link-hover);
-    -webkit-mask-image: url('../assets/icons/arrow-forward.svg');
-            mask-image: url('../assets/icons/arrow-forward.svg');
-    -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-            mask-position: center;
+    mask-image: url('../assets/icons/arrow-forward.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
     max-block-size: 100%;
     transition: var(--em-transition-boing);
   }
 
-
-.cta-link:hover::after {
+  &:hover::after {
     transform: translateX(var(--cta-icon-transform)) scale(1.1);
     background-color: var(--em-color-link-default);
   }
+}
