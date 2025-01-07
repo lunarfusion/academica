@@ -1,0 +1,10 @@
+<span{{ attributes.addClass('badge').addClass(extra_classes|default([])) }}>
+    {% if has_icon == true %}
+      <span class="badge__icon icon icon--small">
+        {# {{ icon }} #}
+        {# {{ source(path ~ '../src/icons/' ~ icon ~ '.svg') }} #}
+        {% block icon %}{{ badge_icon }}{% endblock %}
+      </span>
+    {% endif %}
+  {{ content }}
+</span>

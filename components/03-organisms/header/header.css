@@ -1,0 +1,131 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  
+  /********* Mobile nav - open/close Toggle *********/
+  .button--menu-toggle.is-open {
+    
+    .is-open-text,
+    .menu-close-icon {
+      opacity: 1;
+      display: flex;
+    }
+    
+    .is-closed-text,
+    .menu-open-icon {
+      opacity: 0;
+      display: none;
+    }
+  }
+  
+  .menu--main {
+    background-color: var(--em-color-action-nav-bg-default);
+  }
+  
+  .menu-item {
+    box-shadow: var(--em-color-bg-base) 0 1.5px 0 1.5px;
+  }
+  
+  /*** Desktop size - Mobile Responsive Menu Drawer ***/
+  @media (min-width: 993px) {
+    
+    /* we don't need the menu toggle on desktop sizes */
+    .button--menu-toggle {
+      visibility: hidden;
+    }
+    
+    .menu--main {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  }
+  
+  /*** Mobile size - Mobile Responsive Menu Drawer ***/
+  @media (max-width: 992px) {
+    .button--menu-toggle {
+      visibility: visible;
+      z-index: 3;
+    }
+    
+    .menu-closed .menu--main {
+      transform: translateX(100%);
+    }
+    
+    .menu--wrapper {
+      width: 100%;
+      height: auto;
+      position: relative;
+      left: 0;
+      right: 0;
+      top: 0;
+      clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100vh);
+    }
+    
+    .menu--main {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      transition: var(--em-transition-smooth);
+      /* margin-block-start: var(--em-size-mobile-menu-toggle); */
+    }
+    
+    .menu-item {
+      box-shadow: var(--em-color-bg-base) 0 0 0 1.5px;
+    }
+    
+    .main-menu-content-wrapper {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      z-index: 999;
+      transition: var(--em-transition-smooth);
+      
+      &.menu-opened {
+        transform: translateX(0);
+      }
+      
+      &.menu-closed {
+        transform: translateX(105%);
+      }
+    }
+    
+    .menu--main {
+      block-size: auto;
+      inline-size: 100%;
+      min-inline-size: 100%;
+      
+      span,
+      a {
+        white-space: wrap;
+      }
+    }
+    
+    .menu--main .menu {
+      flex-direction: column;
+    }
+    
+    .menu--main .menu .menu--wrapper {
+      position: relative;
+      min-height: auto;
+      z-index: 1;
+      inline-size: 100%;
+    }
+    
+    .menu--main .menu-item--expanded .menu {
+      margin-block-start: 0;
+    }
+    
+  }
+}

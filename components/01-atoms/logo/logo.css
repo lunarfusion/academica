@@ -1,0 +1,13 @@
+.site-logo {
+  position: relative;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  /* flex: 0 0 10%; */
+  
+  height: 200px;
+  width: 200px;
+  border: 3px dashed fuchsia;
+}

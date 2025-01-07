@@ -1,0 +1,37 @@
+# These will be loaded on every pages.
+global-styling:
+  version: 01
+  css:
+    theme:
+      dist/academicatheme.css: {}
+      dist/base.css: {}
+  # js:
+  #   assets/js/main.js: { attributes: { type: "module" } }
+
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+    - core/drupalSettings
+
+  hot-module-replacement:
+    header: true
+    js:
+      http://localhost:12321/@vite/client: { type: external, attributes: { type: "module" } }
+
+
+css-variables:
+  css:
+    theme:
+      dist/vars.css: {preprocess: false}
+
+#
+# layouts:
+#   css:
+#     theme:
+#       dist/civictheme.layout.css: {}
+#
+# admin:
+#   css:
+#     theme:
+#       dist/civictheme.admin.css: {}

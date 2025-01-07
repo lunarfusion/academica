@@ -1,0 +1,118 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Button
+status: experimental
+
+props:
+  type: object
+  properties:
+    html_tag:
+      type: string
+      description: Button is either a button or a link that looks like a button.
+      enum:
+        - button
+        - a
+    url:
+      type: string
+      title: Button URL
+      format: iri-reference
+      default: http://wikipedia.com
+
+    input_id:
+      format: iri-reference
+      default: menu-toggle
+
+    has_icon:
+      type: string
+      title: Button with icon
+      description: Button icon modifier.
+      enum:
+        - true
+        - false
+      default: false
+
+    menu_toggler:
+      type: string
+      title: Menu Toggle
+      description: Is this the menu toggler?
+      enum:
+        - true
+        - false
+      default: false
+
+    variant:
+      type: string
+      title: Type
+      description: 'Button type: primary, secondary, tertiary.'
+      default: primary
+      enum:
+        - primary
+        - secondary
+        - tertiary
+      examples:
+        - primary
+
+slots:
+  # Content to display in the button
+  button_content:
+    title: Content
+    required: true
+    description: Content of the button.
+    examples:
+      - Read more
+  button_icon:
+    title: Icon
+    required: false
+    description: Optional button icon
+    examples:
+      - arrow-forward
+
+thirdPartySettings:
+  sdcStorybook:
+    stories:
+      primary:
+        title: Primary
+        props:
+          extra_classes:
+            - button--primary
+      secondary:
+        title: Secondary
+        props:
+          extra_classes:
+            - button--secondary
+      ghost:
+        title: Ghost
+        props:
+          extra_classes:
+            - button--ghost
+      nav:
+        title: Nav
+        props:
+          extra_classes:
+            - button--nav
+      circle:
+        title: Circle
+        props:
+          extra_classes:
+            - button--circle
+      small:
+        title: Small
+        props:
+          extra_classes:
+            - button--small
+      menu_toggle:
+        title: Menu Toggle
+        input_id: menu-toggle
+        props:
+          html_tag: button
+          url: false
+          has_icon: true
+          menu_toggler: true
+          extra_classes:
+            - button--menu-toggle
+            - button--ghost
+            - button--icon
+        slots:
+          required:
+             - icon
+          icon: menu-open
+          content: open

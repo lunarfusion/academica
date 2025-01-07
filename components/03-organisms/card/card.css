@@ -1,0 +1,116 @@
+.card {
+  position: relative;
+  width: 100%;
+  max-width: calc(var(--em-size-container-width) * 0.5);
+  min-width: 320px;
+  
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  margin-block: 2rem;
+  border-block-start: 4px solid var(--em-color-border-secondary-light);
+  box-shadow: var(--em-shadow-002);
+  border-end-end-radius: var(--em-size-radius-med);
+  border-end-start-radius: var(--em-size-radius-med);
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--em-size-sm-gap-component);
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  &__content p {
+    font-size: var(--em-size-text-med);
+  }
+  
+  &__title {
+    margin-block-start: 0;
+    border-inline-start: 6px solid var(--em-color-border-tertiary);
+    padding-inline-start: 0.5rem;
+    
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
+      margin: 0;
+    }
+  }
+  
+  &__summary {}
+  
+  &__image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    inline-size: 100%;
+    block-size: auto;
+    overflow: hidden;
+    transition: var(--em-transition-smooth);
+    
+    &::after {
+      width: 100%;
+      height: 100%;
+      background-color: var(--em-color-bg-secondary);
+      content: "";
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      mix-blend-mode: color;
+      transition: var(--em-transition-smooth);
+      transform: translateX(-100%);
+      mask-image: url("../images/shield-mask-partial.svg");
+      mask-repeat: no-repeat;
+      mask-size: auto 100%;
+      mask-position: right;
+      filter: drop-shadow(var(--em-shadow-003));
+    }
+  }
+  
+  &:hover {
+    .emory-card-block__image::after {
+      transform: translateX(0);
+    }
+  }
+  
+  /*** Variants **/
+  &--small {
+    max-width: calc(var(--em-size-container-width) * 0.25);
+    min-width: 160px;
+    
+    .card__content p {
+      font-size: var(--em-size-text-small);
+    }
+  }
+  
+  
+  &--horizontal {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  /*** Content Region = Card is horizontal ***/
+  .region--content &,
+  &--horizontal {
+    flex-direction: row-reverse;
+    gap: 1rem;
+    
+    &__image {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+  }
+}

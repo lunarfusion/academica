@@ -1,0 +1,35 @@
+# This is so your IDE knows about the syntax for fixes and autocomplete.
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Branding
+
+status: experimental
+
+props:
+  type: object
+
+  properties:
+    attributes:
+      # type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    site_logo:
+      type: string
+      format: iri-reference
+      examples:
+        - "../src/images/colorwheel.svg"
+    url:
+      type: string
+      title: Branding url
+      format: iri-reference
+
+slots:
+  site_name:
+    type: string
+    examples:
+      - Storybook University
+
+  site_slogan:
+    type: string
+    examples:
+      - 'A Higher Education Design System Demo'
+

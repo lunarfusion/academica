@@ -1,0 +1,50 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Title
+
+props:
+  type: object
+  properties:
+    html_tag:
+      type: string
+      description: xxxxxx
+      enum:
+        - h1
+        - h2
+        - h3
+        - h4
+slots:
+  text:
+    type: string
+    title: Title text
+    examples:
+      - Title of a Component's Content
+
+thirdPartySettings:
+  sdcStorybook:
+    stories:
+      page_title:
+        title: Page Title H1
+        slots:
+          text: Title of the Page
+        props:
+          html_tag: h1
+          extra_classes:
+            - page-title
+          
+      section_title:
+        title: Section Title H2
+        slots:
+          text: Title of a Section
+        props:
+          html_tag: h2
+          extra_classes:
+            - section-title
+
+      card_title:
+        title: Title of a Card
+        slots:
+          text: Card Title
+        props:
+          html_tag: h3
+          extra_classes:
+            - card__title

@@ -1,0 +1,49 @@
+.tag {
+  position: relative;
+  vertical-align: top;
+  
+  inline-size: auto;
+  inline-size: auto;
+  block-size: calc((var(--em-size-block-component-base) * 0.35) + (var(--em-size-xs-inner-vert-component) * 2));
+  
+  
+  display: inline-flex;
+  align-items: center;
+  gap: var(--em-size-sm-gap-component);
+  
+  /* padding-block: var(--em-size-xs-inner-vert-component);
+  padding-inline: var(--em-size-xs-inner-horiz-component); */
+  margin-inline-end: 1rem;
+  
+  border-radius: var(--em-size-radius-sm);
+  
+  font-family: var(--em-font-primary);
+  font-size: var(--em-size-text-extra-small);
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--em-color-fg-black-static);
+  /* background-color: var(--em-color-bg-primary-light); */
+  
+  &__icon {
+    /* border-radius: 100%;
+    padding: var(--em-size-xs-inner-vert-component); */
+  }
+  
+  &--university &__icon {
+    /* background-color: var(--em-color-tag-cat1); */
+  }
+  
+  &--students &__icon {
+    /* background-color: var(--em-color-tag-cat2); */
+  }
+  
+  &--faculty &__icon {
+    /* background-color: var(--em-color-tag-cat3); */
+  }
+  
+  &--research &__icon {
+    /* background-color: var(--em-color-tag-cat4); */
+  }
+}

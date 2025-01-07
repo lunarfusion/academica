@@ -1,0 +1,43 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Icon
+status: experimental
+
+props:
+  type: object
+  properties:
+    icon:
+      type: string
+      description: Icon Name
+      enum:
+        - arrow-backward
+        - arrow-forward
+        - menu-open
+        - menu-close
+      
+thirdPartySettings:
+  sdcStorybook:
+    stories:
+      
+      extra_small:
+        title: extra small icon
+        props:
+          extra_classes:
+            - icon--extra-small
+            
+      small:
+        title: small icon
+        props:
+          extra_classes:
+            - icon--small
+            
+      medium:
+        title: medium icon
+        props:
+          extra_classes:
+            - icon--medium
+            
+      large:
+        title: large icon
+        props:
+          extra_classes:
+            - icon--large

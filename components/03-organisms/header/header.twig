@@ -1,0 +1,9 @@
+<div{{ attributes.addClass('header') }}>
+{# first ref is component name, second is slot name from this component's YML #}
+  {% block branding %}{{ branding }}{% endblock %}
+  {% block button %}{{ menu_toggle }}{% endblock %}
+  
+  <div class="menu--wrapper" id="main-menu-hider">
+    {% block menu %}{{ menu_main }}{% endblock %}
+  </div>
+</div>

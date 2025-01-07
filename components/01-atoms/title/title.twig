@@ -1,0 +1,5 @@
+<{{ html_tag|default('h3') }}{{ attributes.addClass('title').addClass(extra_classes|default([])) }}>
+  {% block text %}
+    {{ text }}
+  {% endblock %}
+</{{ html_tag|default('h3') }}>

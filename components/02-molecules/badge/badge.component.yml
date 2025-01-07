@@ -1,0 +1,91 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Badge
+status: experimental
+
+# A badge is a small piece of content which conveys static information such as status. A badge is not interactive.
+props:
+  type: object
+  properties:
+    has_icon:
+      type: string
+      title: Badge with icon
+      description: Badge icon modifier
+      enum:
+        - true
+        - false
+      default: false                                        
+slots:
+  content:
+    title: Content
+    required: true
+    description: Content of the badge.
+    examples:
+       - Badge
+                        
+thirdPartySettings:
+  sdcStorybook:
+   stories: 
+     informative:
+      title: Informative
+      props:
+        has_icon: true
+        extra_classes:
+        - badge--informative
+      slots:
+        content: Informative Badge
+        badge_icon:
+          - type: component
+            component: "storybook-university:icon"
+            props:
+              icon: circle-check-solid
+              extra_classes:
+                - badge__icon
+                - icon--small
+     positive:
+      title: Positive
+      props:
+        has_icon: true
+        extra_classes:
+          - badge--positive  
+      slots:
+        content: Success Badge
+        badge_icon:
+        - type: component
+          component: "storybook-university:icon"
+          props:
+            icon: circle-check-solid
+            extra_classes:
+              - badge__icon
+              - icon--small
+     warning:
+       title: Warning
+       props:
+         has_icon: true
+         extra_classes:
+           - badge--warning 
+       slots:
+        content: Warning Badge
+        badge_icon:
+        - type: component
+          component: "storybook-university:icon"
+          props:
+            icon: triangle-exclamation-solid
+            extra_classes:
+              - badge__icon
+              - icon--small               
+     negative:
+        title: Negative
+        props:
+          has_icon: true
+          extra_classes:
+            - badge--negative    
+        slots:
+          content: Error Badge
+          badge_icon:
+            - type: component
+              component: "storybook-university:icon"
+              props:
+                icon: circle-xmark-solid
+                extra_classes:
+                  - badge__icon
+                  - icon--small

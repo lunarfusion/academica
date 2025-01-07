@@ -1,0 +1,125 @@
+/*!
+ * Primitive variables are named for their literal color and mapped to an HSL value
+ * The order for this document is
+ * 1 - hues
+ * 2 - lightness
+ * 3 - neutrals
+ * 4 - colors following the color wheel from 360:
+ * red, orange, yellow, green, blue, purple
+ */
+
+:root {
+  /** Hues ***/
+  --em-hue-white: 240;
+  --em-hue-black: 240;
+  
+  --em-hue-yellow: 42;
+  --em-hue-blue: 222;
+  --em-hue-cyan: 200;
+  
+  --em-hue-red: 360;
+  --em-hue-orange: 30;
+  --em-hue-green: 160;
+  
+  
+  /*** Lightness ***/
+  --em-lightness-100: 100%;
+  --em-lightness-000: 0%;
+  
+  /********* COLORS *********/
+  /*** Neutral ***/
+  --em-color-black: hsl(var(--em-hue-black), 10%, var(--em-lightness-000));
+  --em-color-gray-005: hsl(var(--em-hue-white), 10%, 5%);
+  --em-color-gray-010: hsl(var(--em-hue-white), 10%, 10%);
+  --em-color-gray-020: hsl(var(--em-hue-white), 10%, 20%);
+  --em-color-gray-030: hsl(var(--em-hue-white), 10%, 30%);
+  --em-color-gray-040: hsl(var(--em-hue-white), 10%, 40%);
+  --em-color-gray-050: hsl(var(--em-hue-white), 10%, 50%);
+  --em-color-gray-060: hsl(var(--em-hue-white), 10%, 60%);
+  --em-color-gray-070: hsl(var(--em-hue-white), 10%, 70%);
+  --em-color-gray-075: hsl(var(--em-hue-white), 10%, 75%);
+  --em-color-gray-080: hsl(var(--em-hue-white), 10%, 80%);
+  --em-color-gray-085: hsl(var(--em-hue-white), 10%, 85%);
+  --em-color-gray-090: hsl(var(--em-hue-white), 10%, 90%);
+  --em-color-gray-095: hsl(var(--em-hue-white), 10%, 95%);
+  --em-color-white: hsl(var(--em-hue-white), 10%, var(--em-lightness-100));
+  
+  /*** Blue ***/
+  --em-color-blue-010: hsl(var(--em-hue-blue), 98%, 10%);
+  --em-color-blue-020: hsl(var(--em-hue-blue), 98%, 20%);
+  --em-color-blue-030: hsl(var(--em-hue-blue), 98%, 30%);
+  --em-color-blue-040: hsl(var(--em-hue-blue), 80%, 40%);
+  --em-color-blue-050: hsl(var(--em-hue-blue), 80%, 50%);
+  --em-color-blue-060: hsl(var(--em-hue-blue), 80%, 60%);
+  --em-color-blue-070: hsl(var(--em-hue-blue), 80%, 70%);
+  --em-color-blue-080: hsl(var(--em-hue-blue), 80%, 80%);
+  --em-color-blue-085: hsl(var(--em-hue-blue), 80%, 85%);
+  --em-color-blue-090: hsl(var(--em-hue-blue), 80%, 90%);
+  --em-color-blue-093: hsl(var(--em-hue-blue), 80%, 93%);
+  --em-color-blue-095: hsl(var(--em-hue-blue), 80%, 95%);
+  --em-color-blue-097: hsl(var(--em-hue-blue), 80%, 97%);
+  
+  /*** Blue Alpha ***/
+  --em-color-blue-020-a70: hsla(var(--em-hue-blue), 98%, 20%, 0.7);
+  --em-color-blue-020-a75: hsla(var(--em-hue-blue), 98%, 20%, 0.75);
+  --em-color-blue-020-a90: hsla(var(--em-hue-blue), 98%, 20%, 0.9);
+  
+  /*** Cyan ***/
+  --em-color-cyan-010: hsl(var(--em-hue-cyan), 100%, 10%);
+  --em-color-cyan-020: hsl(var(--em-hue-cyan), 100%, 20%);
+  --em-color-cyan-030: hsl(var(--em-hue-cyan), 100%, 30%);
+  --em-color-cyan-040: hsl(var(--em-hue-cyan), 100%, 40%);
+  --em-color-cyan-045: hsl(var(--em-hue-cyan), 100%, 45%);
+  --em-color-cyan-050: hsl(var(--em-hue-cyan), 100%, 50%);
+  --em-color-cyan-060: hsl(var(--em-hue-cyan), 100%, 60%);
+  --em-color-cyan-070: hsl(var(--em-hue-cyan), 100%, 70%);
+  --em-color-cyan-075: hsl(var(--em-hue-cyan), 100%, 75%);
+  --em-color-cyan-080: hsl(var(--em-hue-cyan), 100%, 80%);
+  --em-color-cyan-085: hsl(var(--em-hue-cyan), 100%, 85%);
+  --em-color-cyan-090: hsl(var(--em-hue-cyan), 100%, 90%);
+  --em-color-cyan-095: hsl(var(--em-hue-cyan), 100%, 95%);
+  
+  /*** Yellow ***/
+  --em-color-yellow-010: hsl(var(--em-hue-yellow), 100%, 10%);
+  --em-color-yellow-020: hsl(var(--em-hue-yellow), 100%, 20%);
+  --em-color-yellow-030: hsl(var(--em-hue-yellow), 100%, 30%);
+  --em-color-yellow-040: hsl(var(--em-hue-yellow), 100%, 40%);
+  --em-color-yellow-050: hsl(var(--em-hue-yellow), 100%, 50%);
+  --em-color-yellow-060: hsl(var(--em-hue-yellow), 100%, 60%);
+  --em-color-yellow-070: hsl(var(--em-hue-yellow), 100%, 70%);
+  --em-color-yellow-080: hsl(var(--em-hue-yellow), 100%, 80%);
+  --em-color-yellow-090: hsl(var(--em-hue-yellow), 100%, 90%);
+  
+  /*** Red ***/
+  --em-color-red-010: hsl(var(--em-hue-red), 80%, 10%);
+  --em-color-red-020: hsl(var(--em-hue-red), 80%, 20%);
+  --em-color-red-030: hsl(var(--em-hue-red), 80%, 30%);
+  --em-color-red-040: hsl(var(--em-hue-red), 80%, 40%);
+  --em-color-red-050: hsl(var(--em-hue-red), 80%, 50%);
+  --em-color-red-060: hsl(var(--em-hue-red), 80%, 60%);
+  --em-color-red-070: hsl(var(--em-hue-red), 80%, 70%);
+  --em-color-red-080: hsl(var(--em-hue-red), 80%, 80%);
+  --em-color-red-090: hsl(var(--em-hue-red), 80%, 90%);
+  
+  /*** Orange ***/
+  --em-color-orange-010: hsl(var(--em-hue-orange), 80%, 10%);
+  --em-color-orange-020: hsl(var(--em-hue-orange), 80%, 20%);
+  --em-color-orange-030: hsl(var(--em-hue-orange), 80%, 30%);
+  --em-color-orange-040: hsl(var(--em-hue-orange), 80%, 40%);
+  --em-color-orange-050: hsl(var(--em-hue-orange), 80%, 50%);
+  --em-color-orange-060: hsl(var(--em-hue-orange), 80%, 60%);
+  --em-color-orange-070: hsl(var(--em-hue-orange), 80%, 70%);
+  --em-color-orange-080: hsl(var(--em-hue-orange), 80%, 80%);
+  --em-color-orange-090: hsl(var(--em-hue-orange), 80%, 90%);
+  
+  /*** Green ***/
+  --em-color-green-010: hsl(var(--em-hue-green), 80%, 10%);
+  --em-color-green-020: hsl(var(--em-hue-green), 80%, 20%);
+  --em-color-green-030: hsl(var(--em-hue-green), 80%, 30%);
+  --em-color-green-040: hsl(var(--em-hue-green), 80%, 40%);
+  --em-color-green-050: hsl(var(--em-hue-green), 80%, 50%);
+  --em-color-green-060: hsl(var(--em-hue-green), 80%, 60%);
+  --em-color-green-070: hsl(var(--em-hue-green), 80%, 70%);
+  --em-color-green-080: hsl(var(--em-hue-green), 80%, 80%);
+  --em-color-green-090: hsl(var(--em-hue-green), 80%, 90%);
+}

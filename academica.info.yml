@@ -1,0 +1,52 @@
+# These fields are required
+name: academica
+description: Academica is an experimental theme using atomic design principles
+type: theme
+core_version_requirement: ^11
+
+base theme: false
+screenshot: assets/images/screenshot.png
+'alt text': 'academica screenshot'
+favicon: 'assets/images/favicon.png'
+logo: 'assets/images/logo.svg'
+
+# Libraries
+libraries:
+  - academica/global-styling
+  - academica/css-variables
+  # - academica/fonts
+  - academica/hot-module-replacement
+
+dependencies:
+  - components:components
+
+regions:
+  top_menu: 'Top Menu'
+  header: 'Header'
+  main_menu: 'Main Navigation Menu'
+  banner: 'Banner'
+  admin_tasks: 'Admin Tasks'
+  highlighted: 'Highlighted'
+  breadcrumb: 'Breadcrumb'
+  content_top: 'Content Top'
+  page_title: 'Page title'
+  content: 'Content'
+  sidebar_left: 'Left sidebar'
+  sidebar_right: 'Right sidebar'
+  content_bottom: 'Content Bottom'
+  footer_top: Footer Top
+  footer: 'Footer'
+  footer_bottom: Footer Bottom
+
+components:
+  namespaces:
+    base:
+      - components/00-base
+    atoms:
+      - components/01-atoms
+    molecules:
+      - components/02-molecules
+    organisms:
+      - components/03-organisms
+    templates:
+      - components/04-templates

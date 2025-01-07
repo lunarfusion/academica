@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 800 800">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f50;
+      }
+
+      .cls-2 {
+        fill: #f05;
+      }
+
+      .cls-3 {
+        fill: #50f;
+      }
+
+      .cls-4 {
+        fill: #fa0;
+      }
+
+      .cls-5 {
+        fill: #0af;
+      }
+
+      .cls-6 {
+        fill: #f0f;
+      }
+
+      .cls-7 {
+        fill: lime;
+      }
+
+      .cls-8 {
+        fill: blue;
+      }
+
+      .cls-9 {
+        fill: #05f;
+      }
+
+      .cls-10 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 10px;
+      }
+
+      .cls-11 {
+        fill: #fff;
+      }
+
+      .cls-12 {
+        fill: #ff0;
+      }
+
+      .cls-13 {
+        fill: #f0a;
+      }
+
+      .cls-14 {
+        fill: #0f5;
+      }
+
+      .cls-15 {
+        fill: #a0f;
+      }
+
+      .cls-16 {
+        fill: red;
+      }
+
+      .cls-17 {
+        fill: aqua;
+      }
+
+      .cls-18 {
+        fill: #0fa;
+      }
+
+      .cls-19 {
+        fill: #af0;
+      }
+
+      .cls-20 {
+        fill: #5f0;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.3, SVG Export Plug-In . SVG Version: 1.2.0 Build 164)  -->
+  <g>
+    <g id="Layer_1">
+      <path class="cls-11" d="M467.9,17h0c211.1,37.2,352.1,238.5,314.8,449.6h0c-37.2,211.1-238.5,352.1-449.6,314.8h0C121.9,744.3-19,543,18.2,331.9h0C55.4,120.7,256.7-20.2,467.9,17Z" shape-rendering="auto"/>
+      <g>
+        <path class="cls-6" d="M400.5,399.3L60.5,203c22.9-39.7,52.5-75,87.6-104.4l252.3,300.7Z" shape-rendering="optimizeQuality"/>
+        <path class="cls-13" d="M400.5,399.3L148.2,98.6c35.1-29.4,75-52.5,118.1-68.2l134.2,368.8Z" shape-rendering="optimizeQuality"/>
+        <path class="cls-2" d="M400.5,399.3L266.2,30.4c43-15.7,88.5-23.7,134.2-23.7v392.5Z" shape-rendering="optimizeQuality"/>
+        <path class="cls-16" d="M400.5,399.3V6.8c45.8,0,91.2,8,134.2,23.7l-134.2,368.8Z" shape-rendering="optimizeQuality"/>
+        <path class="cls-1" d="M400.5,399.3L534.7,30.4c43,15.7,83,38.7,118.1,68.2l-252.3,300.7Z" shape-rendering="optimizeQuality"/>
+        <path class="cls-4" d="M400.5,399.3l252.3-300.7c35.1,29.4,64.7,64.8,87.6,104.4l-339.9,196.2Z" shape-rendering="optimizeQuality"/>
+        <path class="cls-12" d="M400.5,399.3l339.9-196.3c22.9,39.7,38.7,83,46.6,128.1l-386.5,68.2Z" shape-rendering="optimizeQuality"/>
+        <path class="cls-19" d="M400.5,399.3l386.5-68.2c7.9,45.1,7.9,91.2,0,136.3l-386.5-68.2Z" shape-rendering="optimizeQuality"/>
+        <path class="cls-20" d="M400.5,399.3l386.5,68.2c-8,45.1-23.7,88.4-46.6,128.1l-339.9-196.3Z" shape-rendering="optimizeQuality"/>
+        <path class="cls-7" d="M400.5,399.3l339.9,196.3c-22.9,39.7-52.5,75-87.6,104.4l-252.3-300.7Z" shape-rendering="optimizeQuality"/>
+        <path class="cls-14" d="M400.5,399.3l252.3,300.7c-35.1,29.4-75,52.5-118.1,68.2l-134.2-368.8Z" shape-rendering="optimizeQuality"/>
+        <path class="cls-18" d="M400.5,399.3l134.2,368.8c-43,15.7-88.5,23.7-134.2,23.7v-392.5Z" shape-rendering="optimizeQuality"/>
+        <path class="cls-17" d="M400.5,399.3v392.5c-45.8,0-91.2-8-134.2-23.7l134.2-368.8Z" shape-rendering="optimizeQuality"/>
+        <path class="cls-5" d="M400.5,399.3l-134.2,368.8c-43-15.7-83-38.7-118.1-68.2l252.3-300.7Z" shape-rendering="optimizeQuality"/>
+        <path class="cls-9" d="M400.5,399.3l-252.3,300.7c-35.1-29.4-64.7-64.8-87.6-104.4l339.9-196.3Z" shape-rendering="optimizeQuality"/>
+        <path class="cls-8" d="M400.5,399.3L60.5,595.5c-22.9-39.7-38.7-83-46.6-128.1l386.5-68.2Z" shape-rendering="optimizeQuality"/>
+        <path class="cls-3" d="M400.5,399.3L13.9,467.4c-8-45.1-8-91.2,0-136.3l386.5,68.2Z" shape-rendering="optimizeQuality"/>
+        <path class="cls-15" d="M400.5,399.3L13.9,331.1c8-45.1,23.7-88.4,46.6-128.1l339.9,196.3Z" shape-rendering="optimizeQuality"/>
+      </g>
+      <path class="cls-10" d="M467.9,17h0c211.1,37.2,352.1,238.5,314.8,449.6h0c-37.2,211.1-238.5,352.1-449.6,314.8h0C121.9,744.3-19,543,18.2,331.9h0C55.4,120.7,256.7-20.2,467.9,17Z" shape-rendering="auto"/>
+    </g>
+  </g>
+</svg>

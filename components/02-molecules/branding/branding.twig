@@ -1,0 +1,30 @@
+<div{{ attributes.addClass('branding') }}>
+  <div class="branding__row">
+
+    {% if site_logo %}
+      <a href="{{ url }}" rel="home" class="branding__logo">
+        <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
+      </a>
+    {% endif %}
+
+    {% if site_name or site_slogan %}
+      <div class="branding__site-name-slogan">
+
+        {% if site_name %}
+          <div class="branding__site-name">
+            <a href="{{ url }}" rel="home">
+              {% block site_name %}{{ site_name }}{% endblock %}
+            </a>
+          </div>
+        {% endif %}
+        {% if site_slogan %}
+          <div class="branding__site-slogan">
+            {% block site_slogan %}{{ site_slogan }}{% endblock %}
+          </div>
+        {% endif %}
+
+      </div>
+    {% endif %}
+
+  </div>
+</div>

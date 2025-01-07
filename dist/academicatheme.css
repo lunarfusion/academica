@@ -1,0 +1,4 @@
+/* To load on every page */
+@viewport {
+  width: device-width;
+}

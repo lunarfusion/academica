@@ -1,0 +1,54 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Paragraph
+status: experimental
+
+props:
+  type: object
+
+slots:
+  content:
+    title: Content
+    required: true
+    description: Content of the paragraph.
+    examples:
+      - Across the centuries cosmos quasar from which we spring at the edge of forever the only home we've ever known. Vastness is bearable only through love a mote of dust suspended in a sunbeam with pretty stories for which there's little good evidence something incredible is waiting to be known vanquish the impossible circumnavigated. Emerged into consciousness dream of the mind's eye cosmic ocean courage of our questions invent the universe vastness is bearable only through love and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+
+thirdPartySettings:
+  sdcStorybook:
+    stories:
+      
+      lead:
+        title: Lead Paragraph
+        props:
+          extra_classes:
+            - lead
+        slots: 
+          content:
+            - Lead paragraph content occurs once per article and introduces normal paragraph content which follows. A lead paragraph occurs after the page title or article title and after a deck, but before the rest of the article's content.
+      
+      deck:
+        title: Deck
+        props:
+          extra_classes:
+            - deck
+        slots: 
+          content:
+            - A deck appears once per article, after the page title or article title, and before a lead paragraph. It should contain any descriptive content that may help to illucidate the heading content.
+      
+      kicker:
+        title: Kicker
+        props:
+          extra_classes:
+            - kicker
+        slots: 
+          content:
+            - A kicker is non-heading text which introduces a heading.
+      
+      small:
+        title: Small
+        props:
+          extra_classes:
+            - text-small
+        slots: 
+          content:
+            - Reduced size text for use in cutlines, figcaptions, tags and badges, and card details.

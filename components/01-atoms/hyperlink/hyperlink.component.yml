@@ -1,0 +1,30 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Hyperlink
+status: experimental
+
+props:
+  type: object
+
+slots:
+  link_content:
+    title: Content
+    required: true
+    description: Content of the Link
+    examples:
+      - Sphinx of black quartz, judge my vow
+  link_url:
+    title: URL
+    required: true
+    description: URL destination of the link
+    examples:
+      - https://www.wikipedia.org
+
+thirdPartySettings:
+  sdcStorybook:
+    stories:
+      
+      cta_link:
+        title: Call-to-action Link
+        props:
+          extra_classes:
+            - cta-link

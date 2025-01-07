@@ -1,0 +1,28 @@
+i,
+.icon {
+  color: var(--em-color-fg-secondary);
+  display: inline-block;
+  height: var(--em-size-block-component-base);
+  width: var(--em-size-block-component-base);
+  
+  /*** Variants - size ***/
+  &--extra-small {
+    block-size: calc(var(--em-size-block-component-base) * 0.35);
+    inline-size: calc(var(--em-size-block-component-base) * 0.35);
+  }
+  
+  &--small {
+    block-size: calc(var(--em-size-block-component-base) * 0.65);
+    inline-size: calc(var(--em-size-block-component-base) * 0.65);
+  }
+  
+  &--medium {
+    height: var(--em-size-block-component-base);
+    width: var(--em-size-block-component-base);
+  }
+  
+  &--large {
+    block-size: calc(var(--em-size-block-component-base) * 1.25);
+    inline-size: calc(var(--em-size-block-component-base) * 1.25);
+  }
+}

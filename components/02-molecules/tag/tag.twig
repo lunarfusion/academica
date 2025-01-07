@@ -1,0 +1,6 @@
+<span{{ attributes.addClass('tag').addClass(extra_classes|default([])) }}>
+    <span class="tag__icon icon icon--extra-small">
+      {{ source(path ~ '../src/icons/' ~ tag_icon ~ '.svg') }}
+    </span>
+  {{ tag_content }}
+</span>

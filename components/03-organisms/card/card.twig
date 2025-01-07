@@ -1,0 +1,25 @@
+<div{{attributes.addClass('card').addClass(card_classes|default([])) }}>
+  <div class="card__content">
+    {{ content }}
+    
+    {% block title %}{{ card_title }}{% endblock %}
+
+    <div class="blocky-block-block">
+      {{ description|raw }}
+      {% include "components/02-molecules/button/button.twig" with {
+        html_tag: 'a',
+        variant: 'ghost',
+      } %}
+    </div>
+  </div>
+
+
+  {% if card_image %}
+    <div class="card__image">
+      <img src="{{ card_image }}" alt="placeholder" />
+    </div>
+  {% endif %}
+</div>
+
+
+

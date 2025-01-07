@@ -1,0 +1,21 @@
+<{{ html_tag|default('button')}}{{attributes.setAttribute('href',url).setAttribute('id',input_id).addClass('button').addClass(extra_classes|default([]))}}>
+  {% block button_content %}
+
+    <span class="button__content">
+      {% if menu_toggler == true %}
+        <span class="open-text">OPEN</span>
+        <span class="close-text">CLOSE</span>
+
+        {% else %}
+          {{ button_content }}
+      {% endif %}
+    </span>
+
+    {% if has_icon == true %}
+      <span class="button__icon">
+          {{ source(path ~ '../src/icons/' ~ button_icon ~ '.svg') }}
+      </span>
+    {% endif %}
+
+  {% endblock %}
+</{{ html_tag|default('button') }}>

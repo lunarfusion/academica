@@ -1,0 +1,48 @@
+# This is so your IDE knows about the syntax for fixes and autocomplete.
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Header
+status: experimental
+
+props:
+  type: object
+         
+js:
+ header.js: { attributes: { defer: true } }
+    
+thirdPartySettings:
+  sdcStorybook:
+    stories:
+      
+      default:
+        props:
+          label: Site header    
+        slots:
+          branding:
+            - type: component
+              component: "storybook-university:branding"
+
+          menu_toggle:
+            - type: component
+              component: "storybook-university:button" 
+              props:
+                input_id: menu-toggle
+                html_tag: button
+                url: false
+                has_icon: true
+                menu_toggler: true
+                extra_classes:
+                  - button--menu-toggle
+                  - button--ghost
+                  - button--icon
+              slots:
+                icon: menu-open
+                content: open  
+                 
+          menu_main:
+            - type: component
+              component: "storybook-university:menu"
+              props:
+                menu_id:
+                  - main-menu
+                extra_classes:
+                  - menu--main

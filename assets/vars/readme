@@ -1,0 +1,8 @@
+Include in each component until we figure out something better:
+
+@import "../vars/vars-colors-primatives.css";
+@import "../vars/vars-colors-semantics.css";
+@import "../vars/vars-fonts.css";
+@import "../vars/vars-shadows.css";
+@import "../vars/vars-spacing.css";
+@import "../vars/vars-transitions-animations.css";
