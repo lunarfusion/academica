@@ -31,7 +31,7 @@ css-variables:
 #     theme:
 #       dist/civictheme.layout.css: {}
 #
-# admin:
-#   css:
-#     theme:
-#       dist/civictheme.admin.css: {}
+admin:
+  css:
+    theme:
+      dist/academica.admin.css: {}

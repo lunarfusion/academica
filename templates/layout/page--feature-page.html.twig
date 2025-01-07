@@ -1,0 +1,69 @@
+{#
+/**
+ *
+ * Feature page template with custom content row layouts using the paragraphs module
+ *
+ */
+#}
+
+<div class="page page--feature">
+  <header role="banner" class="container container--full">
+    {{ page.top_menu }}
+    {{ page.header }}
+  </header>
+
+  <div class="container container--full">
+   {{ page.main_menu }}
+  </div>
+
+  <main role="main" id="main-content">
+
+    <div class="container container--full">
+      {{ page.banner }}
+    </div>
+
+    <div class="container">
+      {{ page.highlighted }}
+    </div>
+
+    <div class="admin-tasks">
+      {{ page.admin_tasks }}
+    </div>
+
+    <div class="container">
+      {{ page.breadcrumb }}
+    </div>
+
+    {% if page.content_top %}
+    <div class="container">
+      {{ page.content_top }}
+    </div>
+    {% endif %}
+
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    <div class="container">
+        {{ page.page_title }}
+    </div>
+
+    <!--sidebars are disabled on full width pages which use the paragraphs module -->
+
+    <!--page content including paragraphs content rows -->
+    <div class="container container--full">
+      {{ page.content }}
+    </div>
+
+    {% if page.content_bottom %}
+    <div class="container">
+      {{ page.content_bottom }}
+    </div>
+    {% endif %}
+
+  </main>
+
+  {% if page.footer %}
+    <footer role="contentinfo" class="container container--full">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
+
+</div>{# /.page #}

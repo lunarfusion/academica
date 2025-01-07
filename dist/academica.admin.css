@@ -1,0 +1,61 @@
+/*!
+ * Styling for admin tasks, such as page editing and logout
+ * Intended for the admin_tasks region of this theme
+ */
+
+
+/*** Drupal admin elements region ***/
+.admin-tasks {
+  position: relative;
+  width: 100%;
+  max-width: var(--em-size-container-width);
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+}
+
+.admin-tasks .region {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.admin-tasks .contextual-region {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-tasks .contextual {
+  transform: translateY(-1rem);
+}
+
+.admin-tasks ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.admin-tasks .menu,
+.admin-tasks .tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.admin-tasks .menu,
+.admin-tasks .block-menu .menu {
+  background-color: transparent;
+}
+
+.admin-tasks .tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.admin-tasks .block-menu .menu-item,
+.admin-tasks .tabs li {}
+}

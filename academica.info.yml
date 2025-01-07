@@ -14,6 +14,7 @@ logo: 'assets/images/logo.svg'
 libraries:
   - academica/global-styling
   - academica/css-variables
+  - academica/admin
   # - academica/fonts
   - academica/hot-module-replacement
 
