@@ -4,15 +4,15 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--em-color-bg-primary);
-  padding-inline: var(--em-size-baseline);
-  padding-block: var(--em-size-baseline);
+  background-color: var(--academica-color-bg-primary);
+  padding-inline: var(--academica-size-baseline);
+  padding-block: var(--academica-size-baseline);
   
   &__row {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    max-width: var(--em-size-container-width);
+    max-width: var(--academica-size-container-width);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -37,7 +37,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    flex: 0 0 10%;
+    flex: 0 0 9%;
     
     .site-logo {
       position: relative;
@@ -62,7 +62,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 0.5rem;
-    padding-inline-start: 1rem;
+    padding-inline-start: 2rem;
   }
   
   &__site-slogan {
@@ -71,7 +71,7 @@
     font-size: 1.3rem;
     font-weight: 400;
     
-    font-family: var(--em-font-serif);
+    font-family: var(--academica-font-serif);
     font-style: normal;
     font-optical-sizing: auto;
     text-transform: uppercase;
@@ -80,7 +80,7 @@
     text-align: left;
     width: 100%;
     
-    color: var(--em-color-fg-white-static);
+    color: var(--academica-color-fg-white-static);
   }
   
   &__site-name {
@@ -94,19 +94,19 @@
       line-height: 1;
       font-weight: 600;
       
-      font-family: var(--em-font-secondary);
+      font-family: var(--academica-font-secondary);
       font-style: normal;
       font-optical-sizing: auto;
       
       text-align: left;
       width: 100%;
       
-      color: var(--em-color-fg-white-static);
+      color: var(--academica-color-fg-white-static);
     }
     
     a:hover,
     a:focus {
-      color: var(--em-color-fg-white-static);
+      color: var(--academica-color-fg-white-static);
     }
   }
   
@@ -151,7 +151,7 @@
         justify-content: flex-start;
         gap: 0;
         margin-left: 0;
-        flex: 0 0 calc(100% - var(--em-size-mobile-menu-toggle));
+        flex: 0 0 calc(100% - var(--academica-size-mobile-menu-toggle));
       }
       
       .branding__site-name-slogan {

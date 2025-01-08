@@ -1,62 +1,59 @@
-/***
-  BLOCK = secondary block menu
-  HTML element = <nav> element
-  REGION = region--sidebar-right, region--sidebar-left, region--footer
-***/
-
-.menu {
-  &--wrapper {
+.menu--wrapper {
     position: relative;
     width: 100%;
     display: flex;
     flex-direction: row;
   }
-}
 
 /** menu wrapper level 2 for dropdown submenu show/hide **/
+
 .menu .menu--wrapper {
   position: relative;
   overflow: hidden;
-  transition: var(--em-transition-smooth);
+  transition: var(--academica-transition-smooth);
 }
 
 /*** UL element ***/
+
 .menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
   inline-size: 100%;
-  
-  &--vertical {
+}
+
+.menu--vertical {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    
-    .menu-item {
+  }
+
+.menu--vertical .menu-item {
       inline-size: 100%;
     }
-  }
-  
-  &--horizontal {
+
+.menu--horizontal {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
   }
-}
 
 /*** LI element ***/
+
 .menu-item {
   position: relative;
   margin: 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  transition: var(--em-transition-basic);
-  background-color: var(--em-color-action-nav-bg-default);
-  box-shadow: var(--em-color-bg-base) 0px 0px 0px 1.5px;
-  
-  /*** Has Child Menu - dropdown indicator ***/
-  &--has-children::after {
+  transition: var(--academica-transition-basic);
+  background-color: var(--academica-color-action-nav-bg-default);
+  box-shadow: var(--academica-color-bg-base) 0px 0px 0px 1.5px;
+}
+
+/*** Has Child Menu - dropdown indicator ***/
+
+.menu-item--has-children::after {
     position: absolute;
     display: block;
     right: 0;
@@ -68,20 +65,19 @@
     font-family: "Font Awesome 5 Free";
     font-weight: 700;
     font-size: 1rem;
-    color: var(--em-color-fg-secondary);
-    width: var(--em-size-menu-dropdown-icon);
-    height: var(--em-size-menu-dropdown-icon);
-    transition: var(--em-transition-basic);
+    color: var(--academica-color-fg-secondary);
+    width: var(--academica-size-menu-dropdown-icon);
+    height: var(--academica-size-menu-dropdown-icon);
+    transition: var(--academica-transition-basic);
   }
-  
-  &--expanded::after {
+
+.menu-item--expanded::after {
     transform: scaleY(-1);
   }
-  
-  &--active-trail {
-    
-    /*** Active indicator ***/
-    &::before {
+
+/*** Active indicator ***/
+
+.menu-item--active-trail::before {
       width: 0;
       height: calc(100% + 2px);
       content: "";
@@ -90,18 +86,18 @@
       top: 0;
       margin-top: -2px;
       left: 0;
-      transition: var(--em-transition-smooth);
-      background-color: var(--em-color-active-indicator);
-      width: var(--em-size-border-active-item);
+      transition: var(--academica-transition-smooth);
+      background-color: var(--academica-color-active-indicator);
+      width: var(--academica-size-border-active-item);
     }
-  }
-  
-  /*** Text styles shared by linked and non-lined menu items ***/
-  span,
-  a,
-  button {
+
+/*** Text styles shared by linked and non-lined menu items ***/
+
+.menu-item span,
+  .menu-item a,
+  .menu-item button {
     position: relative;
-    padding: var(--em-size-inner-menu-item-vertical) var(--em-size-inner-menu-item-horizontal);
+    padding: var(--academica-size-inner-menu-item-vertical) var(--academica-size-inner-menu-item-horizontal);
     display: block;
     block-size: 100%;
     
@@ -109,10 +105,10 @@
     font-weight: 700;
     line-height: 1.2;
     text-decoration: none;
-    color: var(--em-color-action-nav-fg-default);
+    color: var(--academica-color-action-nav-fg-default);
     text-align: left;
     
-    transition: var(--em-transition-basic);
+    transition: var(--academica-transition-basic);
     background: transparent;
     cursor: pointer;
     border-radius: 0;
@@ -120,12 +116,14 @@
     box-sizing: border-box;
     
     /*** Focus Indicator ***/
-    border-width: var(--em-size-thickness-focus-indicator);
+    border-width: var(--academica-size-thickness-focus-indicator);
     border-style: solid;
     border-color: transparent;
-    
-    /*** Active indicator ***/
-    &::before {
+  }
+
+/*** Active indicator ***/
+
+.menu-item span::before, .menu-item a::before, .menu-item button::before {
       width: 0;
       height: calc(100% + 2px);
       content: "";
@@ -134,175 +132,186 @@
       top: 0;
       left: -1px;
       margin: auto;
-      transition: var(--em-transition-smooth);
+      transition: var(--academica-transition-smooth);
     }
-    
-    &:hover::before,
-    &.is-active::before,
-    &.is-active:hover::before {
-      width: calc(var(--em-size-border-active-item) - 1px);
+
+.menu-item span:hover::before,
+    .menu-item span.is-active::before,
+    .menu-item span.is-active:hover::before,
+    .menu-item a:hover::before,
+    .menu-item a.is-active::before,
+    .menu-item a.is-active:hover::before,
+    .menu-item button:hover::before,
+    .menu-item button.is-active::before,
+    .menu-item button.is-active:hover::before {
+      width: calc(var(--academica-size-border-active-item) - 1px);
     }
-    
-    /* is not active hover */
-    &:hover::before {
-      background-color: var(--em-color-hover-indicator);
+
+/* is not active hover */
+
+.menu-item span:hover::before, .menu-item a:hover::before, .menu-item button:hover::before {
+      background-color: var(--academica-color-hover-indicator);
     }
-    
-    /* is active + hover */
-    &.is-active::before,
-    &.is-active:hover::before {
-      background-color: var(--em-color-active-indicator);
+
+/* is active + hover */
+
+.menu-item span.is-active::before,
+    .menu-item span.is-active:hover::before,
+    .menu-item a.is-active::before,
+    .menu-item a.is-active:hover::before,
+    .menu-item button.is-active::before,
+    .menu-item button.is-active:hover::before {
+      background-color: var(--academica-color-active-indicator);
     }
-    
-    /*** States ***/
-    &:hover {
-      color: var(--em-color-action-nav-fg-hover);
+
+/*** States ***/
+
+.menu-item span:hover, .menu-item a:hover, .menu-item button:hover {
+      color: var(--academica-color-action-nav-fg-hover);
       border-color: transparent;
       outline: none;
-      background-color: var(--em-color-action-nav-bg-hover);
+      background-color: var(--academica-color-action-nav-bg-hover);
     }
-    
-    &:focus,
-    &:focus-visible {
-      color: var(--em-color-action-nav-fg-focus);
+
+.menu-item span:focus,
+    .menu-item span:focus-visible,
+    .menu-item a:focus,
+    .menu-item a:focus-visible,
+    .menu-item button:focus,
+    .menu-item button:focus-visible {
+      color: var(--academica-color-action-nav-fg-focus);
       outline: none;
-      background-color: var(--em-color-action-nav-bg-focus);
-      border-color: var(--em-color-focus-indicator);
+      background-color: var(--academica-color-action-nav-bg-focus);
+      border-color: var(--academica-color-focus-indicator);
     }
-    
-    &:active,
-    &.is-active {
-      color: var(--em-color-action-nav-fg-active);
-      background-color: var(--em-color-action-nav-bg-active);
+
+.menu-item span:active,
+    .menu-item span.is-active,
+    .menu-item a:active,
+    .menu-item a.is-active,
+    .menu-item button:active,
+    .menu-item button.is-active {
+      color: var(--academica-color-action-nav-fg-active);
+      background-color: var(--academica-color-action-nav-bg-active);
       //border-color: transparent;
       outline: none;
       box-shadow: none;
-      
-      /*** prevent focus from firing on click ***/
-      &:-webkit-focus-ring {
+    }
+
+/*** prevent focus from firing on click ***/
+
+.menu-item span:active:-webkit-focus-ring, .menu-item span.is-active:-webkit-focus-ring, .menu-item a:active:-webkit-focus-ring, .menu-item a.is-active:-webkit-focus-ring, .menu-item button:active:-webkit-focus-ring, .menu-item button.is-active:-webkit-focus-ring {
         border-color: transparent;
         outline: none;
         box-shadow: none;
       }
-    }
-  }
-  
-  /* active/hover indicator is horizontal */
-  .menu--horizontal & {
-    
-    a::before,
-    span::before,
-    button::before {
+
+/* active/hover indicator is horizontal */
+
+.menu--horizontal .menu-item a::before,
+    .menu--horizontal .menu-item span::before,
+    .menu--horizontal .menu-item button::before {
       width: calc(100% + 2px);
-      height: calc(var(--em-size-border-active-item) - 1px);
+      height: calc(var(--academica-size-border-active-item) - 1px);
       bottom: 0;
       top: unset;
     }
+
+.menu-item--active-trail button::before {
+    width: calc(var(--academica-size-border-active-item) - 1px);
+    background-color: var(--academica-color-active-indicator);
   }
-  
-  &--active-trail button::before {
-    width: calc(var(--em-size-border-active-item) - 1px);
-    background-color: var(--em-color-active-indicator);
-  }
-  
-  /*** prevent focus from firing on click ***/
-  &:-webkit-focus-ring {
+
+/*** prevent focus from firing on click ***/
+
+.menu-item:-webkit-focus-ring {
     border-color: transparent;
     outline: none;
     box-shadow: none;
   }
-}
 
 /*** Level 2 child menu  ***/
+
 .menu .menu {
   position: relative;
   padding: 0;
   display: flex;
   flex-direction: column;
   min-width: 100%;
-  transition: var(--em-transition-smooth);
+  transition: var(--academica-transition-smooth);
   background-color: transparent;
   margin-block-start: -100%;
-  
-  .menu-item {
+}
+
+.menu .menu .menu-item {
     width: 100%;
-    margin-inline-start: calc(var(--em-size-border-active-item) + 1px);
+    margin-inline-start: calc(var(--academica-size-border-active-item) + 1px);
     background-color: transparent;
-    box-shadow: var(--em-color-bg-base) 1px 0px 0px 0.5px;
-    
-    &:last-child {
+    box-shadow: var(--academica-color-bg-base) 1px 0px 0px 0.5px;
+  }
+
+.menu .menu .menu-item:last-child {
       border-block-end: 0;
     }
-    
-    &:hover,
-    &:focus {
+
+.menu .menu .menu-item:hover,
+    .menu .menu .menu-item:focus {
       background-color: transparent;
     }
-    
-    &--active-trail,
-    &.active {
+
+.menu .menu .menu-item--active-trail,
+    .menu .menu .menu-item.active {
       background-color: transparent;
     }
-    
-    /* child menu item active indicator is narrower */
-    &--active-trail button::before,
-    &--active-trail button:hover::before {
-      width: calc(var(--em-size-border-active-item) * 0.5);
+
+/* child menu item active indicator is narrower */
+
+.menu .menu .menu-item--active-trail button::before,
+    .menu .menu .menu-item--active-trail button:hover::before {
+      width: calc(var(--academica-size-border-active-item) * 0.5);
     }
-  }
-  
-  a {
+
+.menu .menu a {
     font-size: 0.88rem;
     font-weight: 600;
-    //margin-inline-start: calc(var(--em-size-border-active-item) * 0.5);
-    
-    &:hover:before,
-    &.is-active::before,
-    &.is-active:hover:before {
-      width: calc(var(--em-size-border-active-item) * 0.5);
+    //margin-inline-start: calc(var(--academica-size-border-active-item) * 0.5);
+  }
+
+.menu .menu a:hover:before,
+    .menu .menu a.is-active::before,
+    .menu .menu a.is-active:hover:before {
+      width: calc(var(--academica-size-border-active-item) * 0.5);
       opacity: 0.7;
     }
-  }
-}
 
 /** Menu Level 2 is Collapsed **/
-.menu-item--collapsed {
-  .menu {
+
+.menu-item--collapsed .menu {
     margin-block-start: -100%;
   }
-}
 
 /** Menu Level 2 is Expanded **/
-.menu-item--expanded {
-  .menu {
+
+.menu-item--expanded .menu {
     margin-block-start: 0;
   }
-}
 
 /*** Mobile ***/
+
 @media (max-width: 992px) {
-  & {
-    .menu-item {
       
-      &--has-children::after,
-      &--has-children::after {
+      & .menu-item--has-children::after,
+      & .menu-item--has-children::after {
         margin-inline-end: 1rem;
         font-size: 1.2rem;
       }
       
-      span,
-      a,
-      button {
+      & .menu-item span,
+      & .menu-item a,
+      & .menu-item button {
         font-size: 1.2rem;
       }
-    }
-    
-    .menu .menu {
-      .menu-item {
-        a {
+        & .menu .menu .menu-item a {
           font-size: 1rem;
         }
-      }
-    }
-  }
 }

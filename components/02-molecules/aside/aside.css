@@ -4,30 +4,27 @@
   padding: 0.75rem 1.25rem;
   margin: 1.5rem;
   max-width: 350px;
-  border-block: 4px solid var(--em-color-border-secondary-light);
-  
+  border-block: 4px solid var(--academica-color-border-secondary-light);
+}
+
   /* content */
-  &__title {
+  .aside__title {
     margin-block: 0;
-    font-size: var(--em-size-text-med);
+    font-size: var(--academica-size-text-med);
     font-weight: 600;
   }
-  
-  &__content {
-    font-family: var(--em-font-primary);
-    font-size: var(--em-size-text-small);
+  .aside__content {
+    font-family: var(--academica-font-primary);
+    font-size: var(--academica-size-text-small);
     line-height: 1.6;
     font-weight: 400;
   }
-  
   /* variants */
-  &--float-left {
+  .aside--float-left {
     float: left;
     margin-inline-start: 0;
   }
-  
-  &--float-right {
+  .aside--float-right {
     float: right;
     margin-inline-end: 0;
   }
-}

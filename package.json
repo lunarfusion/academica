@@ -1,8 +1,10 @@
 {
   "name": "academica",
+  "description": "",
   "private": true,
   "type": "module",
   "version": "0.0.1",
+  "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -16,9 +18,9 @@
     "autoprefixer": "^10.4.20",
     "heroicons": "^2.2.0",
     "postcss-import": "^16.1.0",
-    "storybook-addon-sdc": "^0.5.1",
     "vite": "^5.4.10",
-    "vite-plugin-live-reload": "^3.0.3"
+    "vite-plugin-live-reload": "^3.0.3",
+    "storybook-addon-sdc": "^0.5.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.2",

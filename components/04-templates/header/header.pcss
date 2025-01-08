@@ -1,3 +1,4 @@
+/*** TBD - integrate menu button into main menu instead ***/
 .header {
   position: relative;
   display: flex;
@@ -23,11 +24,11 @@
   }
   
   .menu--main {
-    background-color: var(--em-color-action-nav-bg-default);
+    background-color: var(--academica-color-action-nav-bg-default);
   }
   
   .menu-item {
-    box-shadow: var(--em-color-bg-base) 0 1.5px 0 1.5px;
+    box-shadow: var(--academica-color-bg-base) 0 1.5px 0 1.5px;
   }
   
   /*** Desktop size - Mobile Responsive Menu Drawer ***/
@@ -76,12 +77,12 @@
       top: 0;
       width: 100%;
       z-index: 999;
-      transition: var(--em-transition-smooth);
-      /* margin-block-start: var(--em-size-mobile-menu-toggle); */
+      transition: var(--academica-transition-smooth);
+      /* margin-block-start: var(--academica-size-mobile-menu-toggle); */
     }
     
     .menu-item {
-      box-shadow: var(--em-color-bg-base) 0 0 0 1.5px;
+      box-shadow: var(--academica-color-bg-base) 0 0 0 1.5px;
     }
     
     .main-menu-content-wrapper {
@@ -90,7 +91,7 @@
       align-items: flex-start;
       width: 100%;
       z-index: 999;
-      transition: var(--em-transition-smooth);
+      transition: var(--academica-transition-smooth);
       
       &.menu-opened {
         transform: translateX(0);

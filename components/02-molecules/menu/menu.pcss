@@ -1,0 +1,302 @@
+.menu {
+  &--wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/** menu wrapper level 2 for dropdown submenu show/hide **/
+.menu .menu--wrapper {
+  position: relative;
+  overflow: hidden;
+  transition: var(--academica-transition-smooth);
+}
+
+/*** UL element ***/
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  inline-size: 100%;
+  
+  &--vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    .menu-item {
+      inline-size: 100%;
+    }
+  }
+  
+  &--horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+/*** LI element ***/
+.menu-item {
+  position: relative;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  transition: var(--academica-transition-basic);
+  background-color: var(--academica-color-action-nav-bg-default);
+  box-shadow: var(--academica-color-bg-base) 0px 0px 0px 1.5px;
+  
+  /*** Has Child Menu - dropdown indicator ***/
+  &--has-children::after {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    margin-inline-end: 0.25rem;
+    content: "\f0d7";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--academica-color-fg-secondary);
+    width: var(--academica-size-menu-dropdown-icon);
+    height: var(--academica-size-menu-dropdown-icon);
+    transition: var(--academica-transition-basic);
+  }
+  
+  &--expanded::after {
+    transform: scaleY(-1);
+  }
+  
+  &--active-trail {
+    
+    /*** Active indicator ***/
+    &::before {
+      width: 0;
+      height: calc(100% + 2px);
+      content: "";
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      margin-top: -2px;
+      left: 0;
+      transition: var(--academica-transition-smooth);
+      background-color: var(--academica-color-active-indicator);
+      width: var(--academica-size-border-active-item);
+    }
+  }
+  
+  /*** Text styles shared by linked and non-lined menu items ***/
+  span,
+  a,
+  button {
+    position: relative;
+    padding: var(--academica-size-inner-menu-item-vertical) var(--academica-size-inner-menu-item-horizontal);
+    display: block;
+    block-size: 100%;
+    
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+    color: var(--academica-color-action-nav-fg-default);
+    text-align: left;
+    
+    transition: var(--academica-transition-basic);
+    background: transparent;
+    cursor: pointer;
+    border-radius: 0;
+    outline: none;
+    box-sizing: border-box;
+    
+    /*** Focus Indicator ***/
+    border-width: var(--academica-size-thickness-focus-indicator);
+    border-style: solid;
+    border-color: transparent;
+    
+    /*** Active indicator ***/
+    &::before {
+      width: 0;
+      height: calc(100% + 2px);
+      content: "";
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: -1px;
+      margin: auto;
+      transition: var(--academica-transition-smooth);
+    }
+    
+    &:hover::before,
+    &.is-active::before,
+    &.is-active:hover::before {
+      width: calc(var(--academica-size-border-active-item) - 1px);
+    }
+    
+    /* is not active hover */
+    &:hover::before {
+      background-color: var(--academica-color-hover-indicator);
+    }
+    
+    /* is active + hover */
+    &.is-active::before,
+    &.is-active:hover::before {
+      background-color: var(--academica-color-active-indicator);
+    }
+    
+    /*** States ***/
+    &:hover {
+      color: var(--academica-color-action-nav-fg-hover);
+      border-color: transparent;
+      outline: none;
+      background-color: var(--academica-color-action-nav-bg-hover);
+    }
+    
+    &:focus,
+    &:focus-visible {
+      color: var(--academica-color-action-nav-fg-focus);
+      outline: none;
+      background-color: var(--academica-color-action-nav-bg-focus);
+      border-color: var(--academica-color-focus-indicator);
+    }
+    
+    &:active,
+    &.is-active {
+      color: var(--academica-color-action-nav-fg-active);
+      background-color: var(--academica-color-action-nav-bg-active);
+      //border-color: transparent;
+      outline: none;
+      box-shadow: none;
+      
+      /*** prevent focus from firing on click ***/
+      &:-webkit-focus-ring {
+        border-color: transparent;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+  
+  /* active/hover indicator is horizontal */
+  .menu--horizontal & {
+    
+    a::before,
+    span::before,
+    button::before {
+      width: calc(100% + 2px);
+      height: calc(var(--academica-size-border-active-item) - 1px);
+      bottom: 0;
+      top: unset;
+    }
+  }
+  
+  &--active-trail button::before {
+    width: calc(var(--academica-size-border-active-item) - 1px);
+    background-color: var(--academica-color-active-indicator);
+  }
+  
+  /*** prevent focus from firing on click ***/
+  &:-webkit-focus-ring {
+    border-color: transparent;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+/*** Level 2 child menu  ***/
+.menu .menu {
+  position: relative;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  transition: var(--academica-transition-smooth);
+  background-color: transparent;
+  margin-block-start: -100%;
+  
+  .menu-item {
+    width: 100%;
+    margin-inline-start: calc(var(--academica-size-border-active-item) + 1px);
+    background-color: transparent;
+    box-shadow: var(--academica-color-bg-base) 1px 0px 0px 0.5px;
+    
+    &:last-child {
+      border-block-end: 0;
+    }
+    
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+    
+    &--active-trail,
+    &.active {
+      background-color: transparent;
+    }
+    
+    /* child menu item active indicator is narrower */
+    &--active-trail button::before,
+    &--active-trail button:hover::before {
+      width: calc(var(--academica-size-border-active-item) * 0.5);
+    }
+  }
+  
+  a {
+    font-size: 0.88rem;
+    font-weight: 600;
+    //margin-inline-start: calc(var(--academica-size-border-active-item) * 0.5);
+    
+    &:hover:before,
+    &.is-active::before,
+    &.is-active:hover:before {
+      width: calc(var(--academica-size-border-active-item) * 0.5);
+      opacity: 0.7;
+    }
+  }
+}
+
+/** Menu Level 2 is Collapsed **/
+.menu-item--collapsed {
+  .menu {
+    margin-block-start: -100%;
+  }
+}
+
+/** Menu Level 2 is Expanded **/
+.menu-item--expanded {
+  .menu {
+    margin-block-start: 0;
+  }
+}
+
+/*** Mobile ***/
+@media (max-width: 992px) {
+  & {
+    .menu-item {
+      
+      &--has-children::after,
+      &--has-children::after {
+        margin-inline-end: 1rem;
+        font-size: 1.2rem;
+      }
+      
+      span,
+      a,
+      button {
+        font-size: 1.2rem;
+      }
+    }
+    
+    .menu .menu {
+      .menu-item {
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,47 +1,36 @@
 /* @import "./components/icon/icon.css"; */
 /* how to import? */
-
 .badge {
   position: relative;
   vertical-align: top;
-  
   inline-size: auto;
-  block-size: calc((var(--em-size-block-component-base) * 0.75) + (var(--em-size-sm-inner-vert-component) * 2));
+  block-size: calc((var(--academica-size-block-component-base) * 0.75) + (var(--academica-size-sm-inner-vert-component) * 2));
   display: inline-flex;
   align-items: center;
-  gap: var(--em-size-md-gap-component);
+  gap: var(--academica-size-md-gap-component);
+  padding-block: var(--academica-size-sm-inner-vert-component);
+  padding-inline: var(--academica-size-sm-inner-horiz-component);
   
-  padding-block: var(--em-size-sm-inner-vert-component);
-  padding-inline: var(--em-size-sm-inner-horiz-component);
-  /* border-radius: var(--em-size-radius-extra-sm);
-  border-end-end-radius: var(--em-size-radius-med); */
-  
-  font-family: var(--em-font-primary);
-  font-size: var(--em-size-text-med);
+  font-family: var(--academica-font-primary);
+  font-size: var(--academica-size-text-med);
   line-height: 1;
   font-weight: 600;
-  color: var(--em-color-fg-black-static);
-  background-color: var(--em-color-bg-alert-informative);
-  
-  &__icon {
+  color: var(--academica-color-fg-black-static);
+  background-color: var(--academica-color-bg-alert-informative);
+}
+.badge__icon {
     position: relative;
     display: inline-block;
   }
-  
-  
-  &--informative {
-    background-color: var(--em-color-bg-alert-informative);
+.badge--informative {
+    background-color: var(--academica-color-bg-alert-informative);
   }
-  
-  &--positive {
-    background-color: var(--em-color-bg-alert-positive);
+.badge--positive {
+    background-color: var(--academica-color-bg-alert-positive);
   }
-  
-  &--warning {
-    background-color: var(--em-color-bg-alert-warning);
+.badge--warning {
+    background-color: var(--academica-color-bg-alert-warning);
   }
-  
-  &--negative {
-    background-color: var(--em-color-bg-alert-negative);
+.badge--negative {
+    background-color: var(--academica-color-bg-alert-negative);
   }
-}

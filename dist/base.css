@@ -2,7 +2,7 @@
 /*** RESETS ***/
 html {
   scroll-behavior: smooth;
-  accent-color: var(--em-color-action-primary-default);
+  accent-color: var(--academica-color-action-primary-default);
 }
 
 html,
@@ -21,11 +21,11 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--em-color-bg-base);
+  background-color: var(--academica-color-bg-base);
   
-  color: var(--em-color-fg-base);
+  color: var(--academica-color-fg-base);
   font-display: swap;
-  font-family: var(--em-font-primary);
+  font-family: var(--academica-font-primary);
 }
 
 @-o-viewport {
@@ -60,6 +60,22 @@ main {
   flex: 1;
 }
 
+/*** Utilities ***/
+.sr-only {
+  font-size: 0;
+  line-height: 0;
+  height: 0;
+  width: 0;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  color: transparent;
+}
+
+.m-0 {
+  margin: 0;
+}
+
 /*** Typography resets ***/
 h1,
 .h1,
@@ -73,12 +89,12 @@ h5,
 .h5,
 h6,
 .h6 {
-  color: var(--em-color-fg-base);
-  font-family: var(--em-font-serif);
+  color: var(--academica-color-fg-base);
+  font-family: var(--academica-font-serif);
   font-weight: 700;
   font-style: normal;
   font-optical-sizing: auto;
-  max-width: var(--em-size-charlimit-lg);
+  max-width: var(--academica-size-charlimit-lg);
   margin-block-start: 0;
   margin-block-end: 0.5rem;
 }
@@ -122,10 +138,4 @@ h6,
   font-size: 1.1rem;
   line-height: 1.3;
   margin-block-start: 0.5rem;
-}
-
-/*** Layout ***/
-.container {
-  max-inline-size: 1200px;
-  padding-inline: 1rem;
 }

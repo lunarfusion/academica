@@ -4,137 +4,137 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--em-color-bg-primary);
-  padding-inline: var(--em-size-baseline);
-  padding-block: var(--em-size-baseline);
+  background-color: var(--academica-color-bg-primary);
+  padding-inline: var(--academica-size-baseline);
+  padding-block: var(--academica-size-baseline);
 }
-
+  
   .branding__row {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    max-width: var(--em-size-container-width);
+    max-width: var(--academica-size-container-width);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: stretch;
     justify-content: flex-start;
     /* gap: 2rem; */
-
+    
     min-height: 3rem;
   }
-
+  
   .branding .block-system-branding-block {
     display: flex;
     gap: 1rem;
     flex-grow: 1;
     min-width: 0;
   }
-
+  
   .branding__logo {
     position: relative;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
     flex: 0 0 10%;
   }
-
+  
   .branding__logo .site-logo {
       position: relative;
       width: 100%;
     }
-
+  
   .branding__logo a {
       text-decoration: none;
       background: transparent;
     }
-
+  
   .branding__site-name-slogan {
     position: relative;
-
+    
     width: auto;
     max-width: 100%;
     flex-grow: 1;
     flex-basis: 0;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 0.5rem;
-    padding-inline-start: 1rem;
+    padding-inline-start: 2rem;
   }
-
+  
   .branding__site-slogan {
     text-decoration: none;
-
+    
     font-size: 1.3rem;
     font-weight: 400;
-
-    font-family: var(--em-font-serif);
+    
+    font-family: var(--academica-font-serif);
     font-style: normal;
     font-optical-sizing: auto;
     text-transform: uppercase;
     letter-spacing: 1px;
-
+    
     text-align: left;
     width: 100%;
-
-    color: var(--em-color-fg-white-static);
+    
+    color: var(--academica-color-fg-white-static);
   }
-
+  
   /* Site name text */
-
+  
   .branding__site-name a {
       text-decoration: none;
       background: transparent;
-
+      
       font-size: 2.4rem;
       line-height: 1;
       font-weight: 600;
-
-      font-family: var(--em-font-secondary);
+      
+      font-family: var(--academica-font-secondary);
       font-style: normal;
       font-optical-sizing: auto;
-
+      
       text-align: left;
       width: 100%;
-
-      color: var(--em-color-fg-white-static);
+      
+      color: var(--academica-color-fg-white-static);
     }
-
+  
   .branding__site-name a:hover,
     .branding__site-name a:focus {
-      color: var(--em-color-fg-white-static);
+      color: var(--academica-color-fg-white-static);
     }
-
+  
   @media (max-width: 992px) {
       .branding .branding__logo {
         flex: 0 0 15%;
         max-width: 15%;
       }
-
+      
       .branding .branding__site-name-slogan {
         display: flex;
         flex: 0 0 75%;
         max-width: 75%;
         justify-content: center;
       }
-
+        
         /* Site name text */
         .branding__site-name a {
           max-width: 100%;
           font-size: 2rem;
           line-height: 1;
-
+          
           text-wrap: wrap;
           overflow-wrap: break-word;
         }
   }
-
+  
   @media (max-width: 768px) {
-
+      
       .branding .branding__row {
         display: flex;
         flex-wrap: nowrap;
@@ -142,21 +142,21 @@
         justify-content: flex-start;
         gap: 0;
         margin-left: 0;
-        flex: 0 0 calc(100% - var(--em-size-mobile-menu-toggle));
+        flex: 0 0 calc(100% - var(--academica-size-mobile-menu-toggle));
       }
-
+      
       .branding .branding__site-name-slogan {
         justify-content: flex-start;
       }
   }
-
+  
   @media (max-width: 576px) {
-
+      
       /* Site name text */
       .branding__site-name a {
         font-size: 1.4rem;
       }
-
+    
     .branding__site-slogan {
       font-size: 1rem;
       visibility: hidden;

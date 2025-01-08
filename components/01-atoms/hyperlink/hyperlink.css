@@ -1,14 +1,14 @@
 a:not(.button) {
   position: relative;
-  color: var(--em-color-link-default);
+  color: var(--academica-color-link-default);
   font-weight: 500;
   text-decoration: none;
-  transition: var(--em-transition-basic);
-  border-radius: var(--em-size-radius-sm);
+  transition: var(--academica-transition-basic);
+  border-radius: var(--academica-size-radius-sm);
 
   background: linear-gradient(to right,
-      var(--em-color-link-decoration-02) 0%, var(--em-color-link-decoration-02) 50%,
-      var(--em-color-link-decoration-01) 51%, var(--em-color-link-decoration-01) 100%);
+      var(--academica-color-link-decoration-02) 0%, var(--academica-color-link-decoration-02) 50%,
+      var(--academica-color-link-decoration-01) 51%, var(--academica-color-link-decoration-01) 100%);
   background-repeat: no-repeat;
   background-size: auto;
   background-size: 300% 2px;
@@ -17,12 +17,12 @@ a:not(.button) {
   -webkit-box-decoration-break: slice;
 
   /* focus indicator */
-  border: var(--em-size-thickness-focus-indicator) solid transparent;
+  border: var(--academica-size-thickness-focus-indicator) solid transparent;
 }
 
   a:not(.button):hover,
   a:not(.button):visited:hover {
-    color: var(--em-color-link-hover);
+    color: var(--academica-color-link-hover);
     background-position: 2% 100%;
   }
 
@@ -30,14 +30,14 @@ a:not(.button) {
   a:not(.button):focus-visible,
   a:not(.button):visited:focus,
   a:not(.button):visited:focus-visible {
-    color: var(--em-color-link-focus);
+    color: var(--academica-color-link-focus);
     outline: 0;
-    border-color: var(--em-color-focus-indicator);
+    border-color: var(--academica-color-focus-indicator);
   }
 
   a:not(.button):active,
   a:not(.button):visited:active {
-    color: var(--em-color-link-active);
+    color: var(--academica-color-link-active);
     border-color: transparent;
     outline: none;
   }
@@ -57,7 +57,7 @@ a:not(.button) {
   }
 
   a:not(.button):visited {
-    color: var(--em-color-link-visited);
+    color: var(--academica-color-link-visited);
   }
 
 
@@ -78,7 +78,7 @@ p:has(.cta-link) {
   padding-inline-start: 0.125rem;
   padding-inline-end: 1rem;
   margin-inline-start: auto;
-  font-family: var(--em-font-secondary);
+  font-family: var(--academica-font-secondary);
   text-decoration: none;
   font-weight: 600;
   font-size: 1.15rem;
@@ -88,7 +88,7 @@ p:has(.cta-link) {
   -webkit-box-decoration-break: slice;
 
   background: linear-gradient(to right,
-      var(--em-color-link-decoration-02) 0%, var(--em-color-link-decoration-02) 50%,
+      var(--academica-color-link-decoration-02) 0%, var(--academica-color-link-decoration-02) 50%,
       transparent 51%, transparent 100%);
   background-repeat: no-repeat;
 
@@ -101,7 +101,7 @@ p:has(.cta-link) {
 
 
 .cta-link:visited {
-    color: var(--em-color-link-default);
+    color: var(--academica-color-link-default);
   }
 
 
@@ -120,7 +120,7 @@ p:has(.cta-link) {
     left: calc(100% + var(--cta-icon-transform));
     margin-block: auto;
     margin-inline-start: auto;
-    background-color: var(--em-color-link-hover);
+    background-color: var(--academica-color-link-hover);
     -webkit-mask-image: url('../assets/icons/arrow-forward.svg');
             mask-image: url('../assets/icons/arrow-forward.svg');
     -webkit-mask-repeat: no-repeat;
@@ -128,11 +128,11 @@ p:has(.cta-link) {
     -webkit-mask-position: center;
             mask-position: center;
     max-block-size: 100%;
-    transition: var(--em-transition-boing);
+    transition: var(--academica-transition-boing);
   }
 
 
 .cta-link:hover::after {
     transform: translateX(var(--cta-icon-transform)) scale(1.1);
-    background-color: var(--em-color-link-default);
+    background-color: var(--academica-color-link-default);
   }

@@ -1,0 +1,16 @@
+  <div{{attributes.addClass('card').addClass(extra_classes|default([])) }}>
+  <div class="card__content">
+  {# first block ref is component name, second is slot name from this component's YML #}
+  {# This feels like better twig and SDC structure to me  #}
+    {% block title %}{{ card_title }}{% endblock %}
+    {% block tag %}{{ card_tag }}{% endblock %}
+    {% block summary %}{{ card_summary }}{% endblock %}
+    {% block link %}{{ card_link }}{% endblock %}
+  </div>
+
+  {% if card_image %}
+    <div class="card__image">
+      <img src="{{ card_image }}" alt="placeholder" />
+    </div>
+  {% endif %}
+</div>

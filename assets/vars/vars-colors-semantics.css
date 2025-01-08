@@ -3,7 +3,7 @@
  * Semantic variables should follow a naming structure of genral-to-specific
  * 1 - Design system name, 2 - the property of the variable, 3 - what the variable applies to (bg, fg, text), 4 - lastly, modifiers
  * Example: --designsystemname-color-text-primary
- * Example: --em-color-border-primary
+ * Example: --academica-color-border-primary
  *
  */
 
@@ -12,154 +12,154 @@
   /*** SET THEME COLORS ***/
   
   /*** Background - Surface - DEFAULT - changes only in dark mode ***/
-  --em-color-bg-base: var(--em-color-white);
+  --academica-color-bg-base: var(--academica-color-white);
   
   /*** Foreground / Text - DEFAULT - changes only in dark mode ***/
-  --em-color-fg-base: var(--em-color-black);
-  --em-color-fg-subdued: var(--em-color-gray-005);
+  --academica-color-fg-base: var(--academica-color-black);
+  --academica-color-fg-subdued: var(--academica-color-gray-005);
   
   /*** Foreground / Text - Base Theme ***/
-  --em-color-fg-primary: var(--em-color-blue-020);
-  --em-color-fg-primary-medium: var(--em-color-blue-040);
-  --em-color-fg-secondary: var(--em-color-cyan-020);
-  --em-color-fg-tertiary: var(--em-color-yellow-060);
+  --academica-color-fg-primary: var(--academica-color-blue-020);
+  --academica-color-fg-primary-medium: var(--academica-color-blue-040);
+  --academica-color-fg-secondary: var(--academica-color-cyan-020);
+  --academica-color-fg-tertiary: var(--academica-color-yellow-060);
   
   /*** Backgrounds - Base Theme ***/
-  --em-color-bg-primary-dark: var(--em-color-blue-010);
-  --em-color-bg-primary: var(--em-color-blue-020);
-  --em-color-bg-primary-medium: var(--em-color-blue-040);
-  --em-color-bg-primary-light: var(--em-color-blue-080);
-  --em-color-bg-primary-lightest: var(--em-color-blue-095);
-  --em-color-bg-primary-alpha: var(--em-color-blue-020-a75);
+  --academica-color-bg-primary-dark: var(--academica-color-blue-010);
+  --academica-color-bg-primary: var(--academica-color-blue-020);
+  --academica-color-bg-primary-medium: var(--academica-color-blue-040);
+  --academica-color-bg-primary-light: var(--academica-color-blue-080);
+  --academica-color-bg-primary-lightest: var(--academica-color-blue-095);
+  --academica-color-bg-primary-alpha: var(--academica-color-blue-020-a75);
   
-  --em-color-bg-secondary: var(--em-color-cyan-040);
-  --em-color-bg-secondary-light: var(--em-color-cyan-080);
+  --academica-color-bg-secondary: var(--academica-color-cyan-040);
+  --academica-color-bg-secondary-light: var(--academica-color-cyan-080);
   
-  --em-color-bg-tertiary: var(--em-color-yellow-060);
-  --em-color-bg-tertiary-light: var(--em-color-yellow-090);
+  --academica-color-bg-tertiary: var(--academica-color-yellow-060);
+  --academica-color-bg-tertiary-light: var(--academica-color-yellow-090);
   
   /*** Backgrounds - Base Theme - Neutral ***/
-  --em-color-bg-neutral: var(--em-color-gray-060);
-  --em-color-bg-neutral-light: var(--em-color-gray-080);
-  --em-color-bg-neutral-lightest: var(--em-color-gray-095);
+  --academica-color-bg-neutral: var(--academica-color-gray-060);
+  --academica-color-bg-neutral-light: var(--academica-color-gray-080);
+  --academica-color-bg-neutral-lightest: var(--academica-color-gray-095);
   
   /*** Borders - Base Theme ***/
-  --em-color-border-primary: var(--em-color-blue-020);
-  --em-color-border-primary-light: var(--em-color-blue-060);
+  --academica-color-border-primary: var(--academica-color-blue-020);
+  --academica-color-border-primary-light: var(--academica-color-blue-060);
   
-  --em-color-border-secondary: var(--em-color-cyan-040);
-  --em-color-border-secondary-light: var(--em-color-cyan-070);
+  --academica-color-border-secondary: var(--academica-color-cyan-040);
+  --academica-color-border-secondary-light: var(--academica-color-cyan-070);
   
-  --em-color-border-tertiary: var(--em-color-yellow-060);
-  --em-color-border-tertiary-light: var(--em-color-yellow-070);
+  --academica-color-border-tertiary: var(--academica-color-yellow-060);
+  --academica-color-border-tertiary-light: var(--academica-color-yellow-070);
   
   /*** Borders - Base Theme - Neutral ***/
-  --em-color-border-neutral: var(--em-color-gray-040);
-  --em-color-border-neutral-light: var(--em-color-gray-080);
+  --academica-color-border-neutral: var(--academica-color-gray-040);
+  --academica-color-border-neutral-light: var(--academica-color-gray-080);
   
   /*** Form Accents - Base Theme ***/
-  --em-color-accent-primary: var(--em-color-cyan-050);
+  --academica-color-accent-primary: var(--academica-color-cyan-050);
   
   /*** Actions - Primary Buttons and Inputs - Base Theme ***/
-  --em-color-action-primary-default: var(--em-color-cyan-070);
-  --em-color-action-primary-hover: var(--em-color-cyan-075);
-  --em-color-action-primary-focus: var(--em-color-cyan-075);
-  --em-color-action-primary-active: var(--em-color-cyan-085);
+  --academica-color-action-primary-default: var(--academica-color-cyan-070);
+  --academica-color-action-primary-hover: var(--academica-color-cyan-075);
+  --academica-color-action-primary-focus: var(--academica-color-cyan-075);
+  --academica-color-action-primary-active: var(--academica-color-cyan-085);
   
   /*** Actions - Secondary Buttons and Inputs - Base Theme ***/
-  --em-color-action-secondary-default: var(--em-color-gray-070);
-  --em-color-action-secondary-hover: var(--em-color-gray-085);
-  --em-color-action-secondary-focus: var(--em-color-gray-085);
-  --em-color-action-secondary-active: var(--em-color-gray-090);
+  --academica-color-action-secondary-default: var(--academica-color-gray-070);
+  --academica-color-action-secondary-hover: var(--academica-color-gray-085);
+  --academica-color-action-secondary-focus: var(--academica-color-gray-085);
+  --academica-color-action-secondary-active: var(--academica-color-gray-090);
   
   /*** Actions - Link Text ***/
-  --em-color-link-default: var(--em-color-blue-030);
-  --em-color-link-hover: var(--em-color-cyan-040);
-  --em-color-link-focus: var(--em-color-cyan-040);
-  --em-color-link-active: var(--em-color-cyan-050);
-  --em-color-link-visited: var(--em-color-fg-base);
+  --academica-color-link-default: var(--academica-color-blue-030);
+  --academica-color-link-hover: var(--academica-color-cyan-040);
+  --academica-color-link-focus: var(--academica-color-cyan-040);
+  --academica-color-link-active: var(--academica-color-cyan-050);
+  --academica-color-link-visited: var(--academica-color-fg-base);
   
   /*** Foreground / Text - Links text decoration ***/
-  --em-color-link-decoration-01: var(--em-color-border-secondary-light);
-  --em-color-link-decoration-02: var(--em-color-border-tertiary);
+  --academica-color-link-decoration-01: var(--academica-color-border-secondary-light);
+  --academica-color-link-decoration-02: var(--academica-color-border-tertiary);
   
   /*** Actions - Menu Items ***/
-  --em-color-action-nav-fg-default: var(--em-color-blue-020);
-  --em-color-action-nav-fg-hover: var(--em-color-blue-040);
-  --em-color-action-nav-fg-focus: var(--em-color-blue-040);
-  --em-color-action-nav-fg-active: var(--em-color-fg-base);
+  --academica-color-action-nav-fg-default: var(--academica-color-blue-020);
+  --academica-color-action-nav-fg-hover: var(--academica-color-blue-040);
+  --academica-color-action-nav-fg-focus: var(--academica-color-blue-040);
+  --academica-color-action-nav-fg-active: var(--academica-color-fg-base);
   
-  --em-color-action-nav-bg-default: var(--em-color-blue-090);
-  --em-color-action-nav-bg-hover: var(--em-color-blue-093);
-  --em-color-action-nav-bg-focus: var(--em-color-blue-093);
-  --em-color-action-nav-bg-active: var(--em-color-blue-097);
+  --academica-color-action-nav-bg-default: var(--academica-color-blue-090);
+  --academica-color-action-nav-bg-hover: var(--academica-color-blue-093);
+  --academica-color-action-nav-bg-focus: var(--academica-color-blue-093);
+  --academica-color-action-nav-bg-active: var(--academica-color-blue-097);
   
   /*** Signifier for active nav items  - Base Theme ***/
-  --em-color-active-indicator: var(--em-color-blue-040);
-  --em-color-hover-indicator: var(--em-color-cyan-060);
+  --academica-color-active-indicator: var(--academica-color-blue-040);
+  --academica-color-hover-indicator: var(--academica-color-cyan-060);
   
   /*** Focus Indicator - Base Theme ***/
-  --em-color-focus-indicator: var(--em-color-yellow-060);
+  --academica-color-focus-indicator: var(--academica-color-yellow-060);
   
   /*** STATIC does not change with dark mode or other themes ***/
   /*** Foreground / Text - Static ***/
-  --em-color-fg-white-static: var(--em-color-white);
-  --em-color-fg-black-static: var(--em-color-black);
+  --academica-color-fg-white-static: var(--academica-color-white);
+  --academica-color-fg-black-static: var(--academica-color-black);
   
   /*** Background - Static ***/
-  --em-color-bg-white-static: var(--em-color-white);
-  --em-color-bg-black-static: var(--em-color-black);
+  --academica-color-bg-white-static: var(--academica-color-white);
+  --academica-color-bg-black-static: var(--academica-color-black);
   
   /********* Tags *********/
-  --em-color-tag-cat1: var(--em-color-cyan-080);
-  --em-color-tag-cat2: var(--em-color-yellow-080);
-  --em-color-tag-cat3: var(--em-color-blue-080);
-  --em-color-tag-cat4: var(--em-color-gray-080);
+  --academica-color-tag-cat1: var(--academica-color-cyan-080);
+  --academica-color-tag-cat2: var(--academica-color-yellow-080);
+  --academica-color-tag-cat3: var(--academica-color-blue-080);
+  --academica-color-tag-cat4: var(--academica-color-gray-080);
   
   /********* ALERTS *********/
   
   /*** Informative ***/
-  --em-color-fg-alert-informative: var(--em-color-cyan-020);
-  --em-color-border-alert-informative: var(--em-color-cyan-030);
-  --em-color-bg-alert-informative: var(--em-color-cyan-080);
+  --academica-color-fg-alert-informative: var(--academica-color-cyan-020);
+  --academica-color-border-alert-informative: var(--academica-color-cyan-030);
+  --academica-color-bg-alert-informative: var(--academica-color-cyan-080);
   
   /*** Positive ***/
-  --em-color-fg-alert-positive: var(--em-color-green-020);
-  --em-color-border-alert-positive: var(--em-color-green-030);
-  --em-color-bg-alert-positive: var(--em-color-green-080);
+  --academica-color-fg-alert-positive: var(--academica-color-green-020);
+  --academica-color-border-alert-positive: var(--academica-color-green-030);
+  --academica-color-bg-alert-positive: var(--academica-color-green-080);
   
   /*** Warning ***/
-  --em-color-fg-alert-warning: var(--em-color-orange-040);
-  --em-color-border-alert-warning: var(--em-color-orange-060);
-  --em-color-bg-alert-warning: var(--em-color-orange-080);
+  --academica-color-fg-alert-warning: var(--academica-color-orange-040);
+  --academica-color-border-alert-warning: var(--academica-color-orange-060);
+  --academica-color-bg-alert-warning: var(--academica-color-orange-080);
   
   
   /*** Negative ***/
-  --em-color-fg-alert-negative: var(--em-color-red-030);
-  --em-color-border-alert-negative: var(--em-color-red-040);
-  --em-color-bg-alert-negative: var(--em-color-red-080);
+  --academica-color-fg-alert-negative: var(--academica-color-red-030);
+  --academica-color-border-alert-negative: var(--academica-color-red-040);
+  --academica-color-bg-alert-negative: var(--academica-color-red-080);
   
   
   .drk-background {
     /*** Foreground / Text - Base Theme ***/
-    --em-color-fg-base: var(--em-color-white);
-    --em-color-fg-subdued: var(--em-color-gray-095);
+    --academica-color-fg-base: var(--academica-color-white);
+    --academica-color-fg-subdued: var(--academica-color-gray-095);
     
-    --em-color-fg-primary: var(--em-color-blue-080);
-    --em-color-fg-secondary: var(--em-color-cyan-080);
+    --academica-color-fg-primary: var(--academica-color-blue-080);
+    --academica-color-fg-secondary: var(--academica-color-cyan-080);
     
-    --em-color-border-primary: var(--em-color-blue-060);
-    --em-color-border-primary-light: var(--em-color-blue-080);
+    --academica-color-border-primary: var(--academica-color-blue-060);
+    --academica-color-border-primary-light: var(--academica-color-blue-080);
     
     /*** Borders - Base Theme - Neutral ***/
-    --em-color-border-neutral: var(--em-color-gray-080);
-    --em-color-border-neutral-light: var(--em-color-gray-095);
+    --academica-color-border-neutral: var(--academica-color-gray-080);
+    --academica-color-border-neutral-light: var(--academica-color-gray-095);
     
     /*** Actions - Link Text ***/
-    --em-color-link-default: var(--em-color-cyan-080);
-    --em-color-link-hover: var(--em-color-cyan-060);
-    --em-color-link-focus: var(--em-color-cyan-060);
-    --em-color-link-active: var(--em-color-cyan-080);
-    --em-color-link-visited: var(--em-color-fg-base);
+    --academica-color-link-default: var(--academica-color-cyan-080);
+    --academica-color-link-hover: var(--academica-color-cyan-060);
+    --academica-color-link-focus: var(--academica-color-cyan-060);
+    --academica-color-link-active: var(--academica-color-cyan-080);
+    --academica-color-link-visited: var(--academica-color-fg-base);
   }
 }

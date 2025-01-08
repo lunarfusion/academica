@@ -1,0 +1,129 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Card version 2
+group: organisms
+status: experimental
+
+props:
+  type: object
+
+# Method 2 - slots declared up here,
+
+slots:
+  # declare each with a name for the twig block to pull
+  # this doesn't work so far - "basic" will not render child components as slots
+
+  ### THIS COMPONENT CONTENT
+  card_image:
+    title: Card Image
+    required: false
+    description: Image for the card
+    type: string
+    examples:
+      - "../assets/images/placeholder-600-400.jpg"
+
+
+thirdPartySettings:
+  sdcStorybook:
+    stories:
+
+      ### VARIANT - Default vertical card style
+      default:
+        props:
+          label: Card default style
+
+        slots:
+
+          # slot name of child component, i.e. "card_title", is the ref for the twig block
+          ### CHILD COMPONENT
+          card_title:
+            - type: component
+              component: "storybook-university:title"
+              props:
+                html_tag: h3
+                extra_classes:
+                  - card__title
+              slots:
+                text: sdcStorybook Title of the Card Component
+
+          ### CHILD COMPONENT
+          card_tag:
+            - type: component
+              component: "storybook-university:tag"
+              props:
+                extra_classes:
+                  - card__tag
+              slots:
+                tag_content: 'Category'
+                tag_icon: shield-u
+
+          ### CHILD COMPONENT
+          card_summary:
+            - type: component
+              component: "storybook-university:paragraph"
+              props:
+                extra_classes:
+                  - card__summary
+              slots:
+                content: sdcStorybook Summary of the content which this card is linking the visitor to.
+
+          ### CHILD COMPONENT
+          card_link:
+            - type: component
+              component: "storybook-university:button"
+              props:
+                extra_classes:
+                  - card__link
+                  - button--ghost
+                  - button--right
+              slots:
+                  content: Card Link
+
+      ### VARIANT - horizontal layout
+      horizontal:
+        props:
+          extra_classes:
+          - card--horizontal
+        slots:
+          ### CHILD COMPONENT
+          card_title:
+            - type: component
+              component: "storybook-university:title"
+              props:
+                html_tag: h3
+                extra_classes:
+                  - card__title
+              slots:
+                text: sdcStorybook Title of the Card Component
+
+          ### CHILD COMPONENT
+          card_tag:
+            - type: component
+              component: "storybook-university:tag"
+              props:
+                extra_classes:
+                  - card__tag
+              slots:
+                tag_content: 'Category'
+                tag_icon: shield-u
+
+          ### CHILD COMPONENT
+          card_summary:
+            - type: component
+              component: "storybook-university:paragraph"
+              props:
+                extra_classes:
+                  - card__summary
+              slots:
+                content: sdcStorybook Summary of the content which this card is linking the visitor to.
+
+          ### CHILD COMPONENT
+          card_link:
+            - type: component
+              component: "storybook-university:button"
+              props:
+                extra_classes:
+                  - card__link
+                  - button--ghost
+                  - button--right
+              slots:
+                content: Card Link

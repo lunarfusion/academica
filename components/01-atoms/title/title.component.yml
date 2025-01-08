@@ -1,5 +1,6 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Title
+group: atoms
 
 props:
   type: object
@@ -30,7 +31,7 @@ thirdPartySettings:
           html_tag: h1
           extra_classes:
             - page-title
-          
+
       section_title:
         title: Section Title H2
         slots:

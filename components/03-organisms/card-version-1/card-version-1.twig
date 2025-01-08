@@ -1,0 +1,12 @@
+<div{{attributes.addClass('card').addClass(extra_classes|default([])) }}>
+  <div class="card__content">
+    {# Twig does not pull in children as blocks, it pulls them from the sdc-addon content in the YML #}
+    {{ content }}
+  </div>
+
+  {% if card_image %}
+    <div class="card__image">
+      <img src="{{ card_image }}" alt="placeholder" />
+    </div>
+  {% endif %}
+</div>

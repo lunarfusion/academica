@@ -1,11 +1,12 @@
 # This is so your IDE knows about the syntax for fixes and autocomplete.
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Menu
+group: molecules
 status: experimental
 
 props:
   type: object
-  
+
   properties:
     items:
       type: array
@@ -34,13 +35,13 @@ props:
 thirdPartySettings:
   sdcStorybook:
     stories:
-      
+
       vertical:
         title: Vertical
         props:
           extra_classes:
             - menu--vertical
-            
+
       horizontal:
         title: Horizontal
         props:

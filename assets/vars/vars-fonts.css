@@ -5,10 +5,10 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
 
 :root {
-  --em-font-primary: "Open Sans", sans-serif;
-  --em-font-secondary: "Open Sans", sans-serif;
-  --em-font-serif: "Crimson Pro", serif;
+  --academica-font-primary: "Open Sans", sans-serif;
+  --academica-font-secondary: "Open Sans", sans-serif;
+  --academica-font-serif: "Crimson Pro", serif;
   
-  --em-font-code: "Inconsolata", monospace;
-  --em-font-icons: "Font Awesome 5 Free";
+  --academica-font-code: "Inconsolata", monospace;
+  --academica-font-icons: "Font Awesome 5 Free";
 }

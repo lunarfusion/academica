@@ -8,7 +8,7 @@
 .admin-tasks {
   position: relative;
   width: 100%;
-  max-width: var(--em-size-container-width);
+  max-width: var(--academica-size-container-width);
   margin: 0;
   margin-left: auto;
   margin-right: auto;

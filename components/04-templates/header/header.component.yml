@@ -1,21 +1,22 @@
 # This is so your IDE knows about the syntax for fixes and autocomplete.
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Header
+group: templates
 status: experimental
 
 props:
   type: object
-         
+
 js:
  header.js: { attributes: { defer: true } }
-    
+
 thirdPartySettings:
   sdcStorybook:
     stories:
-      
+
       default:
         props:
-          label: Site header    
+          label: Site header
         slots:
           branding:
             - type: component
@@ -23,7 +24,7 @@ thirdPartySettings:
 
           menu_toggle:
             - type: component
-              component: "storybook-university:button" 
+              component: "storybook-university:button"
               props:
                 input_id: menu-toggle
                 html_tag: button
@@ -36,8 +37,8 @@ thirdPartySettings:
                   - button--icon
               slots:
                 icon: menu-open
-                content: open  
-                 
+                content: open
+
           menu_main:
             - type: component
               component: "storybook-university:menu"

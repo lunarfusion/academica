@@ -1,0 +1,42 @@
+/* @import "./components/icon/icon.css"; */
+/* how to import? */
+
+.badge {
+  position: relative;
+  vertical-align: top;
+  inline-size: auto;
+  block-size: calc((var(--academica-size-block-component-base) * 0.75) + (var(--academica-size-sm-inner-vert-component) * 2));
+  display: inline-flex;
+  align-items: center;
+  gap: var(--academica-size-md-gap-component);
+  padding-block: var(--academica-size-sm-inner-vert-component);
+  padding-inline: var(--academica-size-sm-inner-horiz-component);
+  
+  font-family: var(--academica-font-primary);
+  font-size: var(--academica-size-text-med);
+  line-height: 1;
+  font-weight: 600;
+  color: var(--academica-color-fg-black-static);
+  background-color: var(--academica-color-bg-alert-informative);
+  
+  &__icon {
+    position: relative;
+    display: inline-block;
+  }
+  
+  &--informative {
+    background-color: var(--academica-color-bg-alert-informative);
+  }
+  
+  &--positive {
+    background-color: var(--academica-color-bg-alert-positive);
+  }
+  
+  &--warning {
+    background-color: var(--academica-color-bg-alert-warning);
+  }
+  
+  &--negative {
+    background-color: var(--academica-color-bg-alert-negative);
+  }
+}

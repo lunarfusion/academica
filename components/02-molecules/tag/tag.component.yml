@@ -1,11 +1,12 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Tag
+group: molecules
 status: experimental
 # A tag is a keyword that may be used to group, filter, or sort content.
 
 props:
   type: object
-   
+
 slots:
   tag_content:
     type: string
@@ -19,11 +20,11 @@ slots:
     description: tag icon
     examples:
      - shield-u
-       
+
 thirdPartySettings:
     sdcStorybook:
       stories:
-        
+
         university:
           title: University
           props:
@@ -32,7 +33,7 @@ thirdPartySettings:
           slots:
             content: University Category
             tag_icon: shield-u
-            
+
         students:
           title: Students
           props:
@@ -41,7 +42,7 @@ thirdPartySettings:
           slots:
              tag_content: Student Category
              tag_icon: shield-s
-             
+
         faculty:
           title: Faculty
           props:
@@ -50,7 +51,7 @@ thirdPartySettings:
           slots:
                tag_content: Faculty Category
                tag_icon: shield-f
-               
+
         research:
           title: Research
           props:
