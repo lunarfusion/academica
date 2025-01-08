@@ -5,7 +5,11 @@ const config = {
       name: "storybook-addon-sdc",
       options: {
         sdcStorybookOptions: {
-          namespace: "academica" // Your namespace.
+          namespace: "academica", // Your namespace.
+          storySort: {
+              method: 'alphabetical',
+              locales: 'en-US'
+          }
         },
         vitePluginTwigDrupalOptions: {}, // vite-plugin-twig-drupal options.
         jsonSchemaFakerOptions: {} // json-schema-faker options
@@ -15,7 +19,13 @@ const config = {
   ],
   framework: {
     name: "@storybook/html-vite",
-    options: {}
+    options: {
+      storySort: {
+          method: 'alphabetical',
+          order: ['Atoms', 'Molecules', 'Organisms', 'Templates'],
+          locales: 'en-US'
+      }
+    }
   }
 }
 export default config
