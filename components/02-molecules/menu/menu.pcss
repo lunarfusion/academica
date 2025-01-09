@@ -38,6 +38,13 @@
   }
 }
 
+/*** TODO - temporary fix for main menu horizontal variant ***/
+#block-academica-main-menu .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
 /*** LI element ***/
 .menu-item {
   position: relative;
@@ -183,6 +190,8 @@
   
   /* active/hover indicator is horizontal */
   .menu--horizontal & {
+    box-shadow: -2px 0 0px 0px var(--academica-color-bg-base),
+      2px 0 0px 0px var(--academica-color-bg-base);
     
     a::before,
     span::before,
@@ -193,6 +202,28 @@
       top: unset;
     }
   }
+  
+  
+  /*** TODO - temporary fix for main menu horizontal variant ***/
+  #block-academica-main-menu & {
+    /* box-shadow: var(--academica-color-bg-base) 0px 0px 0px 6.5px; */
+    box-shadow: -2px 0 0px 0px var(--academica-color-bg-base),
+      2px 0 0px 0px var(--academica-color-bg-base);
+    
+    a {
+      padding-block-start: calc(var(--academica-size-inner-menu-item-horizontal) * 0.5);
+    }
+    
+    a::before,
+    span::before,
+    button::before {
+      width: calc(100% + 2px);
+      height: calc(var(--academica-size-border-active-item) - 1px);
+      bottom: 0;
+      top: unset;
+    }
+  }
+  
   
   &--active-trail button::before {
     width: calc(var(--academica-size-border-active-item) - 1px);
@@ -206,6 +237,7 @@
     box-shadow: none;
   }
 }
+
 
 /*** Level 2 child menu  ***/
 .menu .menu {

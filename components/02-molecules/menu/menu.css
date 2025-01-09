@@ -38,6 +38,14 @@
     justify-content: flex-start;
   }
 
+/*** TODO - temporary fix for main menu horizontal variant ***/
+
+#block-academica-main-menu .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
 /*** LI element ***/
 
 .menu-item {
@@ -208,9 +216,35 @@
 
 /* active/hover indicator is horizontal */
 
+.menu--horizontal .menu-item {
+    box-shadow: -2px 0 0px 0px var(--academica-color-bg-base),
+      2px 0 0px 0px var(--academica-color-bg-base);
+  }
+
 .menu--horizontal .menu-item a::before,
     .menu--horizontal .menu-item span::before,
     .menu--horizontal .menu-item button::before {
+      width: calc(100% + 2px);
+      height: calc(var(--academica-size-border-active-item) - 1px);
+      bottom: 0;
+      top: unset;
+    }
+
+/*** TODO - temporary fix for main menu horizontal variant ***/
+
+#block-academica-main-menu .menu-item {
+    /* box-shadow: var(--academica-color-bg-base) 0px 0px 0px 6.5px; */
+    box-shadow: -2px 0 0px 0px var(--academica-color-bg-base),
+      2px 0 0px 0px var(--academica-color-bg-base);
+  }
+
+#block-academica-main-menu .menu-item a {
+      padding-block-start: calc(var(--academica-size-inner-menu-item-horizontal) * 0.5);
+    }
+
+#block-academica-main-menu .menu-item a::before,
+    #block-academica-main-menu .menu-item span::before,
+    #block-academica-main-menu .menu-item button::before {
       width: calc(100% + 2px);
       height: calc(var(--academica-size-border-active-item) - 1px);
       bottom: 0;

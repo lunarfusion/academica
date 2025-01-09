@@ -4,7 +4,6 @@ global-styling:
   css:
     theme:
       dist/academicatheme.css: {}
-      dist/base.css: {}
   # js:
   #   assets/js/main.js: { attributes: { type: "module" } }
 
@@ -23,7 +22,7 @@ global-styling:
 css-variables:
   css:
     theme:
-      dist/vars.css: {preprocess: false}
+      components/00-base/vars.css: {preprocess: false}
 
 #
 # layouts:

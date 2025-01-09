@@ -91,7 +91,7 @@ h6,
 .h6 {
   color: var(--academica-color-fg-base);
   font-family: var(--academica-font-serif);
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
   font-optical-sizing: auto;
   max-width: var(--academica-size-charlimit-lg);
@@ -138,4 +138,12 @@ h6,
   font-size: 1.1rem;
   line-height: 1.3;
   margin-block-start: 0.5rem;
+}
+
+/*** TODO - temporary header styles ***/
+.main-nav {
+  background-color: var(--academica-color-action-nav-bg-default);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

@@ -14,7 +14,7 @@
   --academica-hue-black: 240;
   
   --academica-hue-yellow: 42;
-  --academica-hue-blue: 222;
+  --academica-hue-blue: 230;
   --academica-hue-cyan: 200;
   
   --academica-hue-red: 360;
@@ -46,6 +46,7 @@
   
   /*** Blue ***/
   --academica-color-blue-010: hsl(var(--academica-hue-blue), 98%, 10%);
+  --academica-color-blue-015: hsl(var(--academica-hue-blue), 98%, 15%);
   --academica-color-blue-020: hsl(var(--academica-hue-blue), 98%, 20%);
   --academica-color-blue-030: hsl(var(--academica-hue-blue), 98%, 30%);
   --academica-color-blue-040: hsl(var(--academica-hue-blue), 80%, 40%);

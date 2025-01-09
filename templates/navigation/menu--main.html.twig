@@ -20,9 +20,52 @@
 #}
 
 {{ include ('academica:menu', {
-    attributes: create_attribute(),
+    attributes: attributes.addClass(classes),
     label: label,
     extra_classes: [
       'menu--horizontal',
     ],
 }) }}
+
+{#
+{% embed 'academica:menu' with {
+  attributes: attributes.addClass(classes),
+    author_attributes,
+    author_name,
+    content,
+    date,
+    display_submitted,
+    label,
+    metadata,
+    title_attributes,
+    title_prefix,
+    title_suffix,
+    read_more,
+    url,
+    } only %}
+  {% block prefix %}
+    {{ title_prefix }}
+    {{ title_suffix }}
+  {% endblock %}
+  {% block meta %}
+    {% if display_submitted %}
+      <div class="node__meta">
+        <span{{ author_attributes }}>
+          {{ 'By'|t }} <span class="node__author">{{- author_name -}}</span>, {{ date }}
+        </span>
+        {{ metadata }}
+      </div>
+    {% endif %}
+  {% endblock %}
+
+  {% block title %}
+    {% if label and not page %}
+      <h2{{ title_attributes.addClass('node__title', 'teaser__title') }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    {% endif %}
+  {% endblock %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %} #}

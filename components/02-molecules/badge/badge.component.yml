@@ -1,8 +1,8 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
-name: Badge
+name: badge
 status: experimental
+group: molecules
 
-# A badge is a small piece of content which conveys static information such as status. A badge is not interactive.
 props:
   type: object
   properties:
@@ -13,7 +13,7 @@ props:
       enum:
         - true
         - false
-      default: false                                        
+      default: false
 slots:
   content:
     title: Content
@@ -21,10 +21,10 @@ slots:
     description: Content of the badge.
     examples:
        - Badge
-                        
+
 thirdPartySettings:
   sdcStorybook:
-   stories: 
+   stories:
      informative:
       title: Informative
       props:
@@ -46,7 +46,7 @@ thirdPartySettings:
       props:
         has_icon: true
         extra_classes:
-          - badge--positive  
+          - badge--positive
       slots:
         content: Success Badge
         badge_icon:
@@ -62,7 +62,7 @@ thirdPartySettings:
        props:
          has_icon: true
          extra_classes:
-           - badge--warning 
+           - badge--warning
        slots:
         content: Warning Badge
         badge_icon:
@@ -72,13 +72,13 @@ thirdPartySettings:
             icon: triangle-exclamation-solid
             extra_classes:
               - badge__icon
-              - icon--small               
+              - icon--small
      negative:
         title: Negative
         props:
           has_icon: true
           extra_classes:
-            - badge--negative    
+            - badge--negative
         slots:
           content: Error Badge
           badge_icon:

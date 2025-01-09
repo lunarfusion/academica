@@ -1,8 +1,7 @@
 /*** VARS ***/
-@import "../assets/vars/vars-colors-primatives.css";
-@import "../assets/vars/vars-colors-semantics.css";
-
-@import "../assets/vars/vars-fonts.css";
-@import "../assets/vars/vars-shadows.css";
-@import "../assets/vars/vars-spacing.css";
-@import "../assets/vars/vars-transitions-animations.css";
+@import "../components/00-base/vars/vars-colors-primatives.css";
+@import "../components/00-base/vars/vars-colors-semantics.css";
+@import "../components/00-base/vars/vars-fonts.css";
+@import "../components/00-base/vars/vars-shadows.css";
+@import "../components/00-base/vars/vars-spacing.css";
+@import "../components/00-base/vars/vars-transitions-animations.css";

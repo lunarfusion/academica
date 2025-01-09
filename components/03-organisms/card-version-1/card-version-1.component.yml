@@ -1,7 +1,7 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
-name: Card Version 1
-group: organisms
+name: card version 1
 status: experimental
+group: organisms
 
 props:
   type: object

@@ -1,0 +1,59 @@
+.details {
+  background-color: var(--academica-color-bg-base);
+  border-inline-start: 6px solid var(--academica-color-bg-secondary);
+  font-size: var(--academica-size-text-med);
+  border-radius: var(--academica-size-radius-sm);
+  box-shadow: var(--academica-shadow-inset);
+  
+  summary {
+    position: relative;
+    background-color: var(--academica-color-bg-secondary-lightest);
+    background: linear-gradient(to right, var(--academica-color-bg-secondary-lightest), var(--academica-color-bg-secondary-light));
+    border-start-end-radius: var(--academica-size-radius-sm);
+    border-end-end-radius: var(--academica-size-radius-sm);
+    padding: 0.75rem 1rem;
+    font-size: var(--academica-size-text-lrg);
+    
+    /* hide marker caret */
+    &::marker {
+      content: "";
+    }
+    
+    /* use plus sign instead */
+    &::after {
+      font-size: calc(var(--academica-size-text-lrg) * 1.5);
+      color: var(--academica-color-bg-secondary);
+      line-height: 0;
+      content: "+";
+      width: 2rem;
+      height: 2rem;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      margin-inline-end: 0.5rem;
+      margin-inline-start: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      transition: var(--academica-transition-basic);
+    }
+  }
+  
+  &__content {
+    padding: 1rem;
+  }
+  
+  &[open] summary::after {
+    clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+  }
+}
+
+/* details group aka accordion */
+.details-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}

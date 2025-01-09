@@ -6,14 +6,14 @@
   margin-right: auto;
   background-color: var(--academica-color-bg-primary);
   padding-inline: var(--academica-size-baseline);
-  padding-block: var(--academica-size-baseline);
+  padding-block: 1.2rem;
 }
   
   .branding__row {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    max-width: var(--academica-size-container-width);
+    max-width: var(--academica-size-container-width-lg);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -38,7 +38,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    flex: 0 0 10%;
+    flex: 0 0 9%;
   }
   
   .branding__logo .site-logo {
@@ -70,13 +70,13 @@
     text-decoration: none;
     
     font-size: 1.3rem;
-    font-weight: 400;
+    font-weight: 500;
     
     font-family: var(--academica-font-serif);
     font-style: normal;
     font-optical-sizing: auto;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     
     text-align: left;
     width: 100%;
@@ -90,9 +90,9 @@
       text-decoration: none;
       background: transparent;
       
-      font-size: 2.4rem;
+      font-size: 2.6rem;
       line-height: 1;
-      font-weight: 600;
+      font-weight: 500;
       
       font-family: var(--academica-font-secondary);
       font-style: normal;

@@ -23,17 +23,29 @@
   /* transform: translateY(-1rem); */
 }
 
-.admin-tasks ul {
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: flex-end;
+
+#block-academica-account-menu ul:not(.contextual-links),
+.admin-tasks ul:not(.contextual-links) {
   width: auto;
-  gap: 2rem;
-  border: 1px solid hsla(0, 0%, 50%, 0.5);
-  box-shadow: 2px 2px 6px 3px hsla(0, 0%, 50%, 0.25);
+  display: inline-block;
+  border: 1.5px solid hsla(0, 0%, 50%, 0.5);
+  box-shadow: 1px 1px 4px 2px hsla(0, 0%, 60%, 0.25);
   border-radius: 18px;
-  padding: 0.5rem 1.5rem;
   list-style-type: none;
+  padding: 0;
+  margin-inline: 1rem;
+}
+
+#block-academica-account-menu li,
+.admin-tasks li {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  border-inline-end: 1px solid hsla(0, 0%, 50%, 0.5);
+}
+
+#block-academica-account-menu li:last-child,
+.admin-tasks li:last-child {
+  border-inline-end: none;
 }
 
 .admin-tasks a {
