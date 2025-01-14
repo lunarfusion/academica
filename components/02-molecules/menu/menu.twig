@@ -1,10 +1,15 @@
-{% import _self as menus %}
+{% set type = type in ['vertical', 'horizontal'] ? type : 'vertical' %}
+{% set type_class = type ? 'menu--%s'|format(type) : '' %}
+{% set modifier_class = '%s %s'|format(type_class, modifier_class|default('')) %}
 
+{% import _self as menus %}
 {% macro menu_links(items, attributes, menu_level) %}
   {% import _self as menus %}
   {% if items %}
 
-    <ul{{ attributes.addClass('menu').addClass(extra_classes).setAttribute('id',menu_id) }}>
+    <ul
+    class="menu {{ modifier_class -}}"
+    {{ attributes.setAttribute('id',menu_id) }}>
       {% for item in items %}
         <li{{ item.attributes }}{{ create_attribute({'class': ['menu-item']}) }}>
           {{ link(item.title, item.url, { class: ['menu__link']}) }}

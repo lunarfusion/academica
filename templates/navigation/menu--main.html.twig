@@ -1,71 +1,8 @@
-{#
-/**
- * @file
- * Theme override to display a menu.
- *
- * Available variables:
- * - menu_name: The machine name of the menu.
- * - items: A nested list of menu items. Each menu item contains:
- *   - attributes: HTML attributes for the menu item.
- *   - below: The menu item child items.
- *   - title: The menu link title.
- *   - url: The menu link URL, instance of \Drupal\Core\Url
- *   - localized_options: Menu link localized options.
- *   - is_expanded: TRUE if the link has visible children within the current
- *     menu tree.
- *   - is_collapsed: TRUE if the link has children within the current menu tree
- *     that are not currently visible.
- *   - in_active_trail: TRUE if the link is in the active trail.
- */
-#}
 
-{{ include ('academica:menu', {
-    attributes: attributes.addClass(classes),
-    label: label,
-    extra_classes: [
-      'menu--horizontal',
-    ],
-}) }}
 
-{#
-{% embed 'academica:menu' with {
-  attributes: attributes.addClass(classes),
-    author_attributes,
-    author_name,
-    content,
-    date,
-    display_submitted,
-    label,
-    metadata,
-    title_attributes,
-    title_prefix,
-    title_suffix,
-    read_more,
-    url,
-    } only %}
-  {% block prefix %}
-    {{ title_prefix }}
-    {{ title_suffix }}
-  {% endblock %}
-  {% block meta %}
-    {% if display_submitted %}
-      <div class="node__meta">
-        <span{{ author_attributes }}>
-          {{ 'By'|t }} <span class="node__author">{{- author_name -}}</span>, {{ date }}
-        </span>
-        {{ metadata }}
-      </div>
-    {% endif %}
-  {% endblock %}
+ {{ include ('academica:menu', {
+  type: 'horizontal',
+  type_class: 'lalala',
+ }) }}
 
-  {% block title %}
-    {% if label and not page %}
-      <h2{{ title_attributes.addClass('node__title', 'teaser__title') }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </h2>
-    {% endif %}
-  {% endblock %}
-  {% block content %}
-    {{ content }}
-  {% endblock %}
-{% endembed %} #}
+{# how to make it the horizontal variant? #}

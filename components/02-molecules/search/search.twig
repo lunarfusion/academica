@@ -1,0 +1,16 @@
+
+<div class="search" {% if attributes is not empty %}{{- attributes|raw -}}{% endif %}>
+  <div class="search-form-wrapper" id="search-form-drawer" aria-expanded="false">
+
+    {{ include ('academica:input', {
+      type: 'search',
+    }) }}
+
+    {{ include ('academica:button', {
+      kind: 'submit',
+      text: 'search',
+    }) }}
+
+  </div>
+</div>
+  ``

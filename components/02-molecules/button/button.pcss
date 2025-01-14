@@ -192,6 +192,13 @@
     block-size: calc(var(--academica-size-block-button) * 0.75);
   }
   
+  /*** Variant - large ***/
+  &--large {
+    font-size: var(--academica-size-text-lrg);
+    padding-inline: calc(var(--academica-size-radius-button) * 1.25);
+    block-size: calc(var(--academica-size-block-button) * 1.5);
+  }
+  
   /*** Variant - if Button is inside a menu ***/
   &--nav {
     color: var(--academica-color-action-nav-fg-default);
@@ -264,6 +271,8 @@
     .button__icon {
       inline-size: 100%;
       block-size: auto;
+      content: url("../../../assets/icons/menu-open.svg");
+      filter: invert(1);
     }
     
     /* change icon to white */
@@ -273,6 +282,10 @@
     
     .button__content {
       font-size: var(--academica-size-text-small);
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      gap: 0.25rem;
     }
     
     /* menu is closed */
@@ -286,7 +299,7 @@
     
     &.is-closed {
       .button__icon {
-        content: url("../assets/icons/menu-open.svg");
+        content: url("../../../assets/icons/menu-open.svg");
         filter: invert(1);
       }
     }
@@ -295,7 +308,7 @@
     &.is-open {
       
       .button__icon {
-        content: url("../assets/icons/menu-close.svg");
+        content: url("../../../assets/icons/menu-close.svg");
         filter: invert(1);
       }
       

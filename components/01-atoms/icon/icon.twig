@@ -1,3 +1,15 @@
-<i {{attributes.addClass('icon').addClass(extra_classes|default([])) }}>
-  {{ source(path ~ '../assets/icons/' ~ icon ~ '.svg') }}
-</i>
+{% set assets_dir = assets_dir|default('@academica/../assets') %}
+
+{% if symbol is not empty %}
+  {% set source = source(assets_dir ~ '/icons/' ~ symbol ~ '.svg', true) %}
+  {% if source is not empty %}
+    {% set size_class = size ? 'icon--' ~ size : '' %}
+    {% set base_class = 'icon ' ~ size_class %}
+    {% set modifier = modifier_class|default('') %}
+    {% set aria_attributes = 'aria-hidden="true" role="img"' %}
+
+    {% set additional_attributes = attributes|default('') %}
+    {% set attributes = 'class="' ~ base_class ~ ' ' ~ modifier ~ '" ' ~ aria_attributes ~ ' ' ~ alt_attribute ~ ' ' ~ additional_attributes %}
+    {{ source|replace({'<svg ': '<svg ' ~ attributes ~ ' '})|raw }}
+  {% endif %}
+{% endif %}

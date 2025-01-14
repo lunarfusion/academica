@@ -8,8 +8,25 @@ props:
   type: object
 
   properties:
-    classes:
-      type: array
+
+    type:
+      type: string
+      title: Type
+      description: 'Type: vertical, horizontal.'
+      default: vertical
+      enum:
+        - vertical
+        - horizontal
+      examples:
+        - vertical
+
+    modifier_class:
+      type: string
+      title: Modifier class
+      description: Additional classes.
+      examples:
+        - 'custom-class'
+
     items:
       type: array
       title: Menu Items
@@ -34,18 +51,3 @@ props:
         required:
           - title
 
-thirdPartySettings:
-  sdcStorybook:
-    stories:
-
-      vertical:
-        title: Vertical
-        props:
-          extra_classes:
-            - menu--vertical
-
-      horizontal:
-        title: Horizontal
-        props:
-          extra_classes:
-            - menu--horizontal

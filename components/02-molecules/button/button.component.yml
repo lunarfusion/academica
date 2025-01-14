@@ -6,12 +6,48 @@ group: molecules
 props:
   type: object
   properties:
-    html_tag:
+
+    text:
       type: string
-      description: Button is either a button or a link that looks like a button.
+      title: Text
+      description: Button text.
+      examples:
+        - 'Button text'
+      default:
+        - value
+
+    allow_html:
+      type: boolean
+      title: Allow HTML in text.
+      default: false
+      examples:
+        - false
+
+    is_disabled:
+      type: boolean
+      title: Disabled or not.
+      default: false
+      examples:
+        - false
+
+    icon:
+      type: string
+      title: Icon
+      description: Icon name.
       enum:
-        - button
-        - a
+        - 'arrow-forward'
+        - 'arrow-backward'
+        - null
+      examples:
+        - null
+
+    modifier_class:
+      type: string
+      title: Modifier class
+      description: Additional classes.
+      examples:
+        - 'custom-class'
+
     url:
       type: string
       title: Button URL
@@ -20,27 +56,20 @@ props:
 
     input_id:
       format: iri-reference
-      default: menu-toggle
 
-    has_icon:
+    kind:
       type: string
-      title: Button with icon
-      description: Button icon modifier.
+      title: Kind
+      description: 'Button kind: submit, button, link, menu toggle.'
+      default: button
       enum:
-        - true
-        - false
-      default: false
+        - submit
+        - button
+        - link
+      examples:
+        - button
 
-    menu_toggler:
-      type: string
-      title: Menu Toggle
-      description: Is this the menu toggler?
-      enum:
-        - true
-        - false
-      default: false
-
-    variant:
+    type:
       type: string
       title: Type
       description: 'Button type: primary, secondary, tertiary.'
@@ -48,72 +77,20 @@ props:
       enum:
         - primary
         - secondary
-        - tertiary
+        - ghost
+        - nav
+        - menu-toggle
       examples:
         - primary
 
-slots:
-  # Content to display in the button
-  button_content:
-    title: Content
-    required: true
-    description: Content of the button.
-    examples:
-      - Read more
-  button_icon:
-    title: Icon
-    required: false
-    description: Optional button icon
-    examples:
-      - arrow-forward
-
-thirdPartySettings:
-  sdcStorybook:
-    stories:
-      primary:
-        title: Primary
-        props:
-          extra_classes:
-            - button--primary
-      secondary:
-        title: Secondary
-        props:
-          extra_classes:
-            - button--secondary
-      ghost:
-        title: Ghost
-        props:
-          extra_classes:
-            - button--ghost
-      nav:
-        title: Nav
-        props:
-          extra_classes:
-            - button--nav
-      circle:
-        title: Circle
-        props:
-          extra_classes:
-            - button--circle
-      small:
-        title: Small
-        props:
-          extra_classes:
-            - button--small
-      menu_toggle:
-        title: Menu Toggle
-        input_id: menu-toggle
-        props:
-          html_tag: button
-          url: false
-          has_icon: true
-          menu_toggler: true
-          extra_classes:
-            - button--menu-toggle
-            - button--ghost
-            - button--icon
-        slots:
-          required:
-             - icon
-          icon: menu-open
-          content: open
+    size:
+      type: string
+      title: Size
+      description: 'Button size: large, regular, small.'
+      default: regular
+      enum:
+        - large
+        - regular
+        - small
+      examples:
+        - regular

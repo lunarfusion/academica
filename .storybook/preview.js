@@ -12,6 +12,5 @@ const preview = {
 
 import '../dist/vars.css';
 import '../dist/academicatheme.css';
-import '../dist/base.css';
 
 export default preview;

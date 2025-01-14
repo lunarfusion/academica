@@ -40,11 +40,11 @@
 
 /*** TODO - temporary fix for main menu horizontal variant ***/
 
-#block-academica-main-menu .menu {
+/* #block-academica-main-menu .menu {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-}
+} */
 
 /*** LI element ***/
 
@@ -109,8 +109,8 @@
     display: block;
     block-size: 100%;
     
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 600;
     line-height: 1.2;
     text-decoration: none;
     color: var(--academica-color-action-nav-fg-default);
@@ -224,32 +224,35 @@
 .menu--horizontal .menu-item a::before,
     .menu--horizontal .menu-item span::before,
     .menu--horizontal .menu-item button::before {
-      width: calc(100% + 2px);
+      width: calc(var(--academica-size-thickness-focus-indicator) * 2 + 100%);
       height: calc(var(--academica-size-border-active-item) - 1px);
       bottom: 0;
+      transform: translateY(var(--academica-size-thickness-focus-indicator));
       top: unset;
+      left: calc(var(--academica-size-thickness-focus-indicator) * -1);
     }
 
 /*** TODO - temporary fix for main menu horizontal variant ***/
 
-#block-academica-main-menu .menu-item {
-    /* box-shadow: var(--academica-color-bg-base) 0px 0px 0px 6.5px; */
+/* #block-academica-main-menu & {
     box-shadow: -2px 0 0px 0px var(--academica-color-bg-base),
       2px 0 0px 0px var(--academica-color-bg-base);
-  }
 
-#block-academica-main-menu .menu-item a {
+    a {
       padding-block-start: calc(var(--academica-size-inner-menu-item-horizontal) * 0.5);
     }
 
-#block-academica-main-menu .menu-item a::before,
-    #block-academica-main-menu .menu-item span::before,
-    #block-academica-main-menu .menu-item button::before {
-      width: calc(100% + 2px);
+    a::before,
+    span::before,
+    button::before {
+      width: calc(var(--academica-size-thickness-focus-indicator) * 2 + 100%);
       height: calc(var(--academica-size-border-active-item) - 1px);
       bottom: 0;
+      transform: translateY(var(--academica-size-thickness-focus-indicator));
       top: unset;
+      left: calc(var(--academica-size-thickness-focus-indicator) * -1);
     }
+  } */
 
 .menu-item--active-trail button::before {
     width: calc(var(--academica-size-border-active-item) - 1px);

@@ -1,21 +1,66 @@
-<{{ html_tag|default('button')}}{{attributes.setAttribute('href',url).setAttribute('id',input_id).addClass('button').addClass(extra_classes|default([]))}}>
-  {% block button_content %}
 
+{% set kind = kind in ['button', 'link', 'submit'] ? kind : 'button' %}
+{% set type = type in ['primary', 'secondary', 'ghost', 'nav', 'menu-toggle'] ? type : 'primary' %}
+{% set size = size in ['large', 'regular', 'small'] ? size : 'regular' %}
+
+{% set type_class = type ? 'button--%s'|format(type) : '' %}
+{% set kind_class = kind ? 'button--%s'|format(kind) : '' %}
+{% set size_class = 'button--%s'|format(size) %}
+{% set modifier_class = '%s %s %s %s'|format(type_class, kind_class, size_class, modifier_class|default('')) %}
+
+
+{# content markup #}
+{% set content_markup %}
+  {% if type == 'menu-toggle' %}
     <span class="button__content">
-      {% if menu_toggler == true %}
-        <span class="open-text">OPEN</span>
-        <span class="close-text">CLOSE</span>
+      <span class="open-text">OPEN</span>
+      <span class="close-text">CLOSE</span>
+      <span class="button__icon"></span>
+    </span>
 
-        {% else %}
-          {{ button_content }}
+  {% else %}
+    <span class="button__content">
+      {% if icon %}
+        {{ text }}
+        <span class="button__icon">
+          {{ source(path ~ '../assets/icons/' ~ icon ~ '.svg') }}
+        </span>
+
+      {% else %}
+        {{ text }}
       {% endif %}
     </span>
 
-    {% if has_icon == true %}
-      <span class="button__icon">
-          {{ source(path ~ '../src/icons/' ~ button_icon ~ '.svg') }}
-      </span>
-    {% endif %}
+  {% endif %}
+{% endset %}
 
-  {% endblock %}
-</{{ html_tag|default('button') }}>
+
+
+{# kind markup #}
+{% if kind == 'button' %}
+  <button
+    class="button {{ modifier_class -}}"
+    data-component-name="button"
+    {% if attributes is not empty %}{{attributes.setAttribute('id',input_id)}}{% endif %}
+    {% if is_disabled %}disabled="disabled" aria-disabled="true"{% endif %}
+    {{- content_markup -}}
+  </button>
+
+{% elseif kind == 'link' %}
+  <a
+    class="button {{ modifier_class -}}"
+    data-component-name="button"
+    {% if attributes is not empty %}{{attributes.setAttribute('href',url)}}{% endif %}
+    {% if is_disabled %}disabled="disabled" aria-disabled="true"{% endif %}
+    {{- content_markup -}}
+  </a>
+
+{% elseif kind in ['reset', 'submit'] %}
+  <input
+    class="button {{ modifier_class -}}"
+    data-component-name="button"
+    type="{{ kind }}"
+    value="{{- text -}}"
+    {% if is_disabled %}disabled="disabled" aria-disabled="true"{% endif %}
+  />
+{% endif %}

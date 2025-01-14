@@ -1,0 +1,26 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: input
+status: experimental
+group: organisms
+
+props:
+  type: object
+  properties:
+
+    type:
+      type: string
+      title: Tyle
+      description: 'Input type: search, text...'
+      default: search
+      enum:
+        - search
+        - text
+      examples:
+        - search
+
+    modifier_class:
+      type: string
+      title: Modifier class
+      description: Additional classes.
+      examples:
+        - 'custom-class'

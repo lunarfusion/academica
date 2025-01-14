@@ -1,5 +1,6 @@
 i,
-.icon {
+.icon,
+svg {
   color: var(--academica-color-fg-secondary);
   display: inline-block;
   height: var(--academica-size-block-component-base);
@@ -7,19 +8,19 @@ i,
 }
 
   /*** Variants - size ***/
-  i--extra-small, .icon--extra-small {
+  i--extra-small, .icon--extra-small, svg--extra-small {
     block-size: calc(var(--academica-size-block-component-base) * 0.35);
     inline-size: calc(var(--academica-size-block-component-base) * 0.35);
   }
-  i--small, .icon--small {
+  i--small, .icon--small, svg--small {
     block-size: calc(var(--academica-size-block-component-base) * 0.65);
     inline-size: calc(var(--academica-size-block-component-base) * 0.65);
   }
-  i--medium, .icon--medium {
+  i--medium, .icon--medium, svg--medium {
     height: var(--academica-size-block-component-base);
     width: var(--academica-size-block-component-base);
   }
-  i--large, .icon--large {
+  i--large, .icon--large, svg--large {
     block-size: calc(var(--academica-size-block-component-base) * 1.25);
     inline-size: calc(var(--academica-size-block-component-base) * 1.25);
   }

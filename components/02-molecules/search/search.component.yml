@@ -1,0 +1,24 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: search
+status: experimental
+group: molecules
+
+props:
+  type: object
+
+js:
+  search.js: { attributes: { defer: true } }
+#   properties:
+#     text:
+#       type: string
+#       title: Text
+#       description: Text for the link.
+#       examples:
+#         - Search
+#
+#     url:
+#       type: string
+#       title: Url
+#       description: Search page URL.
+#       examples:
+#         - '/search'

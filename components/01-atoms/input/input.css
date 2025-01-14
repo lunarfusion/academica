@@ -1,0 +1,20 @@
+.input {
+  border: 1px solid var(--academica-color-border-neutral-light);
+  box-shadow: var(--academica-shadow-inset);
+  background: var(--academica-color-bg-base);
+  min-block-size: 2rem;
+  border-radius: var(--academica-size-radius-med);
+  padding-block: 0.5rem;
+  padding-inline: var(--academica-size-inner-horiz-component);
+}
+  
+  
+  .input--search {
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
+    
+    flex-direction: column;
+    justify-content: stretch;
+    min-inline-size: 200px;
+    min-block-size: 100%;
+  }
