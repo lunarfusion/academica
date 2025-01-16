@@ -1,0 +1,33 @@
+# This is so your IDE knows about the syntax for fixes and autocomplete.
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: navigation
+status: experimental
+group: organisms
+
+props:
+  type: object
+
+  properties:
+
+    menu_id:
+      type: string
+      title: Menu id
+      description: Optional menu ID used for grouping dropdown items.
+      default: navigation
+      examples:
+        - navigation
+        
+    title:
+      type: string
+      title: Title
+      description: Navigation title.
+      examples:
+        - Main Navigation
+
+
+    modifier_class:
+      type: string
+      title: Modifier class
+      description: Additional classes.
+      examples:
+        - 'custom-class'

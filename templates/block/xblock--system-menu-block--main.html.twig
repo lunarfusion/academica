@@ -1,7 +1,12 @@
-
+{#
 {{ include ('academica:menu', {
   type: 'horizontal',
   modifier_class: 'menu--horizontal' ~ modifier_class|default(''),
   items,
-}) }}
+}) }} #}
 
+{# {{ include ('academica:navigation') }} #}
+
+
+{# including menu here does not work #}
+{{ include ('academica:menu') }}

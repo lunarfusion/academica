@@ -9,7 +9,7 @@ props:
 
     type:
       type: string
-      title: Tyle
+      title: Type
       description: 'Input type: search, text...'
       default: search
       enum:

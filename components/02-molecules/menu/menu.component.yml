@@ -9,9 +9,21 @@ props:
 
   properties:
 
-    type:
+    nav_type:
       type: string
-      title: Type
+      title: Layout type
+      description: 'Navigation Type: none, sidebar, main.'
+      default: none
+      enum:
+        - none
+        - sidebar
+        - main
+      examples:
+        - sidebar
+
+    layout_type:
+      type: string
+      title: Layout type
       description: 'Type: vertical, horizontal.'
       default: vertical
       enum:
