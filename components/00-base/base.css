@@ -49,6 +49,11 @@ img {
   margin: 0 auto;
 }
 
+pre {
+  display: block;
+  white-space: pre-wrap;
+}
+
 /* ensure footer does not cover main content */
 .page {
   display: flex;

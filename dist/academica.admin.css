@@ -7,7 +7,7 @@
 /*** node edit ***/
 .admin-tasks,
 #block-academica-account-menu {
-  position: relative;
+  /* position: relative;
   width: 100%;
   max-width: var(--academica-size-container-width);
   margin: 0;
@@ -16,10 +16,8 @@
   padding: 0.5rem;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-}
-
-.admin-tasks {
+  justify-content: flex-start; */
+/* }.admin-tasks {
   margin-block: 1rem;
 }
 
@@ -58,11 +56,11 @@
 #block-academica-account-menu a:hover,
 #block-academica-account-menu a:focus {
   color: hsl(0, 0%, 30%);
-}
+} */
 
 
 /** login menu ***/
-#block-academica-account-menu ul:not(.contextual-links),
+/* #block-academica-account-menu ul:not(.contextual-links),
 .admin-tasks ul:not(.contextual-links) {
   position: relative;
   border: 1.5px solid hsla(0, 0%, 50%, 0.5);
@@ -95,4 +93,4 @@
 #block-academica-account-menu li:last-child,
 .admin-tasks li:last-child {
   border-inline-end: none;
-}
+} */

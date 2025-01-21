@@ -6,6 +6,7 @@ const config = {
       options: {
         sdcStorybookOptions: {
           namespace: "academica", // Your namespace.
+          validate: false,
           storySort: {
               method: 'alphabetical',
               locales: 'en-US'

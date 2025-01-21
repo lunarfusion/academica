@@ -1,58 +1,24 @@
-{% set layout_type = layout_type in ['vertical', 'horizontal'] ? layout_type : 'vertical' %}
-{% set nav_type = nav_type in ['none', 'sidebar', 'main'] ? nav_type : 'none' %}
-{% set layout_type_class = layout_type ? 'menu--%s'|format(layout_type) : '' %}
-{% set nav_type_class = nav_type ? 'nav--%s'|format(nav_type) : '' %}
-{% set modifier_class = '%s %s %s'|format(layout_type_class, nav_type_class, modifier_class|default('')) %}
-
 {% import _self as menus %}
-{% macro menu_links(items, menu_level, layout_type, modifier_class) %}
 
-
+{% macro menu_links(items, attributes) %}
+  {% import _self as menus %}
   {% if items %}
-
-    {% if menu_level == 0 %}
-      <ul
-      class="menu menu--level-{{ menu_level }} {{ modifier_class -}}"
-      data-component-name="menu">
-
-    {% else %}
-      <div class="menu__submenu-wrapper">
-        <ul
-        class="menu menu--level-{{- menu_level }} {{ modifier_class -}}"
-        data-component-name="menu">
-    {% endif %}
-
-
+    <ul{{ attributes.addClass('menu') }}>
       {% for item in items %}
 
         {%
           set item_classes = [
-            'menu-item',
-            'menu-item--level-' ~ menu_level,
-            item.is_expanded ? 'menu-item--expanded',
-            item.is_collapsed ? 'menu-item--collapsed',
-            item.in_active_trail ? 'menu-item--active-trail',
-            item.below ? 'menu-item--has-children' : '',
+            'menu__item',
+            'menu__item--level-' ~ menu_level,
           ]
         %}
 
         <li class="{{- item_classes|join(' ') -}}" {{- item_attributes|raw -}}>
-          {{ link(item.title, item.url) }}
-          {% if item.below %}
-            {{ menus.menu_links(item.below, menu_level + 1) }}
-          {% endif %}
+          {{ link(item.title, item.url, { class: ['menu__link']}) }}
         </li>
       {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}
 
-      {% if menu_level == 0 %}
-        </ul>
-      {% else %}
-          </ul>
-        </div>
-      {% endif %}
-
-
-    {% endif %}
-  {% endmacro %}
-
-{{ menus.menu_links(items, 0, layout_type, modifier_class) }}
+{{ menus.menu_links(items, attributes) }}

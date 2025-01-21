@@ -3,23 +3,12 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schema
 name: menu
 status: experimental
 group: molecules
+title: 'molecules/menu'
 
 props:
   type: object
 
   properties:
-
-    nav_type:
-      type: string
-      title: Layout type
-      description: 'Navigation Type: none, sidebar, main.'
-      default: none
-      enum:
-        - none
-        - sidebar
-        - main
-      examples:
-        - sidebar
 
     layout_type:
       type: string
@@ -48,18 +37,14 @@ props:
           title:
             type: string
             examples:
-              - Home
-              - About
-              - Programs
-              - Events
+              - My account
+              - Log out
           url:
             type: string
             format: uri
             examples:
-              - https://wikipedia.org
-              - https://nasa.gov
-              - https://lunarfusion.com
-              - https://www.futurity.org
+              - /user
+              - /logout
         required:
           - title
 

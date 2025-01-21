@@ -9,20 +9,57 @@ props:
 
   properties:
 
-    menu_id:
+    nav_id:
       type: string
-      title: Menu id
+      title: Navigation menu ID
       description: Optional menu ID used for grouping dropdown items.
-      default: navigation
+      default: main-nav
       examples:
-        - navigation
-        
+        - main-nav
+        - sidebar-nav
+
+    nav_type:
+      type: string
+      title: Layout type
+      description: 'Navigation Type: main, sidebar, footer.'
+      default: main
+      enum:
+        - main
+        - sidebar
+        - footer
+      examples:
+        - main
+
     title:
       type: string
       title: Title
       description: Navigation title.
       examples:
         - Main Navigation
+
+    items:
+      type: array
+      title: Menu Items
+      items:
+        type: object
+        properties:
+          title:
+            type: string
+            examples:
+              - Home
+              - About
+              - Programs
+              - Events
+          url:
+            type: string
+            format: uri
+            examples:
+              - https://wikipedia.org
+              - https://nasa.gov
+              - https://lunarfusion.com
+              - https://www.futurity.org
+        required:
+          - title
 
 
     modifier_class:
@@ -31,3 +68,6 @@ props:
       description: Additional classes.
       examples:
         - 'custom-class'
+
+js:
+    navigation.js: { attributes: { defer: true } }

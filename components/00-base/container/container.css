@@ -4,7 +4,7 @@
   width: 100%;
   max-width: var(--academica-size-container-width);
   min-width: 320px;
-  
+
   margin-left: auto;
   margin-right: auto;
   padding-inline: var(--academica-size-container-padding);
@@ -95,12 +95,12 @@
 /********* FLEXBOX COLUMNS *********/
 .col {
   position: relative;
-  
+
   width: auto;
   max-width: 100%;
   flex-grow: 1;
   flex-basis: 0;
-  
+
   padding-inline: var(--academica-size-col-padding);
   margin-block: calc(var(--academica-size-col-padding) * 0.5);
 }

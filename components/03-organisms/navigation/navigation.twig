@@ -1,26 +1,54 @@
 
-{% set menu_id = menu_id|default('navigation') %}
-{% set modifier_class = '%s'|format(modifier_class|default('')) %}
+{% set nav_type = nav_type in ['sidebar', 'main', 'footer'] ? nav_type : 'main' %}
+{% set nav_type_class = nav_type ? 'nav--%s'|format(nav_type) : '' %}
+{% set modifier_class = '%s %s %s'|format(layout_type_class, nav_type_class, modifier_class|default('')) %}
+
+{% import _self as menus %}
+{% macro menu_links(items, menu_level, layout_type, modifier_class) %}
 
 
-{% set heading_id = attributes.id ~ '-menu'|clean_id %}
-<nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes.addClass(classes)|without('role', 'aria-labelledby') }}>
-  
-  <div 
-    class="{{ modifier_class -}}"
-    {{ attributes.setAttribute('id', menu_id) }}>
-    
-  {# Label. If not displayed, we still provide it for screen readers. #}
-  {% if not configuration.label_display %}
-    {% set title_attributes = title_attributes.addClass('visually-hidden') %}
-  {% endif %}
-  {{ title_prefix }}
-  <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h2>
-  {{ title_suffix }}
+  {% if items %}
+    <div class="nav nav--level-{{ menu_level }} {{ modifier_class -}}"
+    data-component-name="navigation">
+      {% if menu_level == 0 %}
+        <ul class="nav__list nav--level-{{- menu_level }} {{ modifier_class -}}">
 
-    {{ include ('academica:menu', {
-      layout_type: 'horizontal',
-    }) }}
+      {% else %}
+        <div class="nav__subnav-wrapper">
+          <ul class="nav__list nav--level-{{- menu_level }} {{ modifier_class -}}">
+      {% endif %}
 
-  </div>
-</nav>
+
+        {% for item in items %}
+
+          {%
+            set item_classes = [
+              'nav__item',
+              'nav__item--level-' ~ menu_level,
+              item.is_expanded ? 'nav__item--expanded',
+              item.is_collapsed ? 'nav__item--collapsed',
+              item.in_active_trail ? 'nav__item--active-trail',
+              item.below ? 'nav__item--has-children' : '',
+            ]
+          %}
+
+          <li class="{{- item_classes|join(' ') -}}" {{- item_attributes|raw -}}>
+            {{ link(item.title, item.url, { class: ['nav__link']}) }}
+            {% if item.below %}
+              {{ menus.menu_links(item.below, menu_level + 1) }}
+            {% endif %}
+          </li>
+        {% endfor %}
+
+        {% if menu_level == 0 %}
+          </ul>
+        {% else %}
+            </ul>
+          </div>
+        {% endif %}
+      </div>
+
+    {% endif %}
+  {% endmacro %}
+
+{{ menus.menu_links(items, 0, layout_type, modifier_class) }}
