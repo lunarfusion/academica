@@ -46,7 +46,7 @@ function academica_theme_suggestions_block_alter(&$suggestions, $variables) {
 /**
  * Breadcrumbs - show current title
  */
-// function university_preprocess_breadcrumb(&$variables) {
+// function academica_preprocess_breadcrumb(&$variables) {
 //    if ($variables['breadcrumb']) {
 //      $request = \Drupal::request();
 //      $route_match = \Drupal::routeMatch();
@@ -60,6 +60,30 @@ function academica_theme_suggestions_block_alter(&$suggestions, $variables) {
 //      }
 //    }
 //  }
+
+// Menus - current active link is-active - doesn't work yet
+function academica_preprocess_menu(&$variables, $hook) {
+  if ($hook == 'menu') {
+    $current_path = \Drupal::request()->getRequestUri();
+    $items = $variables['items'];
+
+    foreach ($items as $key => $item) {
+      // Set active to dom element if path of menu item matches current path
+      if ($item['url']->toString() == $current_path) {
+        // Add active link.
+        $variables['items'][$key]['attributes']['class'][] = 'active';
+      } else {
+        // Set active to dom element if path of menu item matches first part of current path
+        $url_fragments = explode('/', $current_path);
+        if (count($url_fragments) > 1 AND '/' . $url_fragments[1] == $item['url']->toString()) {
+          $variables['items'][$key]['attributes']['class'][] = 'active';
+        }
+      }
+    }
+  }
+}
+
+
 
 /* Menus - Use first menu item as menu title */
 function menu_tree($menu_name) {

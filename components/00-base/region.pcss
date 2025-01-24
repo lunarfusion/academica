@@ -1,0 +1,29 @@
+.region {
+  
+  &--main-nav {
+    background-color: var(--academica-color-action-nav-bg-default);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  &--footer {
+    background-color: var(--academica-color-bg-primary);
+    padding-inline: var(--academica-size-baseline);
+    padding-block: 1rem;
+  }
+}
+
+
+/********* DESKTOP DISPLAY ONLY for MENU--MAIN *********/
+@media (min-width: 992px) {
+  .region {
+    &--main-nav {
+      background-color: var(--academica-color-action-nav-bg-default);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  
+}

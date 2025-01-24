@@ -28,9 +28,13 @@
   --academica-color-bg-primary-dark: var(--academica-color-blue-010);
   --academica-color-bg-primary: var(--academica-color-blue-015);
   --academica-color-bg-primary-medium: var(--academica-color-blue-040);
-  --academica-color-bg-primary-light: var(--academica-color-blue-080);
+  --academica-color-bg-primary-light: var(--academica-color-blue-070);
   --academica-color-bg-primary-lightest: var(--academica-color-blue-095);
-  --academica-color-bg-primary-alpha: var(--academica-color-blue-020-a75);
+  
+  --academica-color-bg-primary-alpha: var(--academica-color-blue-015-a75);
+  --academica-color-bg-primary-light-alpha: var(--academica-color-blue-070-a50);
+  --academica-color-bg-primary-lightest-alpha: var(--academica-color-blue-095-a75);
+  --academica-color-bg-primary-lightest-alpha-alpha: var(--academica-color-blue-095-a70);
   
   --academica-color-bg-secondary: var(--academica-color-cyan-040);
   --academica-color-bg-secondary-light: var(--academica-color-cyan-080);
@@ -83,18 +87,22 @@
   --academica-color-link-decoration-01: var(--academica-color-border-secondary-light);
   --academica-color-link-decoration-02: var(--academica-color-border-tertiary);
   
-  /*** Actions - Menu Items ***/
+  /*** NAV Actions - Menu Items ***/
   --academica-color-action-nav-fg-default: var(--academica-color-blue-020);
   --academica-color-action-nav-fg-hover: var(--academica-color-blue-040);
   --academica-color-action-nav-fg-focus: var(--academica-color-blue-040);
   --academica-color-action-nav-fg-active: var(--academica-color-fg-base);
   
   --academica-color-action-nav-bg-default: var(--academica-color-blue-090);
-  --academica-color-action-nav-bg-hover: var(--academica-color-blue-093);
-  --academica-color-action-nav-bg-focus: var(--academica-color-blue-093);
+  --academica-color-action-nav-bg-subnav: var(--academica-color-blue-093);
+  --academica-color-action-nav-bg-subnav-subnav: var(--academica-color-blue-095);
+  --academica-color-action-nav-bg-subnav-subnav-subnav: var(--academica-color-blue-097);
+  
+  --academica-color-action-nav-bg-hover: var(--academica-color-bg-base);
+  --academica-color-action-nav-bg-focus: var(--academica-color-bg-base);
   --academica-color-action-nav-bg-active: var(--academica-color-blue-097);
   
-  /*** Signifier for active nav items  - Base Theme ***/
+  /*** NAV Signifier for active nav items  - Base Theme ***/
   --academica-color-active-indicator: var(--academica-color-blue-040);
   --academica-color-hover-indicator: var(--academica-color-cyan-060);
   

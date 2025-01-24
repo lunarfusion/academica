@@ -7,7 +7,7 @@
   background-color: var(--academica-color-bg-primary);
   padding-inline: var(--academica-size-baseline);
   padding-block: 1rem;
-  
+
   &__row {
     width: 100%;
     margin-left: auto;
@@ -21,126 +21,126 @@
     min-height: 3rem;
     gap: 1.5rem;
   }
-  
+
   /* .block-system-branding-block {
     display: flex;
     gap: 0.5rem;
     flex-grow: 1;
     min-width: 0;
   } */
-  
+
   &__logo {
     position: relative;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
     flex: 0 0 9%;
-    
+
     img {
       padding: 0.5rem;
     }
-    
+
     a {
       text-decoration: none;
       background: transparent;
     }
   }
-  
+
   &__site-name-slogan {
     position: relative;
-    
+
     width: auto;
     max-width: 100%;
     flex-grow: 1;
     flex-basis: 0;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 0.5rem;
   }
-  
+
   &__site-slogan {
     text-decoration: none;
-    
-    font-size: 1.3rem;
-    font-weight: 500;
-    
-    font-family: var(--academica-font-serif);
+
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    font-family: var(--academica-font-primary);
     font-style: normal;
     font-optical-sizing: auto;
     text-transform: uppercase;
     letter-spacing: 2px;
-    
+
     text-align: left;
     width: 100%;
-    
+
     color: var(--academica-color-fg-white-static);
   }
-  
+
   &__site-name {
-    
+
     /* Site name text */
     a {
       text-decoration: none;
       background: transparent;
-      
-      font-size: 2.6rem;
+
+      font-size: 2.8rem;
       line-height: 1;
       font-weight: 500;
-      
+
       font-family: var(--academica-font-secondary);
       font-style: normal;
       font-optical-sizing: auto;
-      
+
       text-align: left;
       width: 100%;
-      
+
       color: var(--academica-color-fg-white-static);
     }
-    
+
     a:hover,
     a:focus {
       color: var(--academica-color-fg-white-static);
     }
   }
-  
-  
+
+
   @media (max-width: 992px) {
     & {
       .branding__logo {
         flex: 0 0 15%;
         max-width: 15%;
       }
-      
+
       .branding__site-name-slogan {
         display: flex;
         flex: 0 0 75%;
         max-width: 75%;
         justify-content: center;
       }
-      
+
       &__site-name {
-        
+
         /* Site name text */
         a {
           max-width: 100%;
           font-size: 2rem;
           line-height: 1;
-          
+
           text-wrap: wrap;
           overflow-wrap: break-word;
         }
       }
     }
   }
-  
-  
+
+
   @media (max-width: 768px) {
     & {
-      
+
       .branding__row {
         display: flex;
         flex-wrap: nowrap;
@@ -150,24 +150,24 @@
         margin-left: 0;
         flex: 0 0 calc(100% - var(--academica-size-mobile-menu-toggle));
       }
-      
+
       .branding__site-name-slogan {
         justify-content: flex-start;
       }
     }
   }
-  
-  
+
+
   @media (max-width: 576px) {
-    
+
     &__site-name {
-      
+
       /* Site name text */
       a {
         font-size: 1.4rem;
       }
     }
-    
+
     &__site-slogan {
       font-size: 1rem;
       visibility: hidden;

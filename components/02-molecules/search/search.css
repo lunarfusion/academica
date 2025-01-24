@@ -43,6 +43,7 @@
     .search {
       //justify-content: stretch;
       align-items: stretch;
+      max-block-size: var(--academica-size-nav-item);
     }
     
     .search .search-form-wrapper {

@@ -1,6 +1,6 @@
 .title {
   color: var(--academica-color-fg-base);
-  font-family: var(--academica-font-serif);
+  font-family: var(--academica-font-secondary);
   font-weight: 700;
   font-style: normal;
   font-optical-sizing: auto;
@@ -10,14 +10,12 @@
 }
 
 /* has flag indicator - is in content region OR has section-heading class */
-
 .section-title {
   position: relative;
   display: block;
   padding-block-start: 1.5rem;
-}
-
-.section-title::before {
+  
+  &::before {
     --flag-height: 12px;
     --notch-calc: calc(100% - var(--flag-height));
     
@@ -33,3 +31,4 @@
     border-end-end-radius: var(--flag-height);
     border-start-start-radius: var(--flag-height);
   }
+}

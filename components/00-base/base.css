@@ -58,7 +58,7 @@ pre {
 .page {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 main {
@@ -95,8 +95,8 @@ h5,
 h6,
 .h6 {
   color: var(--academica-color-fg-base);
-  font-family: var(--academica-font-serif);
-  font-weight: 600;
+  font-family: var(--academica-font-secondary);
+  font-weight: 700;
   font-style: normal;
   font-optical-sizing: auto;
   max-width: var(--academica-size-charlimit-lg);
@@ -112,7 +112,7 @@ h1,
 
 h2,
 .h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   line-height: 1.11;
   margin-block-start: 1.5rem;
 }
@@ -145,10 +145,19 @@ h6,
   margin-block-start: 0.5rem;
 }
 
-/*** TODO - temporary header styles ***/
-.main-nav {
-  background-color: var(--academica-color-action-nav-bg-default);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+
+p {
+  font-weight: 400;
+}
+
+/*** TODO - titles for navs ***/
+nav h2 {
+  background-color: var(--academica-color-bg-primary);
+  color: var(--academica-color-fg-white-static);
+  padding: 0.75rem 1rem;
+  font-size: 1.6rem;
+  font-family: var(--academica-font-secondary);
+  font-weight: 600;
+  border-start-start-radius: var(--academica-size-radius-med);
+  margin: 0;
 }

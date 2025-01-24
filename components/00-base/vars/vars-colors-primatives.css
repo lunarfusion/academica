@@ -15,7 +15,7 @@
   
   --academica-hue-yellow: 42;
   --academica-hue-blue: 230;
-  --academica-hue-cyan: 200;
+  --academica-hue-cyan: 205;
   
   --academica-hue-red: 360;
   --academica-hue-orange: 30;
@@ -64,6 +64,20 @@
   --academica-color-blue-020-a70: hsla(var(--academica-hue-blue), 98%, 20%, 0.7);
   --academica-color-blue-020-a75: hsla(var(--academica-hue-blue), 98%, 20%, 0.75);
   --academica-color-blue-020-a90: hsla(var(--academica-hue-blue), 98%, 20%, 0.9);
+  
+  
+  --academica-color-blue-070-a70: hsla(var(--academica-hue-blue), 98%, 70%, 0.7);
+  --academica-color-blue-070-a75: hsla(var(--academica-hue-blue), 98%, 70%, 0.75);
+  --academica-color-blue-070-a90: hsla(var(--academica-hue-blue), 98%, 70%, 0.9);
+  
+  --academica-color-blue-085-a60: hsla(var(--academica-hue-blue), 98%, 85%, 0.6);
+  --academica-color-blue-080-a70: hsla(var(--academica-hue-blue), 98%, 80%, 0.7);
+  --academica-color-blue-085-a75: hsla(var(--academica-hue-blue), 98%, 85%, 0.75);
+  --academica-color-blue-085-a90: hsla(var(--academica-hue-blue), 98%, 85%, 0.9);
+  
+  --academica-color-blue-090-a70: hsla(var(--academica-hue-blue), 98%, 90%, 0.7);
+  --academica-color-blue-095-a75: hsla(var(--academica-hue-blue), 98%, 95%, 0.75);
+  --academica-color-blue-095-a90: hsla(var(--academica-hue-blue), 98%, 95%, 0.9);
   
   /*** Cyan ***/
   --academica-color-cyan-010: hsl(var(--academica-hue-cyan), 100%, 10%);

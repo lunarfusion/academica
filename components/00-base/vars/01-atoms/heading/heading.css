@@ -11,7 +11,7 @@ h5,
 h6,
 .h6 {
   color: var(--academica-color-fg-base);
-  font-family: var(--academica-font-serif);
+  font-family: var(--academica-font-secondary);
   font-weight: 700;
   font-style: normal;
   font-optical-sizing: auto;

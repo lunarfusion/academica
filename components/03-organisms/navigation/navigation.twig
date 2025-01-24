@@ -8,14 +8,14 @@
 
 
   {% if items %}
-    <div class="nav nav--level-{{ menu_level }} {{ modifier_class -}}"
-    data-component-name="navigation">
+
       {% if menu_level == 0 %}
-        <ul class="nav__list nav--level-{{- menu_level }} {{ modifier_class -}}">
+        <ul class="nav nav--level-{{- menu_level }} {{ modifier_class -}}"
+        data-component-name="navigation">
 
       {% else %}
         <div class="nav__subnav-wrapper">
-          <ul class="nav__list nav--level-{{- menu_level }} {{ modifier_class -}}">
+          <ul class="nav nav--level-{{- menu_level }} {{ modifier_class -}}">
       {% endif %}
 
 
@@ -24,7 +24,6 @@
           {%
             set item_classes = [
               'nav__item',
-              'nav__item--level-' ~ menu_level,
               item.is_expanded ? 'nav__item--expanded',
               item.is_collapsed ? 'nav__item--collapsed',
               item.in_active_trail ? 'nav__item--active-trail',
@@ -32,7 +31,7 @@
             ]
           %}
 
-          <li class="{{- item_classes|join(' ') -}}" {{- item_attributes|raw -}}>
+          <li class="{{- item_classes|join(' ')-}}" {{- item_attributes|raw -}}>
             {{ link(item.title, item.url, { class: ['nav__link']}) }}
             {% if item.below %}
               {{ menus.menu_links(item.below, menu_level + 1) }}
@@ -46,7 +45,7 @@
             </ul>
           </div>
         {% endif %}
-      </div>
+
 
     {% endif %}
   {% endmacro %}
