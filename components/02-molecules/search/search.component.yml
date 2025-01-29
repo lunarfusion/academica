@@ -6,19 +6,32 @@ group: molecules
 props:
   type: object
 
-js:
-  search.js: { attributes: { defer: true } }
-#   properties:
-#     text:
-#       type: string
-#       title: Text
-#       description: Text for the link.
-#       examples:
-#         - Search
-#
-#     url:
-#       type: string
-#       title: Url
-#       description: Search page URL.
-#       examples:
-#         - '/search'
+
+thirdPartySettings:
+    sdcStorybook:
+      stories:
+
+        default:
+          props:
+            label: Search toggle
+
+          slots:
+
+            search_input:
+              - type: component
+                component: "academica:input"
+                props:
+                  type: search
+                  placeholder_text: 'What are you searching for?'
+
+            search_submit:
+                - type: component
+                  component: "academica:button"
+                  props:
+                    kind: button
+                    type: ghost
+                    input_value: search
+                    text: search
+                    size: regular
+                    modifier_class:
+                      - 'button--search'

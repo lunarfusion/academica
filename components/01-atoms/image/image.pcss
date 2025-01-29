@@ -1,7 +1,59 @@
-img.image {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
+.image {
+  position: relative;
+  
+  &--default {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  &--square {
+    overflow: hidden;
+    width: 100%;
+    
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
+    
+    &::after {
+      display: block;
+      content: "";
+      padding-block-start: 100%;
+      width: 100%;
+    }
+  }
+  
+  
+  &--card {
+    overflow: hidden;
+    width: 100%;
+    transition: var(--academica-transition-smooth);
+    /* position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    inline-size: 100%;
+    block-size: auto;
+    overflow: hidden; */
+    
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
+    
+    &::after {
+      display: block;
+      content: "";
+      padding-block-start: 60%;
+      width: 100%;
+    }
+  }
 }

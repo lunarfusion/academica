@@ -1,6 +1,4 @@
-{% set placeholder_text = attributes.placeholder ~ 'Enter search terms...' %}
 {% set type = type in ['search', 'text'] ? kind : 'search' %}
-
 {% set type_class = kind ? 'input--%s'|format(kind) : '' %}
 {% set modifier_class = '%s %s'|format(type_class, modifier_class|default('')) %}
 

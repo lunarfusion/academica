@@ -5,6 +5,7 @@
     justify-content: space-between;
   }
   
+  
   .region--footer {
     background-color: var(--academica-color-bg-primary);
     padding-inline: var(--academica-size-baseline);
@@ -22,5 +23,4 @@
       flex-direction: row;
       justify-content: space-between;
     }
-  
 }

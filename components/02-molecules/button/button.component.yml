@@ -14,20 +14,6 @@ props:
       default:
         - Button text
 
-    allow_html:
-      type: boolean
-      title: Allow HTML in text.
-      default: false
-      examples:
-        - false
-
-    is_disabled:
-      type: boolean
-      title: Disabled or not.
-      default: false
-      examples:
-        - false
-
     icon:
       type: string
       title: Icon
@@ -42,12 +28,19 @@ props:
       examples:
         - null
 
-    modifier_class:
-      type: string
-      title: Modifier class
-      description: Additional classes.
+    allow_html:
+      type: boolean
+      title: Allow HTML in text.
+      default: false
       examples:
-        - 'custom-class'
+        - false
+
+    is_disabled:
+      type: boolean
+      title: Disabled or not.
+      default: false
+      examples:
+        - false
 
     url:
       type: string
@@ -62,7 +55,6 @@ props:
       type: string
       title: Input value
       default: submit
-
 
     kind:
       type: string
@@ -101,3 +93,55 @@ props:
         - small
       examples:
         - regular
+
+    modifier_class:
+        type: string
+        title: Modifier class
+        description: Additional classes.
+        default: mod-class
+
+# slots:
+  # icon:
+  #   type: string
+  #   title: Icon
+  #   description: Icon name.
+  #   enum:
+  #     - 'arrow-forward'
+  #     - 'arrow-backward'
+  #     - 'menu-open'
+  #     - 'menu-close'
+  #     - 'search-toggle'
+  #     - null
+  #   examples:
+  #     - null
+
+  # button_icon:
+  #   - type: component
+  #     component: "academica:icon"
+  #     description: button icon
+  #     props:
+  #       symbol: menu-open
+
+#
+#
+# thirdPartySettings:
+#   sdcStorybook:
+#     stories:
+#
+#       default:
+#         props:
+#           label: Default button
+#
+#
+#       menu_toggle:
+#         props:
+#           label: Button with icon
+#           text: open
+#           modifier_class: button--menu-toggle
+#
+#         slots:
+#           icon:
+#           - type: component
+#             component: "academica:icon"
+#             props:
+#               symbol: menu-open

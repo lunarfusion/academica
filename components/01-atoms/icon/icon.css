@@ -3,10 +3,10 @@ i,
 svg {
   color: var(--academica-color-fg-secondary);
   display: inline-block;
-  height: var(--academica-size-block-component-base);
-  width: var(--academica-size-block-component-base);
+  max-block-size: var(--academica-size-block-component-base);
+  max-inline-size: var(--academica-size-block-component-base);
 }
-
+  
   /*** Variants - size ***/
   i--extra-small, .icon--extra-small, svg--extra-small {
     block-size: calc(var(--academica-size-block-component-base) * 0.35);

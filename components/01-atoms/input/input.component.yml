@@ -18,6 +18,10 @@ props:
       examples:
         - search
 
+    placeholder_text:
+      type: string
+      default: Enter search terms
+
     modifier_class:
       type: string
       title: Modifier class

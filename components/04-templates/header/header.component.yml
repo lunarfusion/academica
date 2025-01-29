@@ -24,24 +24,21 @@ thirdPartySettings:
 
           menu_toggle:
             - type: component
-              component: "storybook-university:button"
+              component: "academica:button"
               props:
-                input_id: menu-toggle
-                html_tag: button
-                url: false
-                has_icon: true
-                menu_toggler: true
-                extra_classes:
-                  - button--menu-toggle
-                  - button--ghost
-                  - button--icon
-              slots:
-                icon: menu-open
-                content: open
+                kind: button
+                type: menu-toggle
+                size: small
+                input_value: open menu
+                # text: open
+                # size: small
+                # icon: menu-toggle
+                modifier_class:
+                  - 'button--menu-toggle'
 
           menu_main:
             - type: component
-              component: "storybook-university:menu"
+              component: "academica:navigation"
               props:
                 menu_id:
                   - main-menu

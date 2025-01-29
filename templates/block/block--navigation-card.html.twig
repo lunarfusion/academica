@@ -9,13 +9,25 @@
     'block-' ~ plugin_id|clean_class,
   ]
 %}
+
+
+   {# {{ include ('academica:card', {
+      attributes: attributes,
+      type: 'navigation',
+      modifier_class: modifier_class,
+      card_title: label,
+      summary: content,
+  })
+  #}
+
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-    {{ content }}
-  {% endblock %}
+{% if label %}
+  <h2{{ title_attributes }}>{{ label }}</h2>
+{% endif %}
+{{ title_suffix }}
+
+{% block content %}
+  {{ content }}
+{% endblock %}
 </div>

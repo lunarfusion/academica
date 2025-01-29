@@ -1,7 +1,61 @@
-img.image {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
+.image {
+  position: relative;
 }
+  
+  .image--default {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .image--square {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .image--square img {
+      height: 100%;
+      width: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      position: absolute;
+    }
+  
+  .image--square::after {
+      display: block;
+      content: "";
+      padding-block-start: 100%;
+      width: 100%;
+    }
+  
+  .image--card {
+    overflow: hidden;
+    width: 100%;
+    transition: var(--academica-transition-smooth);
+  }
+  
+  /* position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    inline-size: 100%;
+    block-size: auto;
+    overflow: hidden; */
+  
+  .image--card img {
+      height: 100%;
+      width: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      position: absolute;
+    }
+  
+  .image--card::after {
+      display: block;
+      content: "";
+      padding-block-start: 60%;
+      width: 100%;
+    }

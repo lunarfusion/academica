@@ -1,28 +1,28 @@
 .button {
   position: relative;
   padding-inline: var(--academica-size-radius-button);
-
+  
   max-inline-size: 100%;
   block-size: var(--academica-size-block-button);
   inline-size: auto;
-
+  
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--academica-size-md-gap-component);
-
+  
   background-color: var(--academica-color-action-primary-default);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
-
+  
   border: var(--academica-size-thickness-component) solid transparent;
   outline: none;
   border-radius: var(--academica-size-radius-button);
-
+  
   transition: var(--academica-transition-basic);
   cursor: pointer;
-
+  
   font-family: var(--academica-font-primary);
   font-size: var(--academica-size-text-med);
   font-weight: 600;
@@ -33,7 +33,7 @@
   text-decoration: none;
   text-transform: uppercase;
 }
-
+  
   /*** Focus Indicator ***/
   .button::after {
     position: absolute;
@@ -41,20 +41,20 @@
     content: "";
     left: 0;
     top: 0;
-
+    
     z-index: -1;
-
+    
     inline-size: calc(100% + (var(--academica-size-gap-focus-indicator) * 2) + (var(--academica-size-thickness-component) * 2));
     block-size: calc(100% + (var(--academica-size-gap-focus-indicator) * 2) + (var(--academica-size-thickness-component) * 2));
-
+    
     margin-block-start: calc((var(--academica-size-gap-focus-indicator) + var(--academica-size-thickness-focus-indicator) + var(--academica-size-thickness-component)) * -1);
     margin-inline-start: calc((var(--academica-size-gap-focus-indicator) + var(--academica-size-thickness-focus-indicator) + var(--academica-size-thickness-component)) * -1);
-
+    
     border-width: var(--academica-size-thickness-focus-indicator);
     border-style: solid;
     border-color: var(--academica-color-focus-indicator);
     opacity: 0;
-
+    
     border-radius: calc(var(--academica-size-radius-button) + var(--academica-size-gap-focus-indicator) + var(--academica-size-thickness-component));
   }
   /*** Child Icon ***/
@@ -62,6 +62,7 @@
     display: flex;
     block-size: calc(100% * 0.5);
     inline-size: auto;
+    font-size: inherit;
   }
   /* margin: var(--academica-size-inner-vert-component) var(--academica-size-inner-horiz-component); */
   .button__icon svg {
@@ -231,6 +232,7 @@
     display: inline-flex;
     flex-direction: column-reverse;
     justify-content: center;
+    align-items: center;
     gap: 0.25rem;
     border-radius: 0;
     border-width: 0;
@@ -239,6 +241,9 @@
     color: var(--academica-color-fg-white-static);
     z-index: 2;
   }
+  .button--menu-toggle span {
+      font-size: inherit;
+    }
   .button--menu-toggle:hover,
     .button--menu-toggle:focus {
       border-color: transparent;
@@ -247,8 +252,8 @@
       border-radius: 0;
     }
   .button--menu-toggle .button__icon {
-      inline-size: 100%;
       block-size: auto;
+      inline-size: calc(100% * 0.75);
       content: url("../../../assets/icons/menu-open.svg");
       filter: invert(1);
     }
