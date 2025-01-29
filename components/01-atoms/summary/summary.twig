@@ -1,0 +1,14 @@
+{% set type = type in ['card', 'view', 'node'] ? type : 'card' %}
+{% set type_class = type ? 'summary--%s'|format(type) : '' %}
+{% set modifier_class = '%s %s'|format(type_class, modifier_class|default('')) %}
+
+{# <{{ html_tag|default('h3') }}{{ attributes.addClass('title').addClass(extra_classes|default([])) }}> #}
+<{{ html_tag|default('div') }}
+class="summary {{ modifier_class -}}">
+  {% block text %}
+    {{ text }}
+  {% endblock %}
+</{{ html_tag|default('div') }}>
+
+{#
+<div{{ item.attributes }}>{{ item.content }}</div> #}

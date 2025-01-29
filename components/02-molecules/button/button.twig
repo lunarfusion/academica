@@ -41,7 +41,12 @@
   <button
     class="button {{ modifier_class -}}"
     data-component-name="button"
-    {% if attributes is not empty %}{{attributes.setAttribute('id',input_id)}}{% endif %}
+    value="{{input_value}}"
+    {% if attributes is not empty %}
+      {{attributes.setAttribute('id',input_id)}}
+      {# {{attributes.setAttribute('value',input_value)}} #}
+      {# todo - why isn't value working? #}
+    {% endif %}
     {% if is_disabled %}disabled="disabled" aria-disabled="true"{% endif %}
     {{- content_markup -}}
   </button>
@@ -50,7 +55,9 @@
   <a
     class="button {{ modifier_class -}}"
     data-component-name="button"
-    {% if attributes is not empty %}{{attributes.setAttribute('href',url)}}{% endif %}
+    {% if attributes is not empty %}
+      {{attributes.setAttribute('href',url)}}
+    {% endif %}
     {% if is_disabled %}disabled="disabled" aria-disabled="true"{% endif %}
     {{- content_markup -}}
   </a>

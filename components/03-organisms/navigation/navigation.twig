@@ -1,10 +1,10 @@
 
 {% set nav_type = nav_type in ['sidebar', 'main', 'footer'] ? nav_type : 'main' %}
 {% set nav_type_class = nav_type ? 'nav--%s'|format(nav_type) : '' %}
-{% set modifier_class = '%s %s %s'|format(layout_type_class, nav_type_class, modifier_class|default('')) %}
+{% set modifier_class = '%s %s'|format(nav_type_class, modifier_class|default('')) %}
 
 {% import _self as menus %}
-{% macro menu_links(items, menu_level, layout_type, modifier_class) %}
+{% macro menu_links(items, menu_level, nav_type, modifier_class) %}
 
 
   {% if items %}

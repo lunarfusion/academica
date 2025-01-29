@@ -1,28 +1,28 @@
 .button {
   position: relative;
   padding-inline: var(--academica-size-radius-button);
-  
+
   max-inline-size: 100%;
   block-size: var(--academica-size-block-button);
   inline-size: auto;
-  
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--academica-size-md-gap-component);
-  
+
   background-color: var(--academica-color-action-primary-default);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
-  
+
   border: var(--academica-size-thickness-component) solid transparent;
   outline: none;
   border-radius: var(--academica-size-radius-button);
-  
+
   transition: var(--academica-transition-basic);
   cursor: pointer;
-  
+
   font-family: var(--academica-font-primary);
   font-size: var(--academica-size-text-med);
   font-weight: 600;
@@ -32,7 +32,7 @@
   text-transform: none;
   text-decoration: none;
   text-transform: uppercase;
-  
+
   /*** Focus Indicator ***/
   &::after {
     position: absolute;
@@ -40,37 +40,46 @@
     content: "";
     left: 0;
     top: 0;
-    
+
     z-index: -1;
-    
+
     inline-size: calc(100% + (var(--academica-size-gap-focus-indicator) * 2) + (var(--academica-size-thickness-component) * 2));
     block-size: calc(100% + (var(--academica-size-gap-focus-indicator) * 2) + (var(--academica-size-thickness-component) * 2));
-    
+
     margin-block-start: calc((var(--academica-size-gap-focus-indicator) + var(--academica-size-thickness-focus-indicator) + var(--academica-size-thickness-component)) * -1);
     margin-inline-start: calc((var(--academica-size-gap-focus-indicator) + var(--academica-size-thickness-focus-indicator) + var(--academica-size-thickness-component)) * -1);
-    
+
     border-width: var(--academica-size-thickness-focus-indicator);
     border-style: solid;
     border-color: var(--academica-color-focus-indicator);
     opacity: 0;
-    
+
     border-radius: calc(var(--academica-size-radius-button) + var(--academica-size-gap-focus-indicator) + var(--academica-size-thickness-component));
   }
-  
+
   /*** Child Icon ***/
   &__icon {
     display: flex;
     block-size: calc(100% * 0.5);
     inline-size: auto;
+    /* margin: var(--academica-size-inner-vert-component) var(--academica-size-inner-horiz-component); */
+
+    svg {
+      /* display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto; */
+    }
   }
-  
+
   /*** State: Hover ***/
   &:hover,
   &.hover {
     background-color: var(--academica-color-action-primary-hover);
     color: var(--academica-color-fg-black-static);
   }
-  
+
   /*** State: Focus ***/
   &:focus:not(:focus-visible),
   &.focus:not(.focus-visible) {
@@ -78,7 +87,7 @@
       opacity: 1;
     }
   }
-  
+
   &:focus,
   &.focus,
   &:focus-visible,
@@ -86,13 +95,13 @@
     background-color: var(--academica-color-action-primary-focus);
     color: var(--academica-color-fg-black-static);
     box-shadow: none;
-    
+
     &::after {
       border-color: var(--academica-color-focus-indicator);
       opacity: 1;
     }
   }
-  
+
   /*** State: Active ***/
   &:active,
   &.active,
@@ -103,28 +112,28 @@
     background-color: var(--academica-color-action-primary-active);
     color: var(--academica-color-fg-black-static);
   }
-  
+
   /*** prevent focus from firing on click ***/
   &:-webkit-focus-ring {
     outline: none;
   }
-  
+
   /*** Variant - secondary ***/
   &--secondary {
     background-color: var(--academica-color-action-secondary-default);
-    
+
     &:hover,
     &.hover {
       background-color: var(--academica-color-action-secondary-hover);
     }
-    
+
     &:focus,
     &.focus,
     &:focus-visible,
     &.focus-visible {
       background-color: var(--academica-color-action-secondary-focus);
     }
-    
+
     &:active,
     &.active,
     &:focus:active,
@@ -132,20 +141,20 @@
       background-color: var(--academica-color-action-secondary-active);
     }
   }
-  
+
   /*** Variant - ghost ***/
   &--ghost {
     background-color: transparent;
     border: var(--academica-size-thickness-component) solid var(--academica-color-action-secondary-default);
     color: var(--academica-color-fg-base);
-    
+
     &:hover,
     &.hover {
       background-color: transparent;
       border-color: var(--academica-color-action-secondary-hover);
       color: var(--academica-color-fg-base);
     }
-    
+
     &:focus,
     &.focus,
     &:focus-visible,
@@ -154,7 +163,7 @@
       border-color: var(--academica-color-action-secondary-focus);
       color: var(--academica-color-fg-base);
     }
-    
+
     &:active,
     &.active,
     &:focus:active,
@@ -164,7 +173,7 @@
       color: var(--academica-color-fg-base);
     }
   }
-  
+
   /*** Variant - circle ***/
   &--circle {
     border-radius: 100%;
@@ -172,11 +181,11 @@
     inline-size: var(--academica-size-block-button);
     max-inline-size: var(--academica-size-block-button);
     max-block-size: var(--academica-size-block-button);
-    
+
     &::after {
       border-radius: 100%;
     }
-    
+
     .button__content {
       position: absolute;
       overflow: hidden;
@@ -184,26 +193,26 @@
       white-space: nowrap;
     }
   }
-  
+
   /*** Variant - small ***/
   &--small {
     font-size: var(--academica-size-text-small);
     padding-inline: calc(var(--academica-size-radius-button) * 0.5);
     block-size: calc(var(--academica-size-block-button) * 0.75);
   }
-  
+
   /*** Variant - large ***/
   &--large {
     font-size: var(--academica-size-text-lrg);
     padding-inline: calc(var(--academica-size-radius-button) * 1.25);
     block-size: calc(var(--academica-size-block-button) * 1.5);
   }
-  
+
   /*** Variant - if Button is inside a menu ***/
   &--nav {
     color: var(--academica-color-action-nav-fg-default);
     background-color: transparent;
-    
+
     &:hover,
     &.hover {
       color: var(--academica-color-action-nav-fg-hover);
@@ -211,7 +220,7 @@
       outline: none;
       background-color: transparent;
     }
-    
+
     &:focus,
     &.focus,
     &:focus-visible,
@@ -220,7 +229,7 @@
       outline: none;
       background-color: transparent;
     }
-    
+
     &:active,
     &.active,
     &:focus:active,
@@ -231,11 +240,11 @@
       background-color: transparent;
     }
   }
-  
+
   &--right {
     margin-inline-start: auto;
   }
-  
+
   /*** Variant - main menu toggle ***/
   &--menu-toggle {
     border-color: transparent;
@@ -244,8 +253,8 @@
     top: 0;
     right: 0;
     display: none;
-    inline-size: var(--academica-size-mobile-menu-toggle);
-    block-size: var(--academica-size-mobile-menu-toggle);
+    inline-size: var(--academica-size-mobile-nav-toggle);
+    block-size: var(--academica-size-mobile-nav-toggle);
     padding-block: 0;
     background-color: var(--academica-color-bg-primary);
     display: inline-flex;
@@ -258,28 +267,28 @@
     border-inline-start-width: 2px;
     color: var(--academica-color-fg-white-static);
     z-index: 2;
-    
+
     &:hover,
     &:focus {
       border-color: transparent;
     }
-    
+
     &::after {
       border-radius: 0;
     }
-    
+
     .button__icon {
       inline-size: 100%;
       block-size: auto;
       content: url("../../../assets/icons/menu-open.svg");
       filter: invert(1);
     }
-    
+
     /* change icon to white */
     svg {
       filter: invert(1);
     }
-    
+
     .button__content {
       font-size: var(--academica-size-text-small);
       display: flex;
@@ -287,40 +296,40 @@
       justify-content: center;
       gap: 0.25rem;
     }
-    
+
     /* menu is closed */
     .close-text {
       display: none;
     }
-    
+
     .open-text {
       display: block;
     }
-    
+
     &.is-closed {
       .button__icon {
         content: url("../../../assets/icons/menu-open.svg");
         filter: invert(1);
       }
     }
-    
+
     /* menu is opened */
     &.is-open {
-      
+
       .button__icon {
         content: url("../../../assets/icons/menu-close.svg");
         filter: invert(1);
       }
-      
+
       .close-text {
         display: block
       }
-      
+
       .open-text {
         display: none;
       }
     }
-    
+
     /* states are simplified */
     &:hover,
     &:focus,

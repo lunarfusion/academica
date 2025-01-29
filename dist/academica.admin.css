@@ -1,96 +1,27 @@
-/*!
- * Styling for admin tasks, such as page editing and logout
- * Intended for the admin_tasks region of this theme
- */
+/* TODO: tabs component */
 
-
-/*** node edit ***/
-.admin-tasks,
-#block-academica-account-menu {
-  /* position: relative;
-  width: 100%;
-  max-width: var(--academica-size-container-width);
-  margin: 0;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start; */
-/* }.admin-tasks {
-  margin-block: 1rem;
+.admin-tasks {
+  
+  .tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    list-style: none;
+    border: 1px dashed fuchsia;
+  }
+  
+  li {
+    padding: 0.125rem 0.5rem;
+    border: 1.5px solid hsla(0, 0%, 50%, 0.5);
+    border-block-end: 0;
+    background-color: var(--academica-color-bg-base);
+    border-start-start-radius: var(--academica-size-radius-med);
+    border-start-end-radius: var(--academica-size-radius-med);
+  }
+  
+  a {
+    font-size: var(--academica-size-text-small);
+    color: var(--academica-color-fg-base);
+  }
 }
-
-.admin-tasks .menu,
-.admin-tasks .tabs {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
-.admin-tasks .menu,
-.admin-tasks .block-menu .menu {
-  background-color: transparent;
-}
-
-.admin-tasks .tabs {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap;
-}
-
-.admin-tasks a,
-#block-academica-account-menu a {
-  font-weight: 600;
-  font-size: 0.7rem;
-  line-height: 1;
-  color: hsl(0, 0%, 20%);
-  text-decoration: none;
-  display: block;
-  position: relative;
-}
-
-.admin-tasks a:hover,
-.admin-tasks a:focus,
-#block-academica-account-menu a:hover,
-#block-academica-account-menu a:focus {
-  color: hsl(0, 0%, 30%);
-} */
-
-
-/** login menu ***/
-/* #block-academica-account-menu ul:not(.contextual-links),
-.admin-tasks ul:not(.contextual-links) {
-  position: relative;
-  border: 1.5px solid hsla(0, 0%, 50%, 0.5);
-  box-shadow: 1px 1px 4px 2px hsla(0, 0%, 60%, 0.25);
-  border-radius: 18px;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  margin-inline: 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
-#block-academica-account-menu li,
-.admin-tasks li {
-  position: relative;
-  block-size: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0.25rem 1rem;
-  margin: 0;
-  top: 0;
-  border-inline-end: 1px solid hsla(0, 0%, 50%, 0.5);
-  font-size: 0;
-}
-
-#block-academica-account-menu li:last-child,
-.admin-tasks li:last-child {
-  border-inline-end: none;
-} */

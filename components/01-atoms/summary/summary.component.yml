@@ -1,0 +1,35 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: summary
+
+status: experimental
+group: atoms
+
+props:
+  type: object
+  properties:
+    html_tag:
+      type: string
+      default: p
+      enum:
+        - p
+        - span
+        - div
+
+    type:
+      type: string
+      title: Type
+      description: 'Summary type: card, view, node.'
+      default: card
+      enum:
+        - card
+        - view
+        - node
+      examples:
+        - card
+
+slots:
+  text:
+    type: string
+    title: Summary text
+    examples:
+      - Summary of content which a component represents which should not be more than one or two short sentences.

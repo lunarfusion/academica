@@ -1,0 +1,12 @@
+{% set type = type in ['card', 'form', 'page', 'section'] ? type : 'card' %}
+{% set type_class = type ? 'title--%s'|format(type) : '' %}
+{% set modifier_class = '%s %s'|format(type_class, modifier_class|default('')) %}
+
+
+<{{ html_tag|default('h3') }}
+class="title {{ modifier_class -}}">
+  {% block text %}
+    {{ text }}
+  {% endblock %}
+</{{ html_tag|default('h3') }}>
+

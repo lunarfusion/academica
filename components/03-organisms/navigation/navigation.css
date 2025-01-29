@@ -1,8 +1,3 @@
-.testclass {
-  border: 10px solid red;
-  pointer-events: none;
-}
-
 .nav {
   --nav-item-size-border: 1.5px;
   
@@ -15,36 +10,27 @@
   inline-size: 100%;
   background-color: var(--academica-color-bg-base);
 }
-
-/* submenu show/hide  */
-
-.nav__subnav-wrapper {
+  
+  /* submenu show/hide  */
+  .nav__subnav-wrapper {
     position: relative;
   }
-
-/* collapse subnav */
-
-.nav__item--collapsed .nav__subnav-wrapper {
+  /* collapse subnav */
+  .nav__item--collapsed .nav__subnav-wrapper {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
-
-.nav__item--collapsed .nav--level-1 {
+  .nav__item--collapsed .nav--level-1 {
     margin-block-start: calc((var(--academica-size-nav-item) + 100%) * -1);
   }
-
-/* expand subnav */
-
-.nav__item--expanded .nav__subnav-wrapper {
+  /* expand subnav */
+  .nav__item--expanded .nav__subnav-wrapper {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
-
-.nav .nav__item--expanded .nav--level-1 {
+  .nav .nav__item--expanded .nav--level-1 {
     margin-block-start: 0;
   }
-
-/*** *** Child element - List Item *** ***/
-
-.nav__item {
+  /*** *** Child element - List Item *** ***/
+  .nav__item {
     position: relative;
     margin: 0;
     box-sizing: border-box;
@@ -57,37 +43,41 @@
     transition: var(--academica-transition-basic);
     border-inline-start: var(--academica-size-border-active-item) solid var(--academica-color-action-nav-bg-default);
   }
-
-.nav__item--has-children .nav__link {
+  .nav__item--has-children .nav__link {
         padding-inline-end: calc(var(--academica-size-inner-menu-item-horizontal) + var(--academica-size-menu-dropdown-icon));
       }
-
-/*** prevent focus from firing on click ***/
-
-.nav__item--has-children:-webkit-focus-ring {
+  /*** prevent focus from firing on click ***/
+  .nav__item--has-children:-webkit-focus-ring {
         border-color: transparent;
         outline: none;
         box-shadow: none;
       }
-
-.nav__item .nav--level-1 .nav__item {
-      border-color: (--academica-color-action-nav-bg-subnav);
-      border-inline-start-width: calc(var(--academica-size-border-active-item) * 0.75);
+  .nav--level-0 .nav__item {
+      border-inline-start: calc(var(--academica-size-border-active-item) * 1.25) solid var(--academica-size-border-active-item);
     }
-
-.nav__item .nav--level-2 .nav__item {
-      border-color: (--academica-color-action-nav-bg-subnav-subnav);
-      border-inline-start-width: calc(var(--academica-size-border-active-item) * 0.5);
+  .nav--level-0 .nav__item--active-trail {
+      border-inline-start: calc(var(--academica-size-border-active-item) * 1.25) solid var(--academica-color-active-indicator);
     }
-
-.nav__item .nav--level-3 .nav__item {
-      border-color: (--academica-color-action-nav-bg-subnav-subnav-subnav);
-      border-inline-start-width: calc(var(--academica-size-border-active-item) * 0.25);
+  .nav--level-1 .nav__item {
+      border-inline-start: calc(var(--academica-size-border-active-item) * 0.75) solid var(--academica-color-action-nav-bg-subnav);
     }
-
-/*** Has Child Menu - dropdown indicator ***/
-
-.nav__item--has-children::after {
+  .nav--level-1 .nav__item--active-trail {
+      border-inline-start: calc(var(--academica-size-border-active-item) * 0.75) solid var(--academica-color-blue-060);
+    }
+  .nav--level-2 .nav__item {
+      border-inline-start: calc(var(--academica-size-border-active-item) * 0.5) solid var(--academica-color-action-nav-bg-subnav-subnav);
+    }
+  .nav--level-2 .nav__item--active-trail {
+      border-inline-start: calc(var(--academica-size-border-active-item) * 0.5) solid var(--academica-color-blue-080);
+    }
+  .nav--level-3 .nav__item {
+      border-inline-start: calc(var(--academica-size-border-active-item) * 0.25) solid var(--academica-color-action-nav-bg-subnav-subnav-subnav);
+    }
+  .nav--level-3 .nav__item--active-trail {
+      border-inline-start: calc(var(--academica-size-border-active-item) * 0.25) solid var(--academica-color-blue-090);
+    }
+  /*** Has Child Menu - dropdown indicator ***/
+  .nav__item--has-children::after {
       position: absolute;
       display: block;
       right: 0;
@@ -104,70 +94,40 @@
       height: var(--academica-size-nav-dropdown-icon);
       transition: var(--academica-transition-basic);
     }
-
-.nav__item--expanded::after {
+  /* karet turned when open */
+  .nav__item--expanded::after {
       transform: scaleY(-1);
     }
-
-.nav__item--active-trail {
-      border-inline-start: calc(var(--academica-size-border-active-item) * 1.25) solid var(--academica-color-active-indicator);
-    }
-
-.nav__item--active-trail .nav--level-1 .nav__item {
-      border-color: var(--academica-color-blue-060);
-      border-inline-start-width: calc(var(--academica-size-border-active-item) * 0.75);
-    }
-
-.nav__item--active-trail .nav--level-2 .nav__item {
-      border-color: var(--academica-color-blue-080);
-      border-inline-start-width: calc(var(--academica-size-border-active-item) * 0.5);
-    }
-
-.nav__item--active-trail .nav--level-3 .nav__item {
-      border-color: var(--academica-color-blue-090);
-      border-inline-start-width: calc(var(--academica-size-border-active-item) * 0.25);
-    }
-
-/* Has child items */
-
-/*** State - Hover ***/
-
-.nav__item--has-children:hover {
+  /* Has child items */
+  /*** State - Hover ***/
+  .nav__item--has-children:hover {
         color: var(--academica-color-action-nav-fg-hover);
         outline: none;
         background-color: var(--academica-color-action-nav-bg-hover);
       }
-
-/*** State - Focus ***/
-
-.nav__item--has-children:focus,
+  /*** State - Focus ***/
+  .nav__item--has-children:focus,
       .nav__item--has-children:focus-visible {
         color: var(--academica-color-action-nav-fg-focus);
         outline: none;
         background-color: var(--academica-color-action-nav-bg-focus);
       }
-
-/*** State - Active ***/
-
-.nav__item--has-children:active,
+  /*** State - Active ***/
+  .nav__item--has-children:active,
       .nav__item--has-children.is-active {
         color: var(--academica-color-action-nav-fg-active);
         background-color: var(--academica-color-action-nav-bg-active);
         outline: none;
         box-shadow: none;
       }
-
-/*** prevent focus from firing on click ***/
-
-.nav__item--has-children:active:-webkit-focus-ring, .nav__item--has-children.is-active:-webkit-focus-ring {
+  /*** prevent focus from firing on click ***/
+  .nav__item--has-children:active:-webkit-focus-ring, .nav__item--has-children.is-active:-webkit-focus-ring {
           border-color: transparent;
           outline: none;
           box-shadow: none;
         }
-
-/*** *** Child element - Link *** ***/
-
-.nav__link {
+  /*** *** Child element - Link *** ***/
+  .nav__link {
     position: relative;
     padding: var(--academica-size-inner-nav-item-vertical) var(--academica-size-inner-nav-item-horizontal);
     display: block;
@@ -199,67 +159,51 @@
     border-style: solid;
     border-color: transparent;
   }
-
-.nav--level-1 .nav__link {
+  .nav--level-1 .nav__link {
       background-color: var(--academica-color-action-nav-bg-subnav);
     }
-
-.nav--level-2 .nav__link {
+  .nav--level-2 .nav__link {
       background-color: var(--academica-color-action-nav-bg-subnav-subnav);
     }
-
-.nav--level-3 .nav__link {
+  .nav--level-3 .nav__link {
       background-color: var(--academica-color-action-nav-bg-subnav-subnav-subnav);
     }
-
-/* make space for karet indicator */
-
-.nav__item--has-children .nav__link {
+  /* make space for karet indicator */
+  .nav__item--has-children .nav__link {
       padding-inline-end: calc(var(--academica-size-inner-nav-item-horizontal) + var(--academica-size-nav-dropdown-icon));
-      /* box-shadow:
-        0px var(--nav-item-size-border) 0px 0px var(--academica-color-bg-base); */
     }
-
-/*** State - Hover ***/
-
-.nav__link:hover {
+  /*** State - Hover ***/
+  .nav__link:hover {
       color: var(--academica-color-action-nav-fg-hover);
       border-color: transparent;
       outline: none;
       background-color: var(--academica-color-action-nav-bg-hover);
     }
-
-/*** State - Focus ***/
-
-.nav__link:focus,
+  /*** State - Focus ***/
+  .nav__link:focus,
     .nav__link:focus-visible {
       color: var(--academica-color-action-nav-fg-focus);
       outline: none;
       background-color: var(--academica-color-action-nav-bg-focus);
       border-color: var(--academica-color-focus-indicator);
     }
-
-/*** State - Active ***/
-
-.nav__link:active,
+  /*** State - Active ***/
+  .nav__link:active,
     .nav__link.is-active {
       color: var(--academica-color-action-nav-fg-active);
       background-color: var(--academica-color-action-nav-bg-active);
       outline: none;
       box-shadow: none;
     }
-
-/*** prevent focus from firing on click ***/
-
-.nav__link:active:-webkit-focus-ring, .nav__link.is-active:-webkit-focus-ring {
+  /*** prevent focus from firing on click ***/
+  .nav__link:active:-webkit-focus-ring, .nav__link.is-active:-webkit-focus-ring {
         border-color: transparent;
         outline: none;
         box-shadow: none;
       }
-
-/*** First Subnav ***/
-
-.nav .nav--level-1 {
+  /************ SUBNAVS ************/
+  /*** First Subnav ***/
+  .nav .nav--level-1 {
     position: relative;
     padding: 0;
     display: flex;
@@ -268,54 +212,64 @@
     max-inline-size: 100%;
     transition: var(--academica-transition-smooth);
   }
-
-.nav .nav--level-1 .nav__item {
+  .nav .nav--level-1 .nav__item {
       max-inline-size: 100%;
       inline-size: 100%;
     }
-
-.nav .nav--level-1 .nav__link {
+  .nav .nav--level-1 .nav__link {
       font-size: var(--academica-size-text-small);
     }
-
-/*** Second Subnav ***/
-
-.nav .nav--level-2 .nav__item--active-trail.nav__item--expanded .nav__subnav-wrapper .nav .nav {
+  /*** Second Subnav ***/
+  .nav .nav--level-2 .nav__item--active-trail.nav__item--expanded .nav__subnav-wrapper .nav .nav {
       border-inline-start: calc((var(--academica-size-border-active-item) * 0.5) - var(--academica-size-thickness-focus-indicator)) solid var(--academica-color-bg-primary-lightest);
     }
-
-.nav .nav--level-2 .nav__link {
+  .nav .nav--level-2 .nav__link {
       font-size: var(--academica-size-text-extra-small);
     }
-
-/*** Sidebar Nav ***/
-
-.nav--sidebar {
+  /************ TYPES ************/
+  /*** Sidebar Nav ***/
+  .nav--sidebar {
     inline-size: 100%;
     flex-direction: column;
     justify-content: flex-start;
     overflow: hidden;
   }
-
-.nav--sidebar .nav__item {
+  .nav--sidebar .nav__item {
       inline-size: 100%;
     }
-
-/*** Footer Nav ***/
-
-.nav--footer {
+  /*** Footer Nav ***/
+  .nav--footer {
     flex-direction: column;
     justify-content: flex-start;
+    background: transparent;
+    /* TODO - padding same as menu title */
+    padding: 0.75rem 1rem;
   }
+  .nav--footer .nav__item {
+      border-inline-start: 1px solid var(--academica-color-border-neutral);
+    }
+  .nav--footer .nav__link {
+      background: transparent;
+      font-size: var(--academica-size-text-small);
+      padding: calc(var(--academica-size-inner-nav-item-vertical) * 0.5) calc(var(--academica-size-inner-nav-item-horizontal) * 0.5);
+      color: var(--academica-color-link-default);
+    }
+  .nav--footer .nav__link:hover {
+        color: var(--academica-color-link-hover);
+      }
+  .nav--footer .nav__link:active {
+        color: var(--academica-color-link-active);
+      }
+
+
 
 /********* DESKTOP DISPLAY ONLY for MENU--MAIN *********/
+
+
 
 @media (min-width: 992px) {
   
   .nav--main {
-    
-    
-    
     
     /* END desktop media query */
     
@@ -371,20 +325,22 @@
     }
     
     /* collapse subnav */
-    .nav--main__item--collapsed .nav--main__subnav-wrapper {
+    .nav--main .nav__item--collapsed .nav__subnav-wrapper {
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      
     }
     
-    .nav--main__item--collapsed .nav--level-1 {
+    .nav--main .nav__item--collapsed .nav--level-1 {
       margin-block-start: calc((var(--academica-size-nav-item) + 100%) * -1);
     }
     
     /* expand subnav */
-    .nav--main__item--expanded .nav--main__subnav-wrapper {
+    .nav--main .nav__item--expanded .nav__subnav-wrapper {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      z-index: 99;
     }
     
-    .nav--main__item--expanded .nav--level-1 {
+    .nav--main .nav__item--expanded .nav--level-1 {
       box-shadow: var(--academica-shadow-001);
       border-block-end: 4px solid var(--academica-color-bg-base);
       margin-block-start: 0;

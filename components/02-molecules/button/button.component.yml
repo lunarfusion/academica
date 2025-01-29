@@ -11,10 +11,8 @@ props:
       type: string
       title: Text
       description: Button text.
-      examples:
-        - 'Button text'
       default:
-        - value
+        - Button text
 
     allow_html:
       type: boolean
@@ -37,6 +35,9 @@ props:
       enum:
         - 'arrow-forward'
         - 'arrow-backward'
+        - 'menu-open'
+        - 'menu-close'
+        - 'search-toggle'
         - null
       examples:
         - null
@@ -56,6 +57,12 @@ props:
 
     input_id:
       format: iri-reference
+
+    input_value:
+      type: string
+      title: Input value
+      default: submit
+
 
     kind:
       type: string

@@ -1,21 +1,33 @@
 .title {
-  color: var(--academica-color-fg-base);
-  font-family: var(--academica-font-secondary);
+  color: var(--em-color-fg-base);
+  font-family: var(--em-font-serif);
   font-weight: 700;
   font-style: normal;
   font-optical-sizing: auto;
-  max-width: var(--academica-size-charlimit-lg);
+  max-width: var(--em-size-charlimit-lg);
   margin-block-start: 0;
   margin-block-end: 0.5rem;
 }
+  
+  .title--card {
+    margin: 0;
+    border-inline-start: 6px solid var(--academica-color-border-tertiary);
+    padding-inline-start: 0.5rem;
+  }
+
+
 
 /* has flag indicator - is in content region OR has section-heading class */
+
+
 
 .section-title {
   position: relative;
   display: block;
   padding-block-start: 1.5rem;
 }
+
+
 
 .section-title::before {
     --flag-height: 12px;
@@ -27,8 +39,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--academica-color-border-tertiary);
-    transform: translateX(calc((var(--academica-size-baseline) + var(--flag-height) + var(--academica-size-col-padding)) * -1));
+    background-color: var(--em-color-border-tertiary);
+    transform: translateX(calc((var(--em-size-baseline) + var(--flag-height) + var(--em-size-col-padding)) * -1));
     overflow: hidden;
     border-end-end-radius: var(--flag-height);
     border-start-start-radius: var(--flag-height);

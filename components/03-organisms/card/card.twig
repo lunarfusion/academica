@@ -1,25 +1,26 @@
-<div{{attributes.addClass('card').addClass(card_classes|default([])) }}>
-  <div class="card__content">
-    {{ content }}
-    
-    {% block title %}{{ card_title }}{% endblock %}
+{% set type = type in ['default', 'navigation'] ? type : 'deault' %}
+{% set type_class = type ? 'card--%s'|format(type) : '' %}
+{% set modifier_class = '%s %s'|format(type_class, modifier_class|default('')) %}
 
-    <div class="blocky-block-block">
-      {{ description|raw }}
-      {% include "components/02-molecules/button/button.twig" with {
-        html_tag: 'a',
-        variant: 'ghost',
-      } %}
+
+
+<div class="card" {{ attributes.addClass(modifier_class) }}>
+
+
+  <div class="card__content">
+    <div class="card__text">
+      {# add with twig block, sdc-addon slos #}
+      {% block title %}{{ card_title }}{% endblock %}
+      {% block summary %}{{ card_summary }}{% endblock %}
     </div>
+
+    {% block image %}{{ card_image }}{% endblock %}
   </div>
 
+ {% block button %}{{ card_button }}{% endblock %}
 
-  {% if card_image %}
-    <div class="card__image">
-      <img src="{{ card_image }}" alt="placeholder" />
-    </div>
-  {% endif %}
+    {# {% block content %}
+      {{ content }}
+    {% endblock %} #}
+
 </div>
-
-
-

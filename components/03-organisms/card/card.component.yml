@@ -6,47 +6,17 @@ group: organisms
 props:
   type: object
 
-### This is where I am trying new ideas for structure of parent and child components
-
-# basic - slots of parent component should be only "content", which sdcStorybook will populate with the child components
-slots:
-
-  ### THIS COMPONENT CONTENT
-  # content:
-  #   title: Content
-  #   examples:
-  #     - Card content, placeholder for child components
-
-  content:
-    # no block names here, just start with type: component
-    ### CHILD COMPONENT
-    - type: component
-      component: "storybook-university:title"
-      props:
-        html_tag: h3
-        extra_classes:
-          - card__title
-      slots:
-        text: sdcStorybook Title of the Card Component
-  ### CHILD COMPONENT - this won't render, screws up storybook
-  # card_title:
-  #   - type: component
-  #     component: "storybook-university:title"
-  #     props:
-  #       html_tag: h3
-  #       extra_classes:
-  #         - card__title
-  #     slots:
-  #       text: Title of the Card Component
-
-  ### THIS COMPONENT CONTENT
-  card_image:
-    title: Card Image
-    required: false
-    description: Image for the card
-    type: string
-    examples:
-      - "../assets/images/placeholder-600-400.jpg"
+  properties:
+    type:
+      type: string
+      title: Type
+      description: 'Card type: default, navigation.'
+      default: card
+      enum:
+        - default
+        - navigation
+      examples:
+        - default
 
 
 thirdPartySettings:
@@ -59,16 +29,54 @@ thirdPartySettings:
           label: Card default style
         slots:
 
-          ### CHILD COMPONENT
+          ### CHILD COMPONENT which has SLOTS and must use TWIG BLOCKS in twig template
+          card_summary:
+            - type: component
+              component: "academica:summary"
+              props:
+                html_tag: div
+                type: card,
+                modifier_class:
+                  - card__summary
+              slots:
+                summary_text: Summary of the content which this card links to. Summaries should be short and easy to scan.
+
           card_title:
             - type: component
-              component: "storybook-university:title"
+              component: "academica:title"
               props:
                 html_tag: h3
-                extra_classes:
+                type: card,
+                modifier_class:
                   - card__title
               slots:
-                text: Title of the Card Component
+                title_text: Title of the Card Component
+
+          card_image:
+            - type: component
+              component: "academica:image"
+              props:
+                type: card
+              examples:
+              - src:  "../assets/images/placeholder-600-400.jpg"
+                alt: 'image example'
+
+          card_button:
+            - type: component
+              component: "academica:button"
+              props:
+                text: View Full Content
+                kind: link,
+                type: secondary
+                modifier_class:
+                  - card__button
+
+
+                #   title_text:
+                #     type: string
+                #     title: Title text
+                #     examples:
+                #       - Title of a Component's Content
 
       ### VARIANT - horizontal layout
       # horizontal:
