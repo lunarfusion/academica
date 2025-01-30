@@ -14,10 +14,6 @@ body {
 
 body {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -27,6 +23,10 @@ body {
   color: var(--academica-color-fg-base);
   font-display: swap;
   font-family: var(--academica-font-primary);
+  /* sticky footer */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 @-o-viewport {
@@ -56,23 +56,19 @@ pre {
   white-space: pre-wrap;
 }
 
-/* ensure footer does not cover main content */
+/* sticky footer */
 .page {
   position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+main.main-content {
   flex: 1;
 }
 
-.main-content-wrapper {
-  flex: 1;
-}
 
-main {
-  /* flex: 1; */
-  /* background: lime; */
-}
 
 footer {
   position: relative;

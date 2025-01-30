@@ -367,8 +367,11 @@
       overflow-x: hidden;
       overflow-y: visible;
       transition: var(--academica-transition-smooth);
-      min-height: 100vh;
+      /* min-height: calc(100vh - (var(--academica-size-nav-item) + 200px)); */
+      /* can't be 100vh or else sticky footer is impacted */
+      min-height: 50vh;
       margin-block-start: var(--academica-size-nav-item);
+      z-index: 99;
     }
     
     /* collapse subnav */
@@ -384,7 +387,6 @@
     /* expand subnav */
     .nav__item--expanded .nav__subnav-wrapper {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-      z-index: 99;
     }
     
     .nav__item--expanded .nav--level-1 {
