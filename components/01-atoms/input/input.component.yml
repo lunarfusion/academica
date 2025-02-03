@@ -22,6 +22,14 @@ props:
       type: string
       default: Enter search terms
 
+    input_id:
+      format: iri-reference
+      default: input-id
+
+    input_label:
+      format: iri-reference
+      default: input-label
+
     modifier_class:
       type: string
       title: Modifier class

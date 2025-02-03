@@ -1,11 +1,14 @@
+{# TODO - search open close trigger does not work #}
+
 <div class="search" {% if attributes is not empty %}{{- attributes|raw -}}{% endif %}>
+
+  {% block search_toggle %}{{ search_toggle }}{% endblock %}
+
   <div class="search-form-wrapper" id="search-form-drawer" aria-expanded="false">
-
-    {% block search_toggle %}{{ search_toggle }}{% endblock %}
-
     <form{{ attributes }}>
       {% block search_input %}{{ search_input }}{% endblock %}
       {% block search_submit %}{{ search_submit }}{% endblock %}
     </form>
   </div>
 </div>
+

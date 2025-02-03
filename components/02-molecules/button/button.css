@@ -57,6 +57,7 @@
     
     border-radius: calc(var(--academica-size-radius-button) + var(--academica-size-gap-focus-indicator) + var(--academica-size-thickness-component));
   }
+  .button__text {}
   /*** Child Icon ***/
   .button__icon {
     display: flex;
@@ -64,13 +65,8 @@
     inline-size: auto;
     font-size: inherit;
   }
-  /* margin: var(--academica-size-inner-vert-component) var(--academica-size-inner-horiz-component); */
   .button__icon svg {
-      /* display: block;
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      margin: 0 auto; */
+      transition: var(--academica-transition-basic);
     }
   /*** State: Hover ***/
   .button:hover,
@@ -129,21 +125,31 @@
       background-color: var(--academica-color-action-secondary-active);
     }
   /*** Variant - ghost ***/
-  .button--ghost {
+  .button--ghost,
+  .button--empty {
     background-color: transparent;
     border: var(--academica-size-thickness-component) solid var(--academica-color-action-secondary-default);
     color: var(--academica-color-fg-base);
   }
   .button--ghost:hover,
-    .button--ghost.hover {
+    .button--ghost.hover,
+    .button--empty:hover,
+    .button--empty.hover {
       background-color: transparent;
       border-color: var(--academica-color-action-secondary-hover);
-      color: var(--academica-color-fg-base);
+      color: var(--academica-color-link-hover);
     }
+  .button--ghost:hover >svg, .button--ghost.hover >svg, .button--empty:hover >svg, .button--empty.hover >svg {
+        fill: var(--academica-color-link-hover);
+      }
   .button--ghost:focus,
     .button--ghost.focus,
     .button--ghost:focus-visible,
-    .button--ghost.focus-visible {
+    .button--ghost.focus-visible,
+    .button--empty:focus,
+    .button--empty.focus,
+    .button--empty:focus-visible,
+    .button--empty.focus-visible {
       background-color: transparent;
       border-color: var(--academica-color-action-secondary-focus);
       color: var(--academica-color-fg-base);
@@ -151,11 +157,18 @@
   .button--ghost:active,
     .button--ghost.active,
     .button--ghost:focus:active,
-    .button--ghost.focus.active {
+    .button--ghost.focus.active,
+    .button--empty:active,
+    .button--empty.active,
+    .button--empty:focus:active,
+    .button--empty.focus.active {
       background-color: transparent;
       border-color: var(--academica-color-action-secondary-active);
       color: var(--academica-color-fg-base);
     }
+  .button--empty {
+    border: var(--academica-size-thickness-component) solid transparent;
+  }
   /*** Variant - circle ***/
   .button--circle {
     border-radius: 100%;

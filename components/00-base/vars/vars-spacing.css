@@ -76,6 +76,7 @@
   --academica-size-inner-nav-item-vertical: 0.75rem;
   --academica-size-inner-nav-item-horizontal: 1rem;
   
+  
   @media (max-width: 992px) {
     --academica-size-col-padding: 16px;
     --academica-size-container-padding: 12px;

@@ -18,7 +18,6 @@ props:
       examples:
         - default
 
-
 thirdPartySettings:
   sdcStorybook:
     stories:

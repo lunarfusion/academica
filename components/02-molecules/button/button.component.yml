@@ -14,6 +14,21 @@ props:
       default:
         - Button text
 
+    has_icon:
+      type: boolean
+      enum:
+        - true
+        - false
+      default: false
+
+    icon_only:
+      type: boolean
+      description: Text is screenreader only
+      enum:
+        - true
+        - false
+      default: false
+
     icon:
       type: string
       title: Icon
@@ -24,9 +39,16 @@ props:
         - 'menu-open'
         - 'menu-close'
         - 'search-toggle'
-        - null
       examples:
-        - null
+        - 'search-toggle'
+
+    assets_dir:
+      type: string
+      title: Assets dir
+      description: Optional assets directory to get icons from.
+      default: '@academica/../assets/icons/'
+      examples:
+        - '@academica/../assets/icons/'
 
     allow_html:
       type: boolean
@@ -50,6 +72,7 @@ props:
 
     input_id:
       format: iri-reference
+      default: button-id
 
     input_value:
       type: string
@@ -77,6 +100,7 @@ props:
         - primary
         - secondary
         - ghost
+        - empty
         - nav
         - menu-toggle
       examples:
@@ -95,53 +119,7 @@ props:
         - regular
 
     modifier_class:
-        type: string
-        title: Modifier class
-        description: Additional classes.
-        default: mod-class
-
-# slots:
-  # icon:
-  #   type: string
-  #   title: Icon
-  #   description: Icon name.
-  #   enum:
-  #     - 'arrow-forward'
-  #     - 'arrow-backward'
-  #     - 'menu-open'
-  #     - 'menu-close'
-  #     - 'search-toggle'
-  #     - null
-  #   examples:
-  #     - null
-
-  # button_icon:
-  #   - type: component
-  #     component: "academica:icon"
-  #     description: button icon
-  #     props:
-  #       symbol: menu-open
-
-#
-#
-# thirdPartySettings:
-#   sdcStorybook:
-#     stories:
-#
-#       default:
-#         props:
-#           label: Default button
-#
-#
-#       menu_toggle:
-#         props:
-#           label: Button with icon
-#           text: open
-#           modifier_class: button--menu-toggle
-#
-#         slots:
-#           icon:
-#           - type: component
-#             component: "academica:icon"
-#             props:
-#               symbol: menu-open
+      type: string
+      title: Modifier class
+      description: Additional classes.
+      default: mod-class

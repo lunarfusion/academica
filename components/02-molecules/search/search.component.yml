@@ -6,6 +6,8 @@ group: molecules
 props:
   type: object
 
+js:
+  search.js: { attributes: { defer: true } }
 
 thirdPartySettings:
     sdcStorybook:
@@ -16,6 +18,21 @@ thirdPartySettings:
             label: Search toggle
 
           slots:
+            search_toggle:
+              - type: component
+                component: "academica:button"
+                props:
+                  kind: button
+                  type: empty
+                  input_value: open search
+                  has_icon: true
+                  icon_only: true
+                  icon: search-toggle
+                  size: small
+                  text: toggle
+                  input_id: search-toggle
+                  modifier_class:
+                    - 'button--search-toggle'
 
             search_input:
               - type: component
@@ -25,13 +42,13 @@ thirdPartySettings:
                   placeholder_text: 'What are you searching for?'
 
             search_submit:
-                - type: component
-                  component: "academica:button"
-                  props:
-                    kind: button
-                    type: ghost
-                    input_value: search
-                    text: search
-                    size: regular
-                    modifier_class:
-                      - 'button--search'
+              - type: component
+                component: "academica:button"
+                props:
+                  kind: button
+                  type: empty
+                  input_value: search
+                  text: search
+                  size: regular
+                  modifier_class:
+                    - 'button--search'

@@ -3,10 +3,11 @@
 {% set modifier_class = '%s %s'|format(type_class, modifier_class|default('')) %}
 
 
-<{{ html_tag|default('h3') }}
-class="title {{ modifier_class -}}">
-  {% block text %}
-    {{ text }}
-  {% endblock %}
-</{{ html_tag|default('h3') }}>
-
+{{ title_prefix }}
+  <{{ html_tag|default('h3') }}
+  class="title {{ modifier_class -}}">
+    {% block text %}
+      {{ text }}
+    {% endblock %}
+  </{{ html_tag|default('h3') }}>
+{{ title_suffix }}

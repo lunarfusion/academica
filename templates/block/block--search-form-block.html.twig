@@ -1,2 +1,32 @@
 
-{{ include ('academica:search') }}
+<div class="search" {% if attributes is not empty %}{{- attributes|raw -}}{% endif %}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {{ include ('academica:button', {
+      attributes: attributes,
+      modifier_class: modifier_class,
+      label: label,
+      kind: 'button',
+      type: 'empty',
+      size: 'regular',
+      text: 'open search',
+      has_icon: true,
+      icon_only: true,
+      icon: 'search-toggle',
+  }) }}
+
+  <div class="search-form-wrapper" id="search-form-drawer" aria-expanded="false">
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+
+</div>
+
+
+{# why doesn't this work? renders null #}
+{# {{ include ('academica:search') }} #}

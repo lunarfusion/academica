@@ -1,6 +1,6 @@
 
 {% set kind = kind in ['button', 'link', 'submit'] ? kind : 'button' %}
-{% set type = type in ['primary', 'secondary', 'ghost', 'nav', 'menu-toggle'] ? type : 'primary' %}
+{% set type = type in ['primary', 'secondary', 'ghost', 'empty', 'nav', 'menu-toggle'] ? type : 'primary' %}
 {% set size = size in ['large', 'regular', 'small'] ? size : 'regular' %}
 
 {% set type_class = type ? 'button--%s'|format(type) : '' %}
@@ -8,6 +8,7 @@
 {% set size_class = 'button--%s'|format(size) %}
 {% set modifier_class = '%s %s %s %s'|format(type_class, kind_class, size_class, modifier_class|default('')) %}
 
+{% set assets_dir = assets_dir|default('@academica/../assets/icons/') %}
 
 {# content markup #}
 {% set content_markup %}
@@ -18,18 +19,28 @@
       <span class="button__icon"></span>
     </span>
 
-  {% else %} #}
-    <span class="button__content">
-      {% if icon %}
-        {{ text }}
-        <span class="button__icon">
-          {{ source(path ~ '../assets/icons/' ~ icon ~ '.svg') }}
-        </span>
+  {% else %}
 
-      {% else %}
+    {% if icon_only %}
+      <span class="button__text  sr-only">
         {{ text }}
+      </span>
+
+      {# {% set has_icon = true %} #}
+      <span class="button__icon">
+        {{ source(assets_dir ~ icon ~ '.svg') }}
+      </span>
+
+    {% else %}
+      <span class="button__text">
+        {{ text }}
+      </span>
+      {% if has_icon %}
+        <span class="button__icon">
+          {{ source(assets_dir ~ icon ~ '.svg') }}
+        </span>
       {% endif %}
-    </span>
+    {% endif %}
 
   {% endif %}
 {% endset %}
@@ -42,12 +53,12 @@
     class="button {{ modifier_class -}}"
     data-component-name="button"
     value="{{input_value}}"
-    {% if attributes is not empty %}
+    id="{{ input_id }}"
+    {{ attributes }}
+    {# {% if attributes is not empty %}
       {{attributes.setAttribute('id',input_id)}}
-      {# {{attributes.setAttribute('value',input_value)}} #}
-      {# todo - why isn't value working? #}
-    {% endif %}
-    {% if is_disabled %}disabled="disabled" aria-disabled="true"{% endif %}
+    {% endif %} #}
+    {% if is_disabled %}disabled="disabled" aria-disabled="true"{% endif %}>
     {{- content_markup -}}
   </button>
 
@@ -58,7 +69,7 @@
     {% if attributes is not empty %}
       {{attributes.setAttribute('href',url)}}
     {% endif %}
-    {% if is_disabled %}disabled="disabled" aria-disabled="true"{% endif %}
+    {% if is_disabled %}disabled="disabled" aria-disabled="true"{% endif %}>
     {{- content_markup -}}
   </a>
 
