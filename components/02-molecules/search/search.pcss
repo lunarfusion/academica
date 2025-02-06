@@ -1,14 +1,10 @@
-/*!
- *
- *
- */
-
 /* Outermost div for the block, contains form and open/close button */
 .search {
   position: relative;
+  inline-size: 100%;
   display: flex;
-  flex-direction: row;
-  /* align-items: center; */
+  flex-direction: row-reverse;
+  align-items: center;
   z-index: 3;
   padding: var(--academica-size-md-gap-component);
   
@@ -16,21 +12,39 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* align-items: center; */
+    inline-size: 100%;
   }
   
   form {
     display: flex;
     align-items: stretch;
+    
+    width: 100%;
+    inline-size: 100%;
+    display: flex;
+    justify-content: flex-end;
+    
+    position: relative;
+    z-index: 1;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-end;
+    
+    transition: var(--academica-transition-ease-in);
   }
   
+  /* form input and button */
   .input,
   .button {
     /* block-size: 100%; */
     max-block-size: var(--academica-size-nav-item);
+    display: flex;
   }
   
   .input {
+    flex: 2;
     border-start-end-radius: 0;
     border-end-end-radius: 0;
     
@@ -48,151 +62,48 @@
   }
   
   .button {
-    border: none;
-    align-self: center;
+    flex: 0;
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
   }
   
-  
-  /********* DESKTOP DISPLAY ONLY  *********/
-  @media (min-width: 992px) {
-    & {
-      //justify-content: stretch;
-      flex-direction: row-reverse;
-      justify-content: flex-end;
-      align-items: stretch;
-      max-block-size: var(--academica-size-nav-item);
-      margin-inline-start: auto;
-      padding: 0;
+  /* search toggle button */
+  .button--search-toggle {
+    display: none;
+  }
+}
+
+
+/********* DESKTOP DISPLAY ONLY  *********/
+@media (min-width: 992px) {
+  .search {
+    justify-content: flex-end;
+    
+    form {
+      inline-size: auto;
+    }
+    
+    /* search toggle button */
+    .button--search-toggle {
+      display: flex;
+      z-index: 2;
     }
     
     .search-form-wrapper {
-      display: flex;
-      align-items: stretch;
-    }
-  }
-}
-
-
-
-/* wrapper serves to hide the search form when it has search-closed transformX applied */
-/* search-open and search-closed classes are added/removed from the wrapper */
-.search-form-wrapper {
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: unset;
-}
-
-form {
-  position: relative;
-  z-index: 1;
-  
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-end;
-  
-  transition: var(--academica-transition-ease-in);
-}
-
-
-
-/*** 'Search' button ***/
-.button.js-form-submit {
-  position: relative;
-  margin: 0;
-  border-radius: 0;
-  block-size: 100%;
-  padding-block: 0.5rem;
-  border: 1px solid var(--academica-color-border-neutral-light);
-}
-
-/*** Search form open/close button ***/
-.button--search-openclose {
-  position: relative;
-  z-index: 2;
-  margin: 0 auto;
-  border-radius: 0;
-  border: 1px solid transparent;
-  border-inline-start: 1px solid var(--academica-color-border-primary-light);
-  background-color: var(--academica-color-action-nav-bg-default);
-  
-  flex-direction: column;
-  min-block-size: 100%;
-  box-shadow: none;
-}
-
-
-@media (max-width: 992px) {
-  .search {
-    width: 100%;
-  }
-  
-  .search-form-wrapper {
-    width: 100%;
-    display: block;
-    background-color: var(--academica-color-action-nav-bg-default);
-    box-shadow: var(--academica-shadow-003);
-    block-size: var(--academica-size-nav-item);
-  }
-  
-  .form-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: stretch;
-    flex-grow: 1;
-  }
-  
-  form {
-    width: 100%;
-    inline-size: 100%;
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  /* text input */
-  .form-search {
-    flex-grow: 1;
-    min-inline-size: 0;
-  }
-  
-  .button--search-openclose {
-    display: none;
-  }
-}
-
-/****** Search open/close function ******/
-.search-closed {
-  form {
-    transform: translateX(100%);
-  }
-  
-  input {
-    display: none;
-  }
-}
-
-.search-open {
-  form {
-    transform: translateX(0);
-  }
-  
-  input {
-    display: inline-flex;
-  }
-}
-
-/*** Always show for mobile ***/
-@media (max-width: 992px) {
-  
-  .search-closed,
-  .search-open {
-    form {
-      transform: none;
-      padding: 1.75rem 1.5rem;
+      justify-content: flex-end;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
     
-    input {
-      display: inline-flex;
+    .search-closed {
+      form {
+        transform: translateX(100%);
+      }
+    }
+    
+    .search-open {
+      form {
+        transform: translateX(0);
+      }
     }
   }
 }

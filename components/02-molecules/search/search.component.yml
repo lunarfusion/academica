@@ -6,9 +6,8 @@ group: molecules
 props:
   type: object
 
-js:
-  search.js: { attributes: { defer: true } }
-
+# js:
+#   search.js: { attributes: { defer: true } }
 
 thirdPartySettings:
     sdcStorybook:
