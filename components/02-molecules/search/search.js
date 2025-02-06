@@ -1,18 +1,23 @@
   // the search form element has a search-closed class applied in the block--search twig template
 // Search form open/close trigger
-((Drupal) => {
+;((Drupal, once) => {
 
   let searchTrigger = document.getElementById("search-toggle");
   let searchForm = document.getElementById("search-form-drawer");
 
   ["mousedown", "focus.keydown"].forEach((event) =>
-    searchTrigger?.addEventListener(event, showHideSearch)
+    searchTrigger.addEventListener(event, showHideSearch)
   );
 
+// Function just for testing JS load
     function showHideSearch(event) {
       alert("Click event worked");
       console.log('search clicked');
+    };
 
+
+// Real Function - uncomment when JS is loading properly
+//     function showHideSearch(event) {
 //       event.preventDefault();
 //       console.log('search clicked');
 //
@@ -28,6 +33,7 @@
 //         // otherwise if it's false, make it true
 //         searchForm.setAttribute("aria-expanded", "true");
 //       };
-    };
+//    };
 
-})(Drupal);
+
+})(Drupal, once)

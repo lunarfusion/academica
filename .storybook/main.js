@@ -1,5 +1,5 @@
 const config = {
-  stories: ["../components/**/*.component.yml"], // Your components directory.
+  stories: ["../components/**/*.component.yml", "../stories/*.stories.js"], // Your components directory.
   addons: [
     {
       name: "storybook-addon-sdc",
