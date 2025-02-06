@@ -9,6 +9,7 @@ props:
 js:
   search.js: { attributes: { defer: true } }
 
+
 thirdPartySettings:
     sdcStorybook:
       stories:

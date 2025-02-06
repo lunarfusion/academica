@@ -1,7 +1,9 @@
 <div{{ attributes }}>
   {{ title_prefix }}
   {% if label %}
+  <div>
     <h2{{ title_attributes }}>{{ label }}</h2>
+  </div>
   {% endif %}
   {{ title_suffix }}
   {% block content %}

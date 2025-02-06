@@ -16,7 +16,8 @@ const config = {
         jsonSchemaFakerOptions: {} // json-schema-faker options
       }
     },
-    "@storybook/addon-essentials"
+    "@storybook/addon-essentials",
+    '@storybook/addon-interactions',
   ],
   framework: {
     name: "@storybook/html-vite",

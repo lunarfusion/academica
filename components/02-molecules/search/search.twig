@@ -4,7 +4,7 @@
 
   {% block search_toggle %}{{ search_toggle }}{% endblock %}
 
-  <div class="search-form-wrapper" id="search-form-drawer" aria-expanded="false">
+  <div class="search-form-wrapper search-closed" id="search-form-drawer" aria-expanded="false">
     <form{{ attributes }}>
       {% block search_input %}{{ search_input }}{% endblock %}
       {% block search_submit %}{{ search_submit }}{% endblock %}
