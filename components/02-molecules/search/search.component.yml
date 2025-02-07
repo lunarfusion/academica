@@ -6,8 +6,8 @@ group: molecules
 props:
   type: object
 
-# js:
-#   search.js: { attributes: { defer: true } }
+js:
+  search.js: { attributes: { defer: true } }
 
 thirdPartySettings:
     sdcStorybook:
@@ -39,7 +39,8 @@ thirdPartySettings:
                 component: "academica:input"
                 props:
                   type: search
-                  placeholder_text: 'What are you searching for?'
+                  value: 'What are you searching for?'
+                  input_label : null
 
             search_submit:
               - type: component

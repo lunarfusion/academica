@@ -1,0 +1,16 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--academica-size-inner-vert-component);
+  
+}
+  
+  .form--horizontal {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .form--vertical .button {
+      align-self: flex-end;
+    }

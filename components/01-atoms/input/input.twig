@@ -1,12 +1,16 @@
-{% set type = type in ['search', 'text'] ? kind : 'search' %}
-{% set type_class = kind ? 'input--%s'|format(kind) : '' %}
+{% set type = type in ['text', 'radio', 'checkbox', 'search', 'range'] ? type : 'text' %}
+{% set type_class = type ? 'input--%s'|format(type) : '' %}
 {% set modifier_class = '%s %s'|format(type_class, modifier_class|default('')) %}
 
-
-<input
- class="input {{ modifier_class -}}"
- {{ attributes }}
- id="{{ input_id }}"
- label="{{ input_label }}"
- placeholder="{{ placeholder_text }}"/>
- {{ children }}
+<div class="input__wrapper">
+  <label for="input" class="label">{{ input_label }}</label>
+  <input
+  type="{{ type }}"
+  class="input {{ modifier_class -}}"
+  {{ attributes }}
+  id="{{ input_id }}"
+  label="{{ input_label }}"
+  value="{{ value }}"
+  placeholder="{{ placeholder_text }}"/>
+  {{ children }}
+</div>

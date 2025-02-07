@@ -36,7 +36,6 @@
 /* form input and button */
 .search .input,
   .search .button {
-    /* block-size: 100%; */
     max-block-size: var(--academica-size-nav-item);
     display: flex;
   }
@@ -55,7 +54,7 @@
       outline: none;
       box-shadow: none;
     }
-.search .button {
+.search .button--search {
     flex: 0;
     border-start-start-radius: 0;
     border-end-start-radius: 0;

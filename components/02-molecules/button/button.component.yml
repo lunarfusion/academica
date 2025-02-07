@@ -14,6 +14,11 @@ props:
       default:
         - Button text
 
+    value:
+      type: string
+      title: input value
+      default: Input value
+
     has_icon:
       type: boolean
       enum:
@@ -85,7 +90,6 @@ props:
       description: 'Button kind: submit, button, link, menu toggle.'
       default: button
       enum:
-        - submit
         - button
         - link
       examples:
@@ -110,13 +114,13 @@ props:
       type: string
       title: Size
       description: 'Button size: large, regular, small.'
-      default: regular
+      default: size-regular
       enum:
-        - large
-        - regular
-        - small
+        - size-large
+        - size-regular
+        - size-small
       examples:
-        - regular
+        - size-regular
 
     modifier_class:
       type: string

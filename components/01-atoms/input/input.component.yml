@@ -10,17 +10,20 @@ props:
     type:
       type: string
       title: Type
-      description: 'Input type: search, text...'
-      default: search
+      description: 'Input type: text, radio, etc...'
+      default: text
       enum:
-        - search
         - text
-      examples:
+        - radio
+        - checkbox
         - search
+        - range
+      examples:
+        - text
 
     placeholder_text:
       type: string
-      default: Enter search terms
+      default: Enter text
 
     input_id:
       format: iri-reference
@@ -28,7 +31,7 @@ props:
 
     input_label:
       format: iri-reference
-      default: input-label
+      default: Label for input
 
     modifier_class:
       type: string
@@ -36,3 +39,8 @@ props:
       description: Additional classes.
       examples:
         - 'custom-class'
+
+    value:
+      type: string
+      title: input value
+      default: Input value

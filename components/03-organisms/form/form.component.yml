@@ -1,0 +1,87 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: form
+status: experimental
+group: organisms
+
+props:
+  type: object
+  properties:
+
+    layout:
+      type: string
+      title: layout
+      description: 'Form layout: vertical or horizontal'
+      default: vertical
+      enum:
+        - vertical
+        - horizontal
+      examples:
+        - vertical
+
+    children:
+      type: array
+      title: form items
+      # examples:
+      # - ['child 1', 'child 2', 'child 3', 'child 4']
+
+thirdPartySettings:
+  sdcStorybook:
+    stories:
+      form:
+        props:
+          children:
+            - type: component
+              component: 'academica:input'
+
+            - type: component
+              component: 'academica:input'
+              props:
+                type: 'checkbox'
+
+            - type: component
+              component: 'academica:input'
+              props:
+                type: 'radio'
+
+            - type: component
+              component: 'academica:button'
+              props:
+                type: 'primary'
+
+#
+# thirdPartySettings:
+#   sdcStorybook:
+#     stories:
+#
+#       ### VARIANT - default vertical card style
+#       default:
+#         props:
+#           label: Form default style
+#         slots:
+#
+#           ### CHILD COMPONENT which has SLOTS and must use TWIG BLOCKS in twig template
+#           form_input_text:
+#             - type: component
+#               component: "academica:input"
+#               props:
+#                 type: text
+#                 placeholder_text: lalalalala
+#
+#           form_submit:
+#             - type: component
+#               component: "academica:button"
+#               props:
+#                 has_icon: false
+#                 kind: button
+#                 type: primary
+#                 size: regular
+
+
+      # ### SEARCH
+      # search:
+      #   props:
+      #     label: Search form
+      #
+      #   slots:
+      #
+      #

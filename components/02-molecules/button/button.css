@@ -68,6 +68,9 @@
   .button__icon svg {
       transition: var(--academica-transition-basic);
     }
+  .button__icon svg path {
+        fill: inherit;
+      }
   /*** State: Hover ***/
   .button:hover,
   .button.hover {
@@ -139,7 +142,7 @@
       border-color: var(--academica-color-action-secondary-hover);
       color: var(--academica-color-link-hover);
     }
-  .button--ghost:hover >svg, .button--ghost.hover >svg, .button--empty:hover >svg, .button--empty.hover >svg {
+  .button--ghost:hover path, .button--ghost.hover path, .button--empty:hover path, .button--empty.hover path {
         fill: var(--academica-color-link-hover);
       }
   .button--ghost:focus,
@@ -187,16 +190,17 @@
       white-space: nowrap;
     }
   /*** Variant - small ***/
-  .button--small {
+  .button--size-small {
     font-size: var(--academica-size-text-small);
     padding-inline: calc(var(--academica-size-radius-button) * 0.5);
     block-size: calc(var(--academica-size-block-button) * 0.75);
   }
   /*** Variant - large ***/
-  .button--large {
+  .button--size-large {
     font-size: var(--academica-size-text-lrg);
     padding-inline: calc(var(--academica-size-radius-button) * 1.25);
     block-size: calc(var(--academica-size-block-button) * 1.5);
+    border-radius: calc(var(--academica-size-radius-button) * 1.5);
   }
   /*** Variant - if Button is inside a menu ***/
   .button--nav {

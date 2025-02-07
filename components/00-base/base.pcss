@@ -19,7 +19,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--academica-color-bg-base);
-  
+
   color: var(--academica-color-fg-base);
   font-display: swap;
   font-family: var(--academica-font-primary);
@@ -168,9 +168,9 @@ p {
   font-size: var(--academica-size-text-med);
   line-height: 1.5;
   font-weight: 400;
-  
+
   color: var(--academica-color-fg-base);
-  
+
   margin-block-start: 0;
   margin-block-end: 1rem;
   max-width: var(--academica-size-charlimit);
@@ -213,15 +213,15 @@ p {
   padding: 0;
   margin: 0;
   margin-block-end: 1rem;
-  
+
   color: var(--academica-color-fg-base);
   font-family: var(--academica-font-primary);
   font-size: var(--academica-size-text-med);
   line-height: 1.4;
   font-weight: 400;
-  
+
   max-width: var(--academica-size-charlimit);
-  
+
   &::marker {
     color: var(--academica-color-fg-primary-medium);
   }
@@ -246,7 +246,7 @@ p {
 
 .node__content li ul {
   list-style-type: square;
-  
+
   & li::marker {
     font-size: 0.75rem;
   }
@@ -262,9 +262,9 @@ p {
   transition: var(--academica-transition-basic);
   border-radius: var(--academica-size-radius-sm);
   border: var(--academica-size-thickness-focus-indicator) solid transparent;
-  
+
   text-decoration: none;
-  
+
   background: linear-gradient(to right,
       var(--academica-color-link-decoration-02) 0%, var(--academica-color-link-decoration-02) 50%,
       var(--academica-color-link-decoration-01) 51%, var(--academica-color-link-decoration-01) 100%);
@@ -274,42 +274,42 @@ p {
   background-position: 98% 100%;
   box-decoration-break: slice;
   -webkit-box-decoration-break: slice;
-  
+
   &:hover {
     color: var(--academica-color-link-hover);
     background-position: 2% 100%;
   }
-  
+
   &:focus,
   &:focus-visible {
     color: var(--academica-color-link-focus);
     outline: 0;
     border-color: var(--academica-color-focus-indicator);
   }
-  
+
   &:active {
     color: var(--academica-color-link-active);
     border-color: transparent;
     outline: none;
   }
-  
+
   &:focus:active,
   &:focus-visible:active {
     border-color: transparent;
     outline: none;
   }
-  
+
   /*** prevent focus from firing on click ***/
   &:-webkit-focus-ring {
     border-color: transparent;
     outline: none;
     box-shadow: none;
   }
-  
+
   &:visited {
     color: var(--academica-color-link-visited);
   }
-  
+
 }
 
 
@@ -323,12 +323,12 @@ p {
   position: relative;
   padding-inline-end: 1.5rem;
   margin-inline-start: auto;
-  
+
   font-family: var(--academica-font-secondary);
   text-decoration: none;
   font-weight: 600;
   font-size: 1.15rem;
-  
+
   a {
     font-family: var(--academica-font-secondary);
     text-decoration: none;
@@ -343,13 +343,13 @@ p {
     background-position: 98% 100%;
     box-decoration-break: slice;
     -webkit-box-decoration-break: slice;
-    
+
     &:hover {
       background-position: 1% 100%;
     }
   }
-  
-  
+
+
   &::after {
     content: "";
     width: 1rem;
@@ -365,7 +365,7 @@ p {
     transition: var(--academica-transition-boing);
     transform: translateX(-0.25rem);
   }
-  
+
   &:hover::after {
     transform: translateX(0);
   }
@@ -391,36 +391,36 @@ nav h2#footer-menu {
 
 /* TODO - Breadcrumbs  */
 .breadcrumb {
-  
+
   ol {
     list-style-type: none;
     display: flex;
     flex-direction: row;
   }
-  
+
   li {
     margin: 0;
     padding-inline: 0.5rem;
     border-inline-end: 3px solid var(--academica-color-border-secondary);
   }
-  
+
   li:first-child {
     padding-inline-start: 0;
   }
-  
+
   li:last-child {
     border: none;
   }
-  
+
   li:last-child {
     font-weight: 600;
   }
-  
+
   a {
     color: var(--academica-color-fg-base);
     border: var(--academica-size-thickness-focus-indicator) solid transparent;
   }
-  
+
   a:focus {
     border-radius: var(--academica-size-radius-extra-sm);
     border: var(--academica-size-thickness-focus-indicator) solid var(--academica-color-focus-indicator);
@@ -443,16 +443,4 @@ footer {
   margin-block: 2rem;
 }
 
-/* TODO - search  */
-.search {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  
-}
 
-#search-block-form {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-}

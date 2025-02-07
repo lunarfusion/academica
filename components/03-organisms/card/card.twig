@@ -1,11 +1,8 @@
-{% set type = type in ['default', 'navigation'] ? type : 'deault' %}
+{% set type = type in ['default', 'navigation'] ? type : 'default' %}
 {% set type_class = type ? 'card--%s'|format(type) : '' %}
 {% set modifier_class = '%s %s'|format(type_class, modifier_class|default('')) %}
 
-
-
 <div class="card" {{ attributes.addClass(modifier_class) }}>
-
 
   <div class="card__content">
     <div class="card__text">

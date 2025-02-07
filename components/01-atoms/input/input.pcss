@@ -1,20 +1,41 @@
 .input {
-  border: 1px solid var(--academica-color-border-neutral-light);
-  box-shadow: var(--academica-shadow-inset);
-  background: var(--academica-color-bg-base);
-  min-block-size: 2rem;
-  border-radius: var(--academica-size-radius-med);
-  padding-block: 0.5rem;
-  padding-inline: var(--academica-size-inner-horiz-component);
   
+  /* wrapper for input and label */
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--academica-size-sm-inner-vert-component);
+    
+    &:has(.input--radio, .input--checkbox) {
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
   
+  &--text,
   &--search {
+    border: 1px solid var(--academica-color-border-neutral-light);
+    box-shadow: var(--academica-shadow-inset);
+    background: var(--academica-color-bg-base);
+    min-block-size: 2rem;
+    border-radius: var(--academica-size-radius-med);
+    padding-block: 0.5rem;
+    padding-inline: var(--academica-size-inner-horiz-component);
+  }
+  
+  &--radio,
+  &--checkbox {}
+  
+  
+  /* &--search {
     border-start-end-radius: 0;
     border-end-end-radius: 0;
-    
+
     flex-direction: column;
     justify-content: stretch;
     min-inline-size: 200px;
     min-block-size: 100%;
-  }
+  } */
 }

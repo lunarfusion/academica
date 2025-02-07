@@ -1,7 +1,7 @@
 
-{% set kind = kind in ['button', 'link', 'submit'] ? kind : 'button' %}
+{% set kind = kind in ['button', 'link'] ? kind : 'button' %}
 {% set type = type in ['primary', 'secondary', 'ghost', 'empty', 'nav', 'menu-toggle'] ? type : 'primary' %}
-{% set size = size in ['large', 'regular', 'small'] ? size : 'regular' %}
+{% set size = size in ['size-large', 'size-regular', 'size-small'] ? size : 'size-regular' %}
 
 {% set type_class = type ? 'button--%s'|format(type) : '' %}
 {% set kind_class = kind ? 'button--%s'|format(kind) : '' %}
@@ -52,7 +52,7 @@
   <button
     class="button {{ modifier_class -}}"
     data-component-name="button"
-    value="{{input_value}}"
+    value="{{- text -}}"
     id="{{ input_id }}"
     {{ attributes }}
     {# {% if attributes is not empty %}

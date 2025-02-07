@@ -1,5 +1,5 @@
 
-<div class="search" {% if attributes is not empty %}{{- attributes|raw -}}{% endif %}>
+{# <div class="search" {% if attributes is not empty %}{{- attributes|raw -}}{% endif %}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes }}>{{ label }}</h2>
@@ -25,8 +25,45 @@
     {% endblock %}
   </div>
 
-</div>
+</div> #}
 
 
 {# why doesn't this work? renders null #}
 {# {{ include ('academica:search') }} #}
+
+{# {% embed 'academica:search' %} #}
+
+{#
+{% block content %}
+  {% embed 'academica:search' with {
+    attributes: create_attribute(),
+    search_toggle,
+    search_input,
+    search_submit
+  } only %}
+    {% block search_toggle %}
+      {{ search_toggle }}
+    {% endblock %}
+    {% block search_input %}
+      {{ children }}
+    {% endblock %}
+    {% block search_submit %}
+      {{ search_submit }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %} #}
+
+<div class="search-form-wrapper" id="search-form-drawer" aria-expanded="false">
+  <div{{ attributes }}>
+    {{ title_prefix }}
+    {% if label %}
+    <div>
+      <h2{{ title_attributes }}>{{ label }}</h2>
+    </div>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+</div>

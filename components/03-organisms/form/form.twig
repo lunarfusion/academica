@@ -1,0 +1,22 @@
+{% set type = type in ['default', 'search'] ? type : 'default' %}
+{% set layout = layout in ['vertical', 'horizontal'] ? layout : 'vertical' %}
+
+{% set type_class = type ? 'form--%s'|format(type) : '' %}
+{% set layout_class = layout ? 'form--%s'|format(layout) : '' %}
+
+{% set modifier_class = '%s %s %s'|format(type_class, layout_class, modifier_class|default('')) %}
+
+
+{# wip, how to do form, form element ? #}
+<form {{ attributes }}
+  class="form {{ modifier_class -}}">
+  {# {{ children }} #}
+  {# {% block form_input_text %}{{ form_input_text }}{% endblock %}
+  {% block form_submit %}{{ form_submit }}{% endblock %} #}
+
+  {# How to populate children without creating slot blocks? #}
+
+  {% for child in children %}
+    {{ child }}
+  {% endfor %}
+</form>
