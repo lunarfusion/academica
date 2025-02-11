@@ -1,3 +1,42 @@
-@import "../components/00-base/container/container.css";
 @import "../components/00-base/base.css";
-@import "../components/00-base/region.css";
+@import "../components/00-base/container/container.css";
+
+/*** not migrated to SDC ***/
+/* layout */
+@import "../components/00-base/pre-sdc-components/main.css";
+@import "../components/00-base/pre-sdc-components/page.css";
+@import "../components/00-base/pre-sdc-components/region.css";
+@import "../components/00-base/pre-sdc-components/flexbox.css";
+
+/* typography */
+@import "../components/00-base/pre-sdc-components/heading.css";
+@import "../components/00-base/pre-sdc-components/paragraph.css";
+@import "../components/00-base/pre-sdc-components/list.css";
+@import "../components/00-base/pre-sdc-components/title.css";
+@import "../components/00-base/pre-sdc-components/byline.css";
+@import "../components/00-base/pre-sdc-components/utilities-text.css";
+
+/* content */
+@import "../components/00-base/pre-sdc-components/aside.css";
+@import "../components/00-base/pre-sdc-components/author.css";
+@import "../components/00-base/pre-sdc-components/figure.css";
+@import "../components/00-base/pre-sdc-components/horizontal-rule.css";
+@import "../components/00-base/pre-sdc-components/quote.css";
+@import "../components/00-base/pre-sdc-components/table.css";
+@import "../components/00-base/pre-sdc-components/tag.css";
+@import "../components/00-base/pre-sdc-components/time.css";
+@import "../components/00-base/pre-sdc-components/boxframe.css";
+@import "../components/00-base/pre-sdc-components/image.css";
+
+/* paragraphs module */
+@import "../components/00-base/pre-sdc-components/paragraph-content-row.css";
+
+/* navigation */
+@import "../components/00-base/pre-sdc-components/breadcrumbs.css";
+
+/* interactives */
+@import "../components/00-base/pre-sdc-components/form.css";
+@import "../components/00-base/pre-sdc-components/carousel.css";
+
+/* utilities */
+@import "../components/00-base/pre-sdc-components/utilities.css";

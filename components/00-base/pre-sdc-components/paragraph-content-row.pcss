@@ -1,0 +1,49 @@
+/*!
+ *
+ *
+ */
+
+/*** Paragraph Rows, Template: paragraph--content-row.html.twig ***/
+.paragraph-content-row {
+
+  &__inner {
+    padding-block: calc(var(--academica-size-container-padding) * 0.5);
+  }
+
+  /*** Container widths ***/
+  .normal-width {
+    position: relative;
+    width: 100%;
+    max-width: var(--academica-size-container-width);
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-inline-start: var(--academica-size-baseline);
+    padding-inline-end: var(--academica-size-baseline);
+  }
+
+  .wide-container {
+    position: relative;
+    width: 100%;
+    max-width: var(--academica-size-container-width-lg);
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-inline-start: var(--academica-size-baseline);
+    padding-inline-end: var(--academica-size-baseline);
+  }
+
+  .full-width-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-inline: 0;
+  }
+
+  .row {
+    padding-block: var(--academica-size-container-padding);
+  }
+}

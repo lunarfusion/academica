@@ -1,11 +1,30 @@
-.region--main-nav {
+.region {
+  max-width: 100%;
+  width: 100%;
+}
+
+  .region--main-nav {
     background-color: var(--academica-color-action-nav-bg-default);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
   }
-  
-  
+
+  .region--content-top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  /*** Sidebars ***/
+
+  .region--sidebar--left {}
+
+  .region--sidebar--right {}
+
   .region--footer {
     background-color: var(--academica-color-bg-primary);
     padding-inline: var(--academica-size-baseline);

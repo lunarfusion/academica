@@ -10,6 +10,8 @@
 :root {
   /********* SEMANTICS *********/
   /*** SET THEME COLORS ***/
+  /*** Form Accents - Base Theme ***/
+  --academica-color-accent-primary: var(--academica-color-cyan-050);
   
   /*** Background - Surface - DEFAULT - changes only in dark mode ***/
   --academica-color-bg-base: var(--academica-color-white);
@@ -61,9 +63,6 @@
   --academica-color-border-neutral: var(--academica-color-gray-040);
   --academica-color-border-neutral-light: var(--academica-color-gray-080);
   
-  /*** Form Accents - Base Theme ***/
-  --academica-color-accent-primary: var(--academica-color-cyan-050);
-  
   /*** Actions - Primary Buttons and Inputs - Base Theme ***/
   --academica-color-action-primary-default: var(--academica-color-cyan-070);
   --academica-color-action-primary-hover: var(--academica-color-cyan-075);
@@ -91,15 +90,16 @@
   --academica-color-action-nav-fg-default: var(--academica-color-blue-020);
   --academica-color-action-nav-fg-hover: var(--academica-color-blue-040);
   --academica-color-action-nav-fg-focus: var(--academica-color-blue-040);
-  --academica-color-action-nav-fg-active: var(--academica-color-fg-base);
+  --academica-color-action-nav-fg-active: var(--academica-color-fg-black-static);
+  --academica-color-action-nav-fg-icon: var(--academica-color-cyan-020);
   
   --academica-color-action-nav-bg-default: var(--academica-color-blue-090);
   --academica-color-action-nav-bg-subnav: var(--academica-color-blue-093);
   --academica-color-action-nav-bg-subnav-subnav: var(--academica-color-blue-095);
   --academica-color-action-nav-bg-subnav-subnav-subnav: var(--academica-color-blue-097);
   
-  --academica-color-action-nav-bg-hover: var(--academica-color-bg-base);
-  --academica-color-action-nav-bg-focus: var(--academica-color-bg-base);
+  --academica-color-action-nav-bg-hover: var(--academica-color-bg-white-static);
+  --academica-color-action-nav-bg-focus: var(--academica-color-bg-white-static);
   --academica-color-action-nav-bg-active: var(--academica-color-blue-097);
   
   /*** NAV Signifier for active nav items  - Base Theme ***/
@@ -141,33 +141,8 @@
   --academica-color-border-alert-warning: var(--academica-color-orange-060);
   --academica-color-bg-alert-warning: var(--academica-color-orange-080);
   
-  
   /*** Negative ***/
   --academica-color-fg-alert-negative: var(--academica-color-red-030);
   --academica-color-border-alert-negative: var(--academica-color-red-040);
   --academica-color-bg-alert-negative: var(--academica-color-red-080);
-  
-  
-  .drk-background {
-    /*** Foreground / Text - Base Theme ***/
-    --academica-color-fg-base: var(--academica-color-white);
-    --academica-color-fg-subdued: var(--academica-color-gray-095);
-    
-    --academica-color-fg-primary: var(--academica-color-blue-080);
-    --academica-color-fg-secondary: var(--academica-color-cyan-080);
-    
-    --academica-color-border-primary: var(--academica-color-blue-060);
-    --academica-color-border-primary-light: var(--academica-color-blue-080);
-    
-    /*** Borders - Base Theme - Neutral ***/
-    --academica-color-border-neutral: var(--academica-color-gray-080);
-    --academica-color-border-neutral-light: var(--academica-color-gray-095);
-    
-    /*** Actions - Link Text ***/
-    --academica-color-link-default: var(--academica-color-cyan-080);
-    --academica-color-link-hover: var(--academica-color-cyan-060);
-    --academica-color-link-focus: var(--academica-color-cyan-060);
-    --academica-color-link-active: var(--academica-color-cyan-080);
-    --academica-color-link-visited: var(--academica-color-fg-base);
-  }
 }

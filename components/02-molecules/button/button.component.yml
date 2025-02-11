@@ -14,11 +14,6 @@ props:
       default:
         - Button text
 
-    value:
-      type: string
-      title: input value
-      default: Input value
-
     has_icon:
       type: boolean
       enum:

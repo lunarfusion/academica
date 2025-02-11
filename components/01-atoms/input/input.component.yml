@@ -33,6 +33,13 @@ props:
       format: iri-reference
       default: Label for input
 
+    input_label_hidden:
+      type: boolean
+      default: false
+      enum:
+        - true
+        - false
+
     modifier_class:
       type: string
       title: Modifier class

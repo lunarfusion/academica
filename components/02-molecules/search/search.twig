@@ -1,4 +1,5 @@
-
+{# SDC Addon method #}
+{#
 <div class="search" {% if attributes is not empty %}{{- attributes|raw -}}{% endif %}>
 
   {% block search_toggle %}{{ search_toggle }}{% endblock %}
@@ -9,6 +10,40 @@
       {% block search_submit %}{{ search_submit }}{% endblock %}
     </form>
   </div>
+</div> #}
+
+
+{%
+  set classes = [
+    'block',
+    'block-search',
+    'search-closed'
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+
+  {{ include ('academica:button', {
+     kind: 'button',
+     size: 'small',
+     type: 'empty',
+     text: 'toggle search',
+     has_icon: true,
+     icon_only: true,
+     icon: 'search-toggle',
+     input_id: 'search-toggle',
+     input_value: 'open search',
+     modifier_class: 'button--search-toggle',
+   }) }}
+
+  <div class="search-form-wrapper" id="search-form-drawer" aria-expanded="false">
+    {{ title_prefix }}
+    {% if label %}
+      <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
 </div>
-
-

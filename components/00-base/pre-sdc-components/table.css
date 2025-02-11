@@ -1,0 +1,20 @@
+
+.table thead {
+  }
+
+  .table th {
+    padding: 1rem;
+    background-color: var(--academica-color-bg-secondary-light);
+  }
+
+  .table tr {
+
+  }
+
+  .table tr:nth-child(even) {
+    background-color:  var(--academica-color-bg-neutral-lightest);
+  }
+
+  .table td {
+    padding: 1rem;
+  }

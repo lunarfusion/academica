@@ -1,5 +1,5 @@
 /* Outermost div for the block, contains form and open/close button */
-.search {
+.block-search {
   position: relative;
   inline-size: 100%;
   display: flex;
@@ -8,12 +8,18 @@
   z-index: 3;
   padding: var(--academica-size-md-gap-component);
   
-  .search-form-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    inline-size: 100%;
+  /* search toggle button hidden on mobile */
+  .button--search-toggle {
+    display: none;
   }
+}
+
+.search-form-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  inline-size: 100%;
+  
   
   form {
     display: flex;
@@ -65,45 +71,54 @@
     border-start-start-radius: 0;
     border-end-start-radius: 0;
   }
-  
-  /* search toggle button */
-  .button--search-toggle {
-    display: none;
-  }
 }
-
 
 /********* DESKTOP DISPLAY ONLY  *********/
 @media (min-width: 992px) {
-  .search {
-    justify-content: flex-end;
-    
-    form {
-      inline-size: auto;
-    }
+  
+  .block-search {
+    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
+    inline-size: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    z-index: 3;
+    padding: 0;
     
     /* search toggle button */
     .button--search-toggle {
       display: flex;
+      flex: 1;
       z-index: 2;
       block-size: var(--academica-size-block-button);
     }
+  }
+  
+  
+  
+  .search-form-wrapper {
+    justify-content: flex-end;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    inline-size: auto;
     
-    .search-form-wrapper {
-      justify-content: flex-end;
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    form {
+      inline-size: auto;
+      flex-direction: row;
     }
-    
-    .search-closed {
-      form {
-        transform: translateX(100%);
-      }
+  }
+  
+  .search-closed {
+    form {
+      transform: translateX(100%);
     }
-    
-    .search-open {
-      form {
-        transform: translateX(0);
-      }
+  }
+  
+  .search-open {
+    form {
+      transform: translateX(0);
     }
   }
 }

@@ -3,7 +3,14 @@
 {% set modifier_class = '%s %s'|format(type_class, modifier_class|default('')) %}
 
 <div class="input__wrapper">
-  <label for="input" class="label">{{ input_label }}</label>
+
+  {% if input_label_hidden == true %}
+    <label for="input" class="label sr-only">{{ input_label }}</label>
+
+    {% else %}
+    <label for="input" class="label">{{ input_label }}</label>
+  {% endif %}
+
   <input
   type="{{ type }}"
   class="input {{ modifier_class -}}"

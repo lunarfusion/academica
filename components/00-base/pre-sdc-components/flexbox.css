@@ -1,0 +1,272 @@
+/********* FLEXBOX ROW *********/
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.row--vert-p-1 {
+    padding-block: calc(var(--academica-size-container-padding) * 2);
+  }
+.row--stretch {
+    align-items: stretch;
+  }
+.row--bottom {
+    place-items: end start;
+  }
+.row--left {
+    place-items: normal;
+  }
+.row--right {
+    place-items: start end;
+  }
+.row--center {
+    justify-content: center;
+  }
+.row--align-center {
+    align-items: center;
+  }
+.row--between {
+    justify-content: space-between;
+  }
+.row--around {
+    justify-content: space-around;
+  }
+.row--gap-01 {
+    gap: 1rem;
+  }
+/********* FLEXBOX COLUMNS *********/
+.col {
+  position: relative;
+  
+  width: auto;
+  max-width: 100%;
+  flex-grow: 1;
+  flex-basis: 0;
+  
+  padding-inline: var(--academica-size-col-padding);
+  margin-block: calc(var(--academica-size-col-padding) * 0.5);
+}
+/* auto width to content */
+.col--auto {
+    flex-grow: unset;
+  }
+/* half width */
+.col--6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+@media (max-width: 576px) {
+      .col--6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+/* TWOTHIRD width */
+.col--8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+@media (max-width: 992px) {
+      .col--8 {
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%;
+      }
+    }
+@media (max-width: 768px) {
+      .col--8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+@media (max-width: 576px) {
+      .col--8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+/* How should col-4 behave when following col-8? */
+@media (max-width: 992px) {
+        .col--8~.col--4 {
+          flex: 0 0 33.33334%;
+          max-width: 33.33334%;
+        }
+      }
+@media (max-width: 768px) {
+        .col--8~.col--4 {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+@media (max-width: 576px) {
+        .col--8~.col--4 {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+/* THIRD width */
+.col--4 {
+    flex: 0 0 33.33334%;
+    max-width: 33.33334%;
+  }
+@media (max-width: 992px) {
+      .col--4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+@media (max-width: 768px) {
+      .col--4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+@media (max-width: 576px) {
+      .col--4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        min-width: 100%;
+      }
+    }
+/* how should col-8 behave when it follows col-4? */
+@media (max-width: 992px) {
+        .col--4~.col--8, .col--4~.emory-col--8 {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+      }
+@media (max-width: 768px) {
+        .col--4~.col--8, .col--4~.emory-col--8 {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+@media (max-width: 576px) {
+        .col--4~.col--8, .col--4~.emory-col--8 {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+/* quarter width */
+.col--3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+@media (max-width: 992px) {
+      .col--3 {
+        flex: 0 0 33.33334%;
+        max-width: 33.33334%
+      }
+    }
+@media (max-width: 768px) {
+      .col--3 {
+        flex: 0 0 50%;
+        max-width: 50%
+      }
+    }
+@media (max-width: 576px) {
+      .col--3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+.col--2 {
+    flex: 0 0 16.6667%;
+    max-width: 16.6667%;
+  }
+@media (max-width: 992px) {
+      .col--2 {
+        flex: 0 0 25%;
+        max-width: 25%;
+      }
+    }
+@media (max-width: 576px) {
+      .col--2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+.col--10 {
+    flex: 0 0 83.3334%;
+    max-width: 83.3334%;
+  }
+@media (max-width: 992px) {
+      .col--10 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+/* three quarter width */
+.col--9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+@media (max-width: 992px) {
+      .col--9 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+/* three quarter width */
+.col--7 {
+    flex: 0 0 58.333%;
+    max-width: 58.333%;
+  }
+@media (max-width: 768px) {
+      .col--7 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+/* full width */
+.col--12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+/* HALF WIDTH TRUMPS */
+/* half width on large */
+@media (max-width: 992px) {
+      .col--lg-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+/* half width on medium */
+@media (max-width: 768px) {
+      .col--md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+/* half width on small */
+@media (max-width: 576px) {
+      .col--sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+/* FULL WIDTH TRUMPS */
+/* full width on large */
+@media (max-width: 992px) {
+      .col--lg-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+/* full width on medium */
+@media (max-width: 768px) {
+      .col--md-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+/* full width on small */
+@media (max-width: 576px) {
+      .col--sm-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }

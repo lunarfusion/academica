@@ -1,0 +1,24 @@
+
+.figure {
+/* max-width: 400px; */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+  .figure br {
+    display: none;
+    line-height: 0;
+  }
+
+.figcaption {
+  margin: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-inline-start: 1px solid var(--academica-color-border-neutral);
+  font-size: var(--academica-size-text-small);
+  color: var(--academica-color-fg-base);
+}
+
+.figcaption__title {}
+
+.figcaption__content {}

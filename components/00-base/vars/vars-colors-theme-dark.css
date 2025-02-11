@@ -1,0 +1,67 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    /*** Background - Surface - DEFAULT - changes only in dark mode ***/
+    --academica-color-bg-base: var(--academica-color-black);
+    
+    /*** Foreground / Text - Base Theme ***/
+    --academica-color-fg-base: var(--academica-color-white);
+    --academica-color-fg-subdued: var(--academica-color-gray-095);
+    
+    --academica-color-fg-primary: var(--academica-color-blue-080);
+    --academica-color-fg-secondary: var(--academica-color-cyan-080);
+    
+    
+    
+    /*** Borders ***/
+    --academica-color-border-primary: var(--academica-color-blue-060);
+    --academica-color-border-primary-light: var(--academica-color-blue-080);
+    
+    /*** Borders - Base Theme - Neutral ***/
+    --academica-color-border-neutral: var(--academica-color-gray-080);
+    --academica-color-border-neutral-light: var(--academica-color-gray-095);
+    
+    /*** Actions - Link Text ***/
+    --academica-color-link-default: var(--academica-color-cyan-080);
+    --academica-color-link-hover: var(--academica-color-cyan-060);
+    --academica-color-link-focus: var(--academica-color-cyan-060);
+    --academica-color-link-active: var(--academica-color-cyan-080);
+    --academica-color-link-visited: var(--academica-color-fg-base);
+  }
+}
+
+
+
+
+:root {
+  
+  /*** Text and border colors for dark backgrounds ***/
+  .drk-background {
+    /*** Foreground / Text - Base Theme ***/
+    --academica-color-fg-base: var(--academica-color-white);
+    --academica-color-fg-subdued: var(--academica-color-gray-095);
+    
+    --academica-color-fg-primary: var(--academica-color-blue-080);
+    --academica-color-fg-secondary: var(--academica-color-cyan-080);
+    
+    /*** NAV Actions - Menu Items ***/
+    --academica-color-action-nav-fg-default: var(--academica-color-blue-020);
+    --academica-color-action-nav-fg-hover: var(--academica-color-blue-040);
+    --academica-color-action-nav-fg-focus: var(--academica-color-blue-040);
+    --academica-color-action-nav-fg-active: var(--academica-color-fg-base);
+    
+    /*** Borders ***/
+    --academica-color-border-primary: var(--academica-color-blue-060);
+    --academica-color-border-primary-light: var(--academica-color-blue-080);
+    
+    /*** Borders - Base Theme - Neutral ***/
+    --academica-color-border-neutral: var(--academica-color-gray-080);
+    --academica-color-border-neutral-light: var(--academica-color-gray-095);
+    
+    /*** Actions - Link Text ***/
+    --academica-color-link-default: var(--academica-color-cyan-080);
+    --academica-color-link-hover: var(--academica-color-cyan-060);
+    --academica-color-link-focus: var(--academica-color-cyan-060);
+    --academica-color-link-active: var(--academica-color-cyan-080);
+    --academica-color-link-visited: var(--academica-color-fg-base);
+  }
+}

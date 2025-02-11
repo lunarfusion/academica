@@ -1,0 +1,124 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: var(--academica-size-container-width);
+  margin-left: auto;
+  margin-right: auto;
+  margin-block: 4rem;
+  padding: 1.5rem;
+  
+  
+  &__inner {
+    position: relative;
+    block-size: 60vh;
+  }
+  
+  &__row {
+    block-size: 100%;
+    z-index: 2;
+    position: relative;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    
+    overflow: auto;
+    width: 100%;
+    scroll-behavior: smooth;
+    
+    scrollbar-color: var(--academica-color-bg-primary-medium) var(--academica-color-bg-neutral-lightest);
+    /* scrollbar style firefox */
+    scrollbar-width: thin;
+  }
+  
+  /* scrollbar style chrome and safari */
+  &__row::-webkit-scrollbar {
+    width: 24px;
+    height: 24px;
+    border-radius: 15px;
+  }
+  
+  &__row::-webkit-scrollbar-track {
+    border-radius: 15px;
+  }
+  
+  &__row::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+  }
+  
+  /*** Slide ***/
+  &__item {
+    position: relative;
+    /* add button size so it does not overlap with item content */
+    padding-inline: var(--academica-size-block-button);
+    padding-block: 2rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    flex: 0 0 100%;
+    max-block-size: 100%;
+    gap: 1rem;
+  }
+  
+  &__image,
+  &__text {
+    width: 100%;
+    display: flex;
+    /* flex: 1 1 0; */
+  }
+  
+  &__image {
+    flex-grow: 2;
+    flex-basis: 0;
+    background-color: var(--academica-color-bg-neutral-lightest);
+    
+    img {
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  
+  &__text {
+    flex-grow: 0;
+    flex-basis: 0;
+  }
+  
+  
+  /*** Forward/back controls ***/
+  &__button {
+    z-index: 3;
+    cursor: pointer;
+    display: block;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    margin: auto;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    
+    &--next {
+      background-image: url('../images/arrow-right-simple.svg');
+      right: 0;
+      transform: translateX(50%) translateY(-50%);
+      
+      &:hover {
+        transform: translateX(50%) translateY(-50%) scale(1.1);
+      }
+    }
+    
+    &--prev {
+      background-image: url('../images/arrow-left-simple.svg');
+      left: 0;
+      transform: translateX(-50%) translateY(-50%);
+      
+      &:hover {
+        transform: translateX(-50%) translateY(-50%) scale(1.1);
+      }
+    }
+  }
+}

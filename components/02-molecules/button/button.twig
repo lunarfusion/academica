@@ -52,12 +52,12 @@
   <button
     class="button {{ modifier_class -}}"
     data-component-name="button"
-    value="{{- text -}}"
-    id="{{ input_id }}"
-    {{ attributes }}
-    {# {% if attributes is not empty %}
+    value="{{ text }}"
+    {# id="{{ input_id }}"
+    {{ attributes }} #}
+    {% if attributes is not empty %}
       {{attributes.setAttribute('id',input_id)}}
-    {% endif %} #}
+    {% endif %}
     {% if is_disabled %}disabled="disabled" aria-disabled="true"{% endif %}>
     {{- content_markup -}}
   </button>

@@ -1,7 +1,8 @@
 .input {
-  
-  
+
+
   /* &--search {
+  background: var(--academica-color-bg-white-static);
     border-start-end-radius: 0;
     border-end-end-radius: 0;
 
@@ -11,13 +12,12 @@
     min-block-size: 100%;
   } */
 }
-  
+
   /* wrapper for input and label */
   .input__wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--academica-size-sm-inner-vert-component);
   }
   .input__wrapper:has(.input--radio, .input--checkbox) {
       flex-direction: row-reverse;

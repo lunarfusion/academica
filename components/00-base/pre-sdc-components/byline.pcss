@@ -1,0 +1,19 @@
+.byline {
+  font-size: var(--academica-size-text-small);
+  margin-block: 1rem;
+
+  &__name {
+    display: inline-block;
+    font-weight: 700;
+    margin-inline-end: 0.5rem;
+
+    &::before {
+      content: "By ";
+    }
+  }
+
+  &__date {
+    border-inline-start: 1px solid var(--academica-color-border-primary);
+    padding-inline-start: 0.5rem;
+  }
+}
