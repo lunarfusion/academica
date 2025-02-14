@@ -41,10 +41,12 @@ props:
               - Log out
           url:
             type: string
-            format: uri
+            format: uri-reference
             examples:
-              - /user
-              - /logout
-        required:
-          - title
+              - //user
+              - //logout
 
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once

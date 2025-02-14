@@ -68,9 +68,11 @@ props:
       type: string
       title: Button URL
       format: iri-reference
-      default: http://wikipedia.com
+      default:
+        - http://wikipedia.com
 
     input_id:
+      type: string
       format: iri-reference
       default: button-id
 
@@ -121,4 +123,5 @@ props:
       type: string
       title: Modifier class
       description: Additional classes.
-      default: mod-class
+      examples:
+        - 'custom-class'

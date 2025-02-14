@@ -52,15 +52,14 @@ props:
               - Events
           url:
             type: string
-            format: uri
+            format: uri-reference
             examples:
-              - https://wikipedia.org
-              - https://nasa.gov
-              - https://lunarfusion.com
-              - https://www.futurity.org
+              - https://example.edu
+              - https://example.edu
+              - https://example.edu
+              - https://example.edu
         required:
           - title
-
 
     modifier_class:
       type: string
@@ -69,5 +68,10 @@ props:
       examples:
         - 'custom-class'
 
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+
 js:
-    navigation.js: { attributes: { defer: true } }
+    navigation.js: {}

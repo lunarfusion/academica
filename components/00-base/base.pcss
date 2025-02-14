@@ -12,17 +12,25 @@ body {
 }
 
 body {
+  /* overflow */
   position: relative;
   overflow-y: auto;
   overflow-x: hidden;
+  
+  /* fix typography rough edges */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  /* font display */
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-family: var(--academica-font-primary);
+  
+  /* color base */
+  color: var(--academica-color-fg-base);
   background-color: var(--academica-color-bg-base);
   
-  color: var(--academica-color-fg-base);
-  font-display: swap;
-  font-family: var(--academica-font-primary);
-  /* flex props to allow sticky footer - combines with main component flex */
+  /* sticky footer */
   display: flex;
   flex-direction: column;
   min-height: 100vh;

@@ -2,8 +2,8 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: var(--academica-size-container-width);
-  min-width: 320px;
+  max-inline-size: var(--academica-size-container-width);
+  min-inline-size: 320px;
   
   margin-left: auto;
   margin-right: auto;
@@ -11,13 +11,13 @@
   
   /*** Wide Variant ***/
   &--wide {
-    max-width: var(--academica-size-container-width-lg);
+    max-inline-size: var(--academica-size-container-width-lg);
   }
   
   /*** Full Width Variant ***/
   &--full {
     padding-inline: 0;
     margin: 0;
-    max-width: 100%;
+    max-inline-size: 100%;
   }
 }

@@ -26,10 +26,12 @@ props:
       default: Enter text
 
     input_id:
+      type: string
       format: iri-reference
       default: input-id
 
     input_label:
+      type: string
       format: iri-reference
       default: Label for input
 
